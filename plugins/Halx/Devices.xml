@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--halx device presets-->
+<root>
+<types>
+  <type>BD</type>
+  <type>DVD</type>
+  <type>DVR</type>
+  <type>Receiver</type>
+  <type>STB</type>
+  <type>TV</type>
+  <type>VCR</type>
+  <type>Other</type>
+</types>
+
+<brands>
+  <brand>Denon</brand>
+  <brand>Dynex</brand>
+  <brand>Harman Kardon</brand>
+  <brand>Insignia</brand>
+  <brand>LG</brand>
+  <brand>Onkyo</brand>
+  <brand>Panasonic</brand>
+  <brand>Philips</brand>
+  <brand>Pioneer</brand>
+  <brand>Samsung</brand>
+  <brand>Sharp</brand>
+  <brand>Sherwood</brand>
+  <brand>Sony</brand>
+  <brand>Toshiba</brand>
+  <brand>Viewsonic</brand>
+  <brand>WestingHouse</brand>
+  <brand>Yamaha</brand>
+  <brand>Sceptre</brand>
+</brands>
+
+<models>
+  <model>TX-NR509</model>
+  <model>LN46D630</model> 
+  <model>Unknown</model>   
+</models>
+</root>

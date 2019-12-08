@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>GgCal</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_GgCal</helplink>
+            <description>
+                <default>Доступ к данным вашего Google календаря. Вы можете создавать события календаря, получать список событий и автоматически запускать синхронизированные события в VoxCommando, соответствующие вашим событиям календаря. Для работы этих действий в настройках плагина Gcal необходимо установить ряд параметров.</default>
+            </description>
+        </info>
+        <command>
+            <name>AddEvent</name>
+            <commandString>GgCal.AddEvent</commandString>
+            <info>
+                <params>1-5</params>
+                <parameter name="Title" type="string" optional="False">Название нового события календаря </parameter>
+                <parameter name="Date" type="string" optional="True">Дата начала нового события</parameter>
+                <parameter name="Time" type="string" optional="True">Время начала нового события</parameter>
+                <parameter name="Feed" type="string" optional="True">Название календаря, чтобы добавить событие в</parameter>
+                <parameter name="Location" type="string" optional="True">Место проведения мероприятия</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_GgCal#AddEvent</helplink>
+                <description>
+                    <default>Добавляет новое событие календаря в указанную &lt;Feed&gt; в соответствии с указанными параметрами.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetDay</name>
+            <commandString>GgCal.GetDay</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="Day" type="integer" optional="False">-1 вчера, 0 сегодня, 1 завтра</parameter>
+                <parameter name="Feed" type="string" optional="True">Какой календарь для получения события для</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_GgCal#GetDay</helplink>
+                <description>
+                    <default>Получает события календаря для &lt;Day&gt; (0 на сегодня, 1 на завтра) из календаря с именем &lt;Feed&gt; .
+События будут возвращены как совпадения, к которым можно получить доступ с помощью {Match.1} {Match.2} и т.д.
+&lt;Feed&gt; (имя календаря) учитывает регистр.  Имя календаря можно увидеть в настройках плагина. Будет использоваться календарь по умолчанию, если он не указан. Календарь по умолчанию указан в настройках плагина Gcal.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetRange</name>
+            <commandString>GgCal.GetRange</commandString>
+            <info>
+                <params>2-3</params>
+                <parameter name="StartOffset" type="integer" optional="False">0 = сегодня, 1 = завтра</parameter>
+                <parameter name="EndOffset" type="integer" optional="False">0 = сегодня, 1 = завтра</parameter>
+                <parameter name="Feed" type="string" optional="True">Какой календарь для получения события для</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_GgCal#GetRange</helplink>
+                <description>
+                    <default>Получает события календаря из диапазона дней.  Пример для получения событий из вчера, сегодня и завтра используйте StartOffset = -1 и EndOffset = 1
+&lt;Feed&gt; (название календаря) чувствителен к регистру.  Имя календаря можно увидеть в настройках плагина. Будет использоваться календарь по умолчанию, если он не указан. Календарь по умолчанию указан в настройках плагина Gcal.
+События будут возвращены как совпадения, к которым можно получить доступ с помощью {Match.1} {Match.2} и т.д.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetToday</name>
+            <commandString>GgCal.GetToday</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="Feed" type="string" optional="True">Какой календарь для получения события для</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_GgCal#GetToday</helplink>
+                <description>
+                    <default>Получает события за остаток дня (после текущего времени). События будут возвращены как совпадения, к которым можно получить доступ с помощью {Match.1} {Match.2} и т.д.
+&lt;Feed&gt; (название календаря) чувствителен к регистру.  Имя календаря можно увидеть в настройках плагина. Будет использоваться календарь по умолчанию, если он не указан. Календарь по умолчанию указан в настройках плагина Gcal.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>QuickAdd</name>
+            <commandString>GgCal.QuickAdd</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="QuickString" type="string" optional="False" />
+                <parameter name="Feed" type="string" optional="True">В каком календаре создавать события</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_GgCal#QuickAdd</helplink>
+                <description>
+                    <default>Отправляет &lt;QuickString&gt; в календарь &lt;Feed&gt;.  Что произойдет дальше, зависит от Google.  Пример строки, которая работает на английском языке:
+-Ужин с Джо завтра в 18:30 в Монреаль.
+-Навестить бабушку в пятницу
+Если &lt;Feed&gt; пропущено, он будет использовать календарь по умолчанию, как определено в настройках плагина Gcal.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetFeed</name>
+            <commandString>GgCal.SetFeed</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Feed" type="string" optional="False">новое имя ленты по умолчанию</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_GgCal#SetFeed</helplink>
+                <description>
+                    <default>Временно устанавливает новый календарь по умолчанию, но не сохраняет его в параметрах.  Этот календарь будет использоваться как календарь по умолчанию до перезапуска VoxCommando.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetTimers</name>
+            <commandString>GgCal.SetTimers</commandString>
+            <info>
+                <params>0+</params>
+                <parameter name="Feed" type="string" optional="True">Имя ленты календаря для сканирования</parameter>
+                <parameter name="Feed" type="string" optional="True">Имя ленты календаря для сканирования</parameter>
+                <parameter name="Feed" type="string" optional="True">Имя ленты календаря для сканирования</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_GgCal#SetTimers</helplink>
+                <description>
+                    <default>Сканирует ваш календарь для предстоящих запланированных элементов в течение следующих 7 дней и создает таймеры событий, которые будут запускать события VoxCommando в соответствующее время. Установите параметры сканирования &amp; генерации событий в настройках плагина Gcal.
+
+Название мероприятия примет форму, ggCal.Event.&lt;Имя календаря&gt;. Это можно использовать для запуска определенных команд. События будут нести полезные нагрузки, которые предоставляют информацию о записи календаря: {1} имя события календаря или заголовок
+{2} название ленты (название календаря), {3} Описание, {4} Дата начала события календаря-формат гггг-ММ-ДД, {5} Время начала события календаря-формат чч: мм (или строка "all-day", если это событие на весь день), {6} HTML-ссылка на событие календаря в Google Календаре, {7} статус события календаря - "подтверждено" (по умолчанию), "отменено", или "ориентировочное", {8} расположение календарного события
+{9} идентификатор события календаря, {10} дата события календаря "конец" - формат гггг-ММ-ДД, {11} Время события календаря "конец" - формат чч: мм (или строка "all-day", если это событие дня)
+
+Существующие таймеры событий будут очищены и заменены.
+</default>
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

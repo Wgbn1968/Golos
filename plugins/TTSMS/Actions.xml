@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+      <command>
+        <name>TTSMS</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#TTS</helplink>
+            <description>
+                <default>Text-to-Speech actions.</default>
+                <de>Text-to-Speech-Befehle.</de>
+            </description>
+        </info>
+        <command>
+            <name>SetLang</name>
+            <commandString>TTSMS.SetLang</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Language Code" type="string" optional="False">en, es, fr, de, pt etc.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#SetLang</helplink>
+                <description>
+                    <default>Used with VoxWav for Android.
+Instructs VoxWav to attempt to set the TTS engine to the language specified by the two character Language Code.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetOutput</name>
+            <commandString>TTSMS.SetOutput</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="DeviceName" type="string" optional="False">The name of the output device to use for TTS</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#SetOutput</helplink>
+                <description>
+                    <default>Sets the audio output device to be used for TTS (text to speech).
+It will select the first device found with a descriptions that contains &lt;DeviceName&gt;.
+If &lt;DeviceName&gt; is an integer it will select by the device number.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVoiceName</name>
+            <commandString>TTSMS.SetVoiceName</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="VoiceName" type="string" optional="False">&lt;voicename&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#SetVoiceName</helplink>
+                <description>
+                    <default>Set the TTS engine to use the voice with the name &lt;VoiceName&gt;.
+You can view the available names in VC options.  Voice name must match exactly.</default>
+                    <de>Gleich wie TTS.SetVoiceNum, nur das Sie hier den Namen der Stimme angeben &lt;voicename&gt; wie Sie in den VC-Optionen stehen, dieser Befehl bietet sich an wenn Sie Г¶fter Stimmen installieren, da hier keine Reihenfolge durch Nummer eingehalten werden muss.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVoiceNum</name>
+            <commandString>TTSMS.SetVoiceNum</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="VoiceNum" type="integer" optional="False">First voice is 0</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#SetVoiceNum</helplink>
+                <description>
+                    <default>Set the TTS engine to use the voice with the &lt;VoiceNum&gt;th voice.  The order of voices can be seen in VoxCommando options.
+The number and names of voices may change if you install or uninstall voices.
+The first voice in the list will have a number of: 0</default>
+                    <de>Stellt Sie die TTS-Ausgabe auf die Stimme mit der &lt;voicenumber&gt; um, die Nummer sind die Reihenfolge der Stimmen wie sie in VC angezeigt werden (angefangen wird mit 0). Die Anzahl und Namen der Stimmen kann sich Г¤ndern, wenn Sie Stimmen installieren oder deinstallieren.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVolume</name>
+            <commandString>TTSMS.SetVolume</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="TTS Volume" type="integer" optional="False">&lt;1-100&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#SetVolume</helplink>
+                <description>
+                    <default>Sets the output volume of the TTS voice.</default>
+                    <de>Legt die Ausgabe-LautstГ¤rke der TTS-Stimme fest</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Speak</name>
+            <commandString>TTSMS.Speak</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="TTS text" type="string" optional="False">&lt;stringoption1 | stringoption2 | etc.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#Speak</helplink>
+                <description>
+                    <default>Speaks the string aloud.  VC will choose randomly from multiple phrases separated by the symbol: | </default>
+                    <de>Spricht die Zeichenfolge laut.  VC wГ¤hlt zufГ¤llig aus mehreren SГ¤tzen, die durch das Symbol getrennt werden: |</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Speak2Wav</name>
+            <commandString>TTSMS.Speak2Wav</commandString>
+            <info>
+                <params>1-3</params>
+                <parameter name="TTS text" type="string" optional="False">What should the TTS engine say?</parameter>
+                <parameter name="Path" type="string" optional="True">Where to save the wav file</parameter>
+                <parameter name="PlayWav" type="boolean" optional="True">True = play the wav file after creating it</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#Speak2Wav</helplink>
+                <description>
+                    <default>Same as TTS.Speak, but instead of speaking aloud, the speech will be recorded to a wav file.
+
+If PlayWav is true the wav will be played immediately, otherwise the file will be created but not played by VoxCommando.</default>
+                    <de>Gleich wie TTS.Speak, nur die Sprache wird in eine Wav-Datei aufgezeichnet.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SpeakSync</name>
+            <commandString>TTSMS.SpeakSync</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="TTS text" type="string" optional="False">&lt;stringoption1 | stringoption2 | etc.&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#SpeakSync</helplink>
+                <description>
+                    <default>Same as TTS.Speak, but VC will wait until speaking is complete before continuing to the next action.</default>
+                    <de>Gleich wie TTS.Speak, aber VC wartet bis das Sprechen abgeschlossen ist, bevor es mit der nГ¤chsten Aktion fortfГ¤hrt.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Stop</name>
+            <commandString>TTSMS.Stop</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Actions#Stop</helplink>
+                <description>
+                    <default>Interrupts the TTS voice (if it is still speaking).  In other words it stops the TTS voice from speaking.  Text that has not been spoken yet is discarded.</default>
+                    <de>Unterbricht die TTS-Stimme (wenn noch gesprochen wird). Text, der bisher noch nicht gesprochen wurde, wird verworfen.</de>
+                </description>
+            </info>
+        </command>
+    </command>
+   
+</AvailableCommands>

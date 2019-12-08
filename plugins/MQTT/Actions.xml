@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>MQTT</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MQTT</helplink>
+            <description>
+                <default>Description of the plugin</default>
+            </description>
+        </info>
+        <command>
+            <name>Connect</name>
+            <commandString>MQTT.Connect</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MQTT#Connect</helplink>
+                <description>
+                    <default>Attempt to (re)connect to MQTT broker.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Publish</name>
+            <commandString>MQTT.Publish</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="Topic" type="string" optional="False">MQTT Topic to publish to</parameter>
+                <parameter name="Payload" type="string" optional="False">Message to send</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MQTT#Publish</helplink>
+                <description>
+                    <default>Publish &lt;Payload&gt; to &lt;Topic&gt; on MQTT server.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Subscribe</name>
+            <commandString>MQTT.Subscribe</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Topic" type="string" optional="False">Topic to subscribe to</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MQTT#Subscribe</helplink>
+                <description>
+                    <default>Subscribe to additional topics, beyond the one defined in the plugin options.
+
+Example &lt;Topic&gt;: 
+VoxCommando/#
+
+This will subscribe to all topics that start with VoxCommando/</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Happy</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MQTT#Happy</helplink>
+                <description>
+                    <default />
+                </description>
+            </info>
+            <command>
+                <name>GetBeaconInfo</name>
+                <commandString>MQTT.Happy.GetBeaconInfo</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Mac or Name" type="string" optional="False">Name of beacon</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MQTT#GetBeaconInfo</helplink>
+                    <description>
+                        <default />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetBeaconZone</name>
+                <commandString>MQTT.Happy.GetBeaconZone</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Mac or Name" type="string" optional="False">Name of beacon</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MQTT#GetBeaconZone</helplink>
+                    <description>
+                        <default />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetZoneOccupants</name>
+                <commandString>MQTT.Happy.GetZoneOccupants</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Zone" type="string" optional="False">Name of zone to query</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MQTT#GetZoneOccupants</helplink>
+                    <description>
+                        <default>Returns a list of beacon names as matches, one for each beacon currently in the zone named &lt;Zone&gt;.
+
+If the zone is empty, it returns 0 matches and an action error.</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+    </command>
+</AvailableCommands>

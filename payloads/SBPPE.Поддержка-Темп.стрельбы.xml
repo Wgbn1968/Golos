@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>0</value>
+        <phrase>Максимальный,Максимально,Максимум</phrase>
+    </payload>
+    <payload>
+        <value>1</value>
+        <phrase>один,еденица</phrase>
+    </payload>
+    <payload>
+        <value>2</value>
+        <phrase>два</phrase>
+    </payload>
+    <payload>
+        <value>3</value>
+        <phrase>три</phrase>
+    </payload>
+    <payload>
+        <value>4</value>
+        <phrase>четыре</phrase>
+    </payload>
+    <payload>
+        <value>5</value>
+        <phrase>пять</phrase>
+    </payload>
+    <payload>
+        <value>6</value>
+        <phrase>шесть</phrase>
+    </payload>
+</PayloadsRoot>

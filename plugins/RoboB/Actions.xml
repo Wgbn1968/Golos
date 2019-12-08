@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>RoboB</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB</helplink>
+            <description>
+                <default>RoboBrowser (RoboB для краткости) позволяет автоматизировать веб-браузер, содержащийся в окне VoxCommando.  Новый RoboBrowser создается с помощью действия "Select".
+
+Окно может быть скрыто.  Существует несколько способов управления браузером для загрузки, редактирования и взаимодействия с веб-страницами.  Вы можете "щелкнуть" по элементам на основе позиции, а иногда и по идентификатору и т. д.  Чтобы действительно использовать этот плагин для создания новых применений, это поможет, если вы немного знаете о html / css / javascript и т. д.
+
+Встроенный веб-браузер работает под управлением Internet Explorer.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Click</name>
+            <commandString>RoboB.Click</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Click</helplink>
+                <description>
+                    <default>Нажимает кнопку "Текущий элемент".</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Dispose</name>
+            <commandString>RoboB.Dispose</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Dispose</helplink>
+                <description>
+                    <default>Закрывает и уничтожает текущий RoboBrowser.
+После этой команды не будет текущего RoboBrowser, поэтому вы должны выбрать новый, прежде чем выполнять другие действия.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Hide</name>
+            <commandString>RoboB.Hide</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Hide</helplink>
+                <description>
+                    <default>Скрыть выбранный в данный момент RoboBrowser.
+Окно RoboBrowser все еще будет существовать и с ним можно взаимодействовать.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ElementByID</name>
+            <commandString>RoboB.ElementByID</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="ID" type="string" optional="False">Найдите элемент с этим идентификатором</parameter>
+                <parameter name="Childnum" type="integer" optional="True">Выберите N-й дочерний элемент найденного элемента</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#ElementByID</helplink>
+                <description>
+                    <default>Выполняет поиск элемента в HTML-документе с помощью его идентификатора.  Если совпадение найдено, то этот элемент будет установлен как "текущий элемент".
+Если &lt;Childnum&gt; указан, то "текущий элемент" будет установлен в дочерний с индексом &lt;Childnum&gt;.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ElementByXY</name>
+            <commandString>RoboB.ElementByXY</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="X" type="integer" optional="False" />
+                <parameter name="Y" type="integer" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#ElementByXY</helplink>
+                <description>
+                    <default>Выполняет поиск элемента в HTML-документе с помощью его координат X и Y.  Если совпадение найдено, то этот элемент будет установлен как "текущий элемент".
+
+Примечание: координаты X, Y можно найти, сначала показав окно с помощью RoboB.Show, а затем установите флажок "отслеживание" в верхней части окна RoboBrowser. При наведении курсора мыши на окно координаты x, y будут обновлены и отобразится другая информация об элементе под мышкой.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ElementByName</name>
+            <commandString>RoboB.ElementByName</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Name" type="string" optional="False">Тип тега для поиска (например, DIV)</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#ElementByName</helplink>
+                <description>
+                    <default>Находит первый элемент с именем &lt;Name&gt;
+Найденный элемент станет "текущим элементом".
+
+ПРЕДУПРЕЖДЕНИЕ:
+Это действие может быть немного медленным при поиске в больших документах.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ElementByTag</name>
+            <commandString>RoboB.ElementByTag</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="Tag" type="string" optional="False">Тип тега для поиска (например, DIV)</parameter>
+                <parameter name="Index" type="integer" optional="False">индекс на основе нуля</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#ElementByTag</helplink>
+                <description>
+                    <default>Сканирует все элементы с тегами, которые соответствуют &lt;Tag&gt; и выбирает &lt;Index&gt; вхождение.
+Найденный элемент станет "текущим элементом".
+Первое вхождение будет иметь индекс 0.
+
+Пример: Чтобы найти 3-й &lt;DIV&gt; в документе, установите:
+    &lt;Tag&gt; = div
+    &lt;Index&gt; = 2</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ElementParent</name>
+            <commandString>RoboB.ElementParent</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#ElementParent</helplink>
+                <description>
+                    <default>Устанавливает "текущий элемент" в родительский элемент "текущего элемента", если он существует.  Другими словами, "поднимитесь по дереву тегов html".
+Пример HTML:
+&lt;body&gt;
+  &lt;div id="wrapper"&gt;
+    &lt;div class="layout"&gt;BOO!&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+Если "Текущий элемент" является div с классом "layout",
+тогда его родителем будет div с идентификатором "wrapper".
+Выполнение этого действия дважды установит "Текущий элемент" в тело.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ElementRegex</name>
+            <commandString>RoboB.ElementRegex</commandString>
+            <info>
+                <params>2-5</params>
+                <parameter name="Tag" type="string" optional="False">тег HTML. Например: div</parameter>
+                <parameter name="Pattern" type="string" optional="False">RegEx шаблон для соответствия</parameter>
+                <parameter name="Drill" type="boolean" optional="True">True = поиск из текущего элемента вместо корневого документа</parameter>
+                <parameter name="IgnoreCase" type="boolean" optional="True">True = поиск без учета регистра</parameter>
+                <parameter name="SingleLine" type="boolean" optional="True">True = совпадение по линиям</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#ElementRegex</helplink>
+                <description>
+                    <default>Хитрое, но мощное действие. &lt;Tag&gt; - это любой html-тег.  Будет создана коллекция всех тегов этого типа, и каждый из них будет сканироваться для регулярного выражения &lt;Pattern&gt;.  Первым элементом, соответствующим шаблону, станет новый "Текущий элемент".
+
+Drill означает, что мы начинаем с ранее определенного "текущего элемента" (т. е. определенного в предыдущем действии) и ищем только теги, которые являются его потомками.  Если Drill имеет значение false, то весь HTML-документ будет искать теги.
+
+Примечание: все логические параметры являются необязательными и по умолчанию будут иметь значение FALSE.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Focus</name>
+            <commandString>RoboB.Focus</commandString>
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Focus</helplink>
+                <description>
+                    <default>Позволяет сфокусироваться на "текущем элементе".
+Например, это может быть использовано для установки курсора в текстовое поле на веб-странице.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Fullscreen</name>
+            <commandString>RoboB.Fullscreen</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="FullScreen" type="boolean" optional="False">True=Полный экран False=Нормальный</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Fullscreen</helplink>
+                <description>
+                    <default>Включает или отключает полноэкранный режим RoboBrowser </default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetHTML</name>
+            <commandString>RoboB.GetHTML</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#GetHTML</helplink>
+                <description>
+                    <default>Возвращает весь текст HTML для "текущего элемента".</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetRoboList</name>
+            <commandString>RoboB.GetRoboList</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="AsMatches" type="boolean" optional="True">По умолчанию: False</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#GetRoboList</helplink>
+                <description>
+                    <default>Возвращает список всех активных имен RoboBrowser с одним именем на строку.
+
+Если &lt;AsMatches&gt; равно true, то имена будут возвращены как [[matches]] а не {LastResult}.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetText</name>
+            <commandString>RoboB.GetText</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#GetText</helplink>
+                <description>
+                    <default>Возвращает весь текст (не HTML) для "текущего элемента".</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetURL</name>
+            <commandString>RoboB.GetURL</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#GetURL</helplink>
+                <description>
+                    <default>Возвращает текущий URL для текущего выбранного окна RoboBrowser.
+Чтобы получить текущий URL для другого RoboBrowser, сначала используйте действие RoboB.Select.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Navigate</name>
+            <commandString>RoboB.Navigate</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="URL" type="string" optional="False">веб-адрес для открытия в браузере</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Navigate</helplink>
+                <description>
+                    <default>Загружает веб-страницу в текущий RoboBrowser, используя указанный URL-адрес.
+Это действие не будет ждать загрузки страницы, прежде чем позволить VoxCommando перейти к следующему действию. Разместите RoboB.Wait после этого действия и макрос будет приостановлен до загрузки страницы. Это зависает, но самое главное-золото, пока он ждет загрузки страницы. В качестве альтернативы используйте событие, как описано ниже.
+
+Когда страница будет загружена, появится событие с форматом RoboB.DocComplete.Name будет сгенерировано (где &lt;Name&gt; - это имя RoboBrowser, которое было определено при его создании с помощью RoboB.Select).</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Select/New</name>
+            <commandString>RoboB.Select</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Name" type="string" optional="False">Имя RoboBrowser для выбора</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Select/New</helplink>
+                <description>
+                    <default>Выбирает RoboBrowser по имени, если он существует, в противном случае он создает новый.
+Новый RoboBrowser будет скрыт.  (см. RoboB.Show)</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetHTML</name>
+            <commandString>RoboB.SetHTML</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="HTML" type="string" optional="False">новый внешний HTML для применения к элементу</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#SetHTML</helplink>
+                <description>
+                    <default>Устанавливает OuterHTML "текущего элемента" в указанный текст. OuterHTML включает в себя открывающие и закрывающие теги элемента вместе со всеми HTML, содержащимися в них (включая дочерние теги).
+
+Вы можете использовать это, чтобы поместить текст в текстовое поле, например.
+
+Это означает, что мы меняем содержание веб-страницы!  Это мощно, но может привести к неправильному поведению страницы.
+
+Например, это можно использовать для удаления рекламы со страницы или изменения текста, отображаемого на странице.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetText</name>
+            <commandString>RoboB.SetText</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Text" type="string" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#SetText</helplink>
+                <description>
+                    <default>Задает текст внутри "текущий элемент".  Это может быть использовано, например, для задания текста поля ввода.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetWinSize</name>
+            <commandString>RoboB.SetWinSize</commandString>
+            <info>
+                <params>2-4</params>
+                <parameter name="Width" type="integer" optional="False">Установите ширину окна браузера</parameter>
+                <parameter name="Height" type="integer" optional="False">Установите высоту окна браузера</parameter>
+                <parameter name="Left" type="integer" optional="True">Расположите левый край окна браузера</parameter>
+                <parameter name="Top" type="integer" optional="True">Расположите верхний край окна браузера</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#SetWinSize</helplink>
+                <description>
+                    <default>Устанавливает размеры текущего окна RoboBrowser.
+
+Занимает 2 или 4 параметров.
+
+Окно RoboBrowser уже должно быть видно, чтобы это действие работало, и если фрейм окна будет скрыт, это должно быть сделано до позиционирования окна.
+
+Обратите внимание, что изменение размера окна может повлиять на координаты X и Y элементов на веб-странице.  Имейте это в виду при использовании RoboB.ElementByXY.
+
+</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ScrollRelative</name>
+            <commandString>RoboB.ScrollRelative</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="RelativeX" type="integer" optional="False">прокрутка вправо по (пикселям)</parameter>
+                <parameter name="RelativeY" type="integer" optional="False">прокрутка вниз по (пикселям)</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#ScrollRelative</helplink>
+                <description>
+                    <default>Прокрутите страницу документа &lt;relativeX&gt;,&lt;relativeY&gt; пикселей, относительно текущего положения прокрутки документа.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ScrollTo</name>
+            <commandString>RoboB.ScrollTo</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="X" type="integer" optional="False">Установить левое положение (пиксели)</parameter>
+                <parameter name="Y" type="integer" optional="False">Установить верхнее положение (пиксели)</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#ScrollTo</helplink>
+                <description>
+                    <default>Прокрутка документа вебстраницы в позицию &lt;X&gt;,&lt;Y&gt; измеряется в пикселях.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Show</name>
+            <commandString>RoboB.Show</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="HideTools" type="boolean" optional="True">По умолчанию=False</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Show</helplink>
+                <description>
+                    <default>Показывает выбранный в данный момент RoboBrowser.
+Активирует окно RoboBrowser и пытается вывести его "поверх".
+Примечание: новые RoboB браузеры скрыты по умолчанию при создании.
+Дополнительный параметр &lt;HideTools&gt; имеет значение true, чтобы скрыть панель в верхней части окна.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ShowFrame</name>
+            <commandString>RoboB.ShowFrame</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="ShowFrame" type="boolean" optional="False">True=показывает / False=скрывает</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#ShowFrame</helplink>
+                <description>
+                    <default>Отображение или скрытие фрейма окна RoboBrowser.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Submit</name>
+            <commandString>RoboB.Submit</commandString>
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Submit</helplink>
+                <description>
+                    <default>Отправляет "текущий элемент".  Это похоже на нажатие кнопки отправить в форме.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Wait</name>
+            <commandString>RoboB.Wait</commandString>
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_RoboB#Wait</helplink>
+                <description>
+                    <default>Приостанавливает выполнение макроса до тех пор, пока текущий RoboBrowser не завершит загрузку веб-страницы.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

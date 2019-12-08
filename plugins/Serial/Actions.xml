@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Serial</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Serial</helplink>
+            <description>
+                <default>Общайтесь с устройствами, совместимыми с Serial/COM портом, такими как Arduino.
+
+Когда вы открываете последовательный порт, плагин генерирует "Serial.Received" событие с именем порта в полезной нагрузке {1} и сообщением в полезной нагрузке {2} каждый раз, когда устройство отправляет сообщение на порт.
+Это событие можно отключить в окне параметров плагина.</default>
+            </description>
+        </info>
+        <command>
+            <name>Open</name>
+            <commandString>Serial.Open</commandString>
+            <info>
+                <params>1-3</params>
+                <parameter name="Port name RegEx pattern." type="string" optional="False" />
+                <parameter name="Baud rate to connect at." type="integer" optional="True">По умолчанию: 9600</parameter>
+                <parameter name="DTR - Restart microcontroller after connection." type="boolean" optional="True">По умолчанию: False</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Serial#Open</helplink>
+                <description>
+                    <default>Открывает и выбирает первый порт с именем, соответствующим &lt;Port name RegEx pattern&gt;.
+Если вы хотите выбрать один из списка открытых портов, вы можете опустить параметры, начиная с 2.
+После открытия порта вы можете обрабатывать входящие сообщения с событием "Serial.Received".
+Действия "Close", "Write" и "Micro.Upload будет работать с портом, выбранным этим действием.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Close</name>
+            <commandString>Serial.Close</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Serial#Close</helplink>
+                <description>
+                    <default>Закрывает текущий выбранный порт.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Write</name>
+            <commandString>Serial.Write</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Message to send on selected port." type="string" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Serial#Write</helplink>
+                <description>
+                    <default>Отправляет сообщение на выбранный порт.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetPorts</name>
+            <commandString>Serial.GetPorts</commandString>
+            <info>
+                <params>0-2</params>
+                <parameter name="Verbose" type="boolean" optional="True">Возвращает больше описательных имен портов. По умолчанию false.</parameter>
+                <parameter name="Open" type="boolean" optional="True">Возвращает только открытые порты. По умолчанию false.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Serial#GetPorts</helplink>
+                <description>
+                    <default>Возвращает список доступных последовательных портов.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Micro</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Serial#Micro</helplink>
+                <description>
+                    <default>Действия отправки команд микроконтроллеров, таких как Arduino и его аналоги.</default>
+                </description>
+            </info>
+            <command>
+                <name>Upload</name>
+                <commandString>Serial.Micro.Upload</commandString>
+                <info>
+                    <params>2</params>
+                    <parameter name="Model" type="string" optional="False">UnoR3 | NanoR3 | Micro | Mega1284 | Mega2560</parameter>
+                    <parameter name="Sketch Path" type="string" optional="False">Путь к скетчу в .HEX формате (не должен содержать "with_bootloader")</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Serial#Upload</helplink>
+                    <description>
+                        <default>[Asynchronous action]
+Загружает скетч в "hex" формате для платы Arduino на выбранном порту.
+Для этого действия необходимо иметь Arduino IDE.
+
+
+Поддерживаемые модели (без учета регистра):
+   UnoR3, NanoR3, Micro, Mega1284, Mega2560.
+
+
+Как сделать .hex файл из .ino или .pde скетча?
+
+   - В меню Arduino IDE выберите "Sketch" -&gt; "Export Compiled Binary" или введите Ctrl+Alt+S;
+
+   - Затем перейдите к Sketch -&gt; Show Sketch Folder.
+   2 .hex файла появится в вашей папке с скетчами.
+  
+
+Важно: чтобы загрузить скетч на Arduino, выберите .hex файл, имя которого не содержит "with_bootloader".</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+    </command>
+</AvailableCommands>

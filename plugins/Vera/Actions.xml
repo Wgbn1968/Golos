@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Vera</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera</helplink>
+            <description>
+                <default>Home automation for the VeraLite and Vera3 devices provided by http://getvera.com/</default>
+            </description>
+        </info>
+        <command>
+            <name>Dim</name>
+            <commandString>Vera.Dim</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="DeviceId" type="integer" optional="False">Device ID Assigned by Vera</parameter>
+                <parameter name="Level" type="integer" optional="False">Brightness level: 0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Dim</helplink>
+                <description>
+                    <default>Set the dim level of a dimmable device.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXML</name>
+            <commandString>Vera.GenXML</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Path" type="string" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#GenXML</helplink>
+                <description>
+                    <default>Generate payload xml for your vera devices and scenes.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Get</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Get</helplink>
+                <description>
+                    <default>Query a device for information about its current state. See available subcommands for details.
+
+Note that in order to work efficiently with Vera device ID numbers, you will likely want to use either payload XMLs or "maps" (to associate ID numbers with some kind of "friendly name" for your devices). These can be generated in the Vera plugin settings.
+
+</default>
+                </description>
+            </info>
+            <command>
+                <name>Armed</name>
+                <commandString>Vera.Get.Armed</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Armed</helplink>
+                    <description>
+                        <default>Queries a device to find out if it is armed or not. Returns 1 if armed, 0 if not armed.
+
+Works with devices that support the service ID: urn:micasaverde-com:serviceId:SecuritySensor1</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>BatteryLevel</name>
+                <commandString>Vera.Get.BatteryLevel</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#BatteryLevel</helplink>
+                    <description>
+                        <default>For a given device ID, queries a device to determine the percentage of battery charge remaining. Returns a number from 0 to 100.
+
+Works with devices that support the service ID: urn:micasaverde-com:serviceId:HaDevice1</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Dim</name>
+                <commandString>Vera.Get.Dim</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Dim</helplink>
+                    <description>
+                        <default>Queries a device (e.g, a light) to get its brightness level. Returns a value from 0 to 100. If device is off, the brightness will be 0. 
+
+Works with devices that support the service ID: urn:upnp-org:serviceId:Dimming1</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>HouseMode</name>
+                <commandString>Vera.Get.HouseMode</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#HouseMode</helplink>
+                    <description>
+                        <default>** Works with UI7 Only
+
+Returns the current house mode of the Vera unit.
+1: Home
+2: Away
+3: Night
+4: Vacation</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Humidity</name>
+                <commandString>Vera.Get.Humidity</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Humidity</helplink>
+                    <description>
+                        <default>Queries a device and returns the last humidity level reported by that sensor (a value from 0 to 100).
+
+Works with devices that support the service ID: urn:micasaverde-com:serviceId:HumiditySensor1</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>HVAC_FanOpMode</name>
+                <commandString>Vera.Get.HVAC_FanOpMode</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#HVAC_FanOpMode</helplink>
+                    <description>
+                        <default>Queries an HVAC device to find the status of the fan operating mode.
+(Auto, ContinuousOn, PeriodicOn)
+Works with devices that support the service ID:  urn:upnp-org:serviceId:HVAC_FanOperatingMode1</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>HVAC_StPtCool</name>
+                <commandString>Vera.Get.HVAC_StPtCool</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#HVAC_StPtCool</helplink>
+                    <description>
+                        <default>Queries an HVAC device to find the temperature setpoint for cooling.
+
+Works with devices that support the service ID:  urn:upnp-org:serviceId:TemperatureSetpoint1_Cool</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>HVAC_StPtHeat</name>
+                <commandString>Vera.Get.HVAC_StPtHeat</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#HVAC_StPtHeat</helplink>
+                    <description>
+                        <default>Queries an HVAC device to find the temperature setpoint for heating.
+
+Works with devices that support the service ID:  urn:upnp-org:serviceId:TemperatureSetpoint1_Heat</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>HVAC_UserOpMode</name>
+                <commandString>Vera.Get.HVAC_UserOpMode</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#HVAC_UserOpMode</helplink>
+                    <description>
+                        <default>Queries an HVAC device to find the mode status of the user operating mode.
+(Off, HeatOn, CoolOn, AutoChangeOver)
+ Works with devices that support the service ID:  urn:upnp-org:serviceId:HVAC_UserOperatingMode1</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>LightLevel</name>
+                <commandString>Vera.Get.LightLevel</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#LightLevel</helplink>
+                    <description>
+                        <default>Queries sensor device and returns perceived brightness of environment. 
+
+Some devices return a value from 0 to 100, but not all devices use the same range. Check your device manual.
+
+Works with devices that support the service ID: urn:micasaverde-com:serviceId:LightSensor1</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>LockStatus</name>
+                <commandString>Vera.Get.LockStatus</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="" optional="False">ID of lock, assinged by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#LockStatus</helplink>
+                    <description>
+                        <default>Queries a device to find out if it is locked or unlocked.
+Returns 1 if device is locked, 0 if  deviced is unlocked.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>LuVar</name>
+                <commandString>Vera.Get.LuVar</commandString>
+                <info>
+                    <params>3</params>
+                    <parameter name="DeviceID" type="integer" optional="False">e.g. 3</parameter>
+                    <parameter name="VarName" type="string" optional="False">e.g. Status</parameter>
+                    <parameter name="ServiceID" type="string" optional="False">e.g. urn:upnp-org:serviceId:SwitchPower1</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#LuVar</helplink>
+                    <description>
+                        <default>Requests the current value of any variable of a Vera device if you know the &lt;DeviceID&gt; &lt;VarName&gt; and &lt;ServiceID&gt;.  
+Device IDs can be found in the Vera UI or by inspecting the map table generated by the plugin.
+Service IDs and Variables names can be found in the Vera UI or by clicking "Edit Known Variables" on the plugin settings window.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>MultiSwitch</name>
+                <commandString>Vera.Get.MultiSwitch</commandString>
+                <info>
+                    <params>2</params>
+                    <parameter name="DeviceId" type="integer" optional="False" />
+                    <parameter name="SwitchNum" type="integer" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#MultiSwitch</helplink>
+                    <description>
+                        <default />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Status</name>
+                <commandString>Vera.Get.Status</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Status</helplink>
+                    <description>
+                        <default>Queries a device to find out if it is on or off. May also work with window coverings.
+Lights return 1 for "on" and 0 for "off"
+Window coverings return 1 if "closed" , 0 if "open" (untested)
+
+Works with devices that support the service ID: urn:upnp-org:serviceId:SwitchPower1</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Temperature</name>
+                <commandString>Vera.Get.Temperature</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Temperature</helplink>
+                    <description>
+                        <default>Queries a device and returns the last temperature level reported by that sensor.
+
+Value returned will depend on the device and how you have configured it. Check your device manual.
+
+Works with devices that support the service ID: urn:upnp-org:serviceId:TemperatureSensor1
+</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Tripped</name>
+                <commandString>Vera.Get.Tripped</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Tripped</helplink>
+                    <description>
+                        <default>Queries a sensor device to find out if it has been tripped. Returns 1 if true, 0 if false.
+
+Works with devices that support the service ID: urn:micasaverde-com:serviceId:SecuritySensor1</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>HVAC</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#HVAC</helplink>
+                <description>
+                    <default>Set HVAC modes and variables such as fan mode and temperature setpoint.</default>
+                </description>
+            </info>
+            <command>
+                <name>SetFanOpMode</name>
+                <commandString>Vera.HVAC.SetFanOpMode</commandString>
+                <info>
+                    <params>2</params>
+                    <parameter name="DeviceID" type="integer" optional="False">Device ID Assigned by Vera</parameter>
+                    <parameter name="Mode" type="string" optional="False">Auto, ContinuousOn, PeriodicOn</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#SetFanOpMode</helplink>
+                    <description>
+                        <default>Sets the fan operating mode of an HVAC device.  &lt;Mode&gt; must be one of:
+Auto
+ContinuousOn
+PeriodicOn
+
+*Note: &lt;Mode&gt; is case sensitive.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetUserOpMode</name>
+                <commandString>Vera.HVAC.SetUserOpMode</commandString>
+                <info>
+                    <params>2</params>
+                    <parameter name="DeviceID" type="integer" optional="False">Device ID Assigned by Vera</parameter>
+                    <parameter name="Mode" type="string" optional="False">Off, HeatOn, CoolOn, AutoChangeOver</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#SetUserOpMode</helplink>
+                    <description>
+                        <default>Sets the user operating mode of an HVAC device.  &lt;Mode&gt; must be one of:
+Off
+HeatOn
+CoolOn
+AutoChangeOver
+
+*Note: &lt;Mode&gt; is case sensitive.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetPtHeat</name>
+                <commandString>Vera.HVAC.SetPtHeat</commandString>
+                <info>
+                    <params>2</params>
+                    <parameter name="DeviceID" type="integer" optional="False">Device ID Assigned by Vera</parameter>
+                    <parameter name="Temperature" type="integer" optional="False">New setpoint temperature to set</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#SetPtHeat</helplink>
+                    <description>
+                        <default>Sets the heating setpoint of an HVAC device.
+
+*Note: &lt;Mode&gt; is case sensitive.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetPtCool</name>
+                <commandString>Vera.HVAC.SetPtCool</commandString>
+                <info>
+                    <params>2</params>
+                    <parameter name="DeviceID" type="integer" optional="False">Device ID Assigned by Vera</parameter>
+                    <parameter name="Temperature" type="integer" optional="False">New setpoint temperature to set</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#SetPtCool</helplink>
+                    <description>
+                        <default>Sets the cooling setpoint of an HVAC device.</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>ListDevices</name>
+            <commandString>Vera.ListDevices</commandString>
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#ListDevices</helplink>
+                <description>
+                    <default>Returns list of Vera rooms, devices, and scenes by ID number. 
+
+This action is for reference/discovery purposes.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>PTZ</name>
+            <commandString>Vera.PTZ</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="DeviceID" type="integer" optional="False">Device ID Assigned by Vera</parameter>
+                <parameter name="Action" type="string" optional="False">Moveup,MoveLeft etc.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#PTZ</helplink>
+                <description>
+                    <default>Actions for Pan Tilt Zoom Camera control.
+&lt;Action&gt; can be one of:
+MoveLeft, MoveRight, MoveUp, MoveDown, ZoomIn, ZoomOut</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Raw</name>
+            <commandString>Vera.Raw</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Command" type="string" optional="False">eg: data_request?id=variableget&amp;...</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Raw</helplink>
+                <description>
+                    <default>Lets you send any HTTP Luup request to the Vera unit. Use this action if you need to extend functionality beyond what is already provided in VoxCommando's Vera plugin. 
+
+Note that you only need to include the string that appears after the last slash (/) of the URL.
+
+e.g.  data_request?id=variableget&amp;...
+
+For more complete syntax reference see: http://wiki.micasaverde.com/index.php/Luup_Requests</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Scene</name>
+            <commandString>Vera.Scene</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="SceneID" type="string" optional="False">ID of scene, assigned by Vera</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Scene</helplink>
+                <description>
+                    <default>Trigger a scene by specifying its ID.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SelectVera</name>
+            <commandString>Vera.SelectVera</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="VeraNum" type="integer" optional="False">1 or 2</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#SelectVera</helplink>
+                <description>
+                    <default>Select one of the two Vera devices defined in the plugin settings.  All subsequent Vera actions will target this device.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Set</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Set</helplink>
+                <description>
+                    <default>Set variables for a device. See available subcommands for details.
+
+Note that in order to work efficiently with Vera device ID numbers, you will likely want to use either payload XMLs or "maps" (to associate ID numbers with some kind of "friendly name" for your devices). These can be generated in the Vera plugin settings.</default>
+                </description>
+            </info>
+            <command>
+                <name>LuVar</name>
+                <commandString>Vera.Set.LuVar</commandString>
+                <info>
+                    <params>4</params>
+                    <parameter name="DeviceID" type="integer" optional="False">e.g. 3</parameter>
+                    <parameter name="VarName" type="string" optional="False">e.g. Status</parameter>
+                    <parameter name="ServiceID" type="string" optional="False">e.g. urn:upnp-org:serviceId:SwitchPower1</parameter>
+                    <parameter name="NewValue" type="string" optional="False">e.g. 0</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#LuVar</helplink>
+                    <description>
+                        <default>Sets the current value of any variable of a Vera device to &lt;NewValue&gt; if you know the &lt;DeviceID&gt; &lt;VarName&gt; and &lt;ServiceID&gt;.  
+Device IDs can be found in the Vera UI or by inspecting the map table generated by the Vera plugin.
+Service IDs and variable names can be found in the Vera UI or by clicking "Edit Known Variables" on the Vera plugin settings window.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>MultiSwitch</name>
+                <commandString>Vera.Set.MultiSwitch</commandString>
+                <info>
+                    <params>3</params>
+                    <parameter name="DeviceID" type="integer" optional="False">ID number of the MultiSwitch device</parameter>
+                    <parameter name="SwitchNum" type="integer" optional="False">0 to 8</parameter>
+                    <parameter name="State" type="integer" optional="False">0=Off, 1=On, -1=Toggle</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#MultiSwitch</helplink>
+                    <description>
+                        <default>Sets the current value of a MultiSwitch switch.
+&lt;Device ID&gt; can be found in the Vera UI or by inspecting the map table generated by the Vera plugin.
+&lt;State&gt; values of 0,1, or -1 respectively will turn the switch On, Off, or Toggle it.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>HouseMode</name>
+                <commandString>Vera.Set.HouseMode</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Mode" type="integer" optional="False">(1 to 4)</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#HouseMode</helplink>
+                    <description>
+                        <default>** Works with UI7 Only
+
+Sets the current house mode of the Vera unit to &lt;Mode&gt;.
+1: Home
+2: Away
+3: Night
+4: Vacation</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>SetLockState</name>
+            <commandString>Vera.SetLockState</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                <parameter name="Lock State" type="integer" optional="False">0: Unlocked, 1: Locked</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#SetLockState</helplink>
+                <description>
+                    <default>Lock or unlock a door lock device.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetState</name>
+            <commandString>Vera.SetState</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                <parameter name="State" type="integer" optional="False">0: Off, 1: On</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#SetState</helplink>
+                <description>
+                    <default>Turn a device on or off.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Toggle</name>
+            <commandString>Vera.Toggle</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#Toggle</helplink>
+                <description>
+                    <default>Toggles the device state between "on" and "off".</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>WinCovAction</name>
+            <commandString>Vera.WinCovAction</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="DeviceID" type="integer" optional="False">ID Assigned by Vera</parameter>
+                <parameter name="Action" type="string" optional="False">Up, Down, or Stop</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Vera#WinCovAction</helplink>
+                <description>
+                    <default>Actions for window coverings.
+&lt;Action&gt; can be one of:
+Up, Down, Stop</default>
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

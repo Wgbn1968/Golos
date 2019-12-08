@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>HitServer</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer</helplink>
+            <description>
+                <default>Commands to communicate with the HOME in touch HitServer
+http://www.homeintouch.com</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>hitserver_startmacro</name>
+            <commandString>HitServer.hitserver_startmacro</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Macro" type="string" optional="False">Name of the macro</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitserver_startmacro</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>hitbot_start</name>
+            <commandString>HitServer.hitbot_start</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="HitBot" type="string" optional="False">name of the HitBot</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitbot_start</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>hitbot_stop</name>
+            <commandString>HitServer.hitbot_stop</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="HitBot" type="string" optional="False">name of the HitBot</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitbot_stop</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>hitbot_listen</name>
+            <commandString>HitServer.hitbot_listen</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="HitBot" type="string" optional="False">name of the HitBot</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitbot_listen</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>hitbot_send</name>
+            <commandString>HitServer.hitbot_send</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="HitBot" type="string" optional="False">name of the HitBot</parameter>
+                <parameter name="Command" type="string" optional="False">Command</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitbot_send</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>hitshell_start</name>
+            <commandString>HitServer.hitshell_start</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Shell" type="string" optional="False">name of the Shell</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitshell_start</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>hitshell_stop</name>
+            <commandString>HitServer.hitshell_stop</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Shell" type="string" optional="False">name of the Shell</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitshell_stop</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>hitshell_listen</name>
+            <commandString>HitServer.hitshell_listen</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Shell" type="string" optional="False">name of the Shell</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitshell_listen</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>hitshell_execute</name>
+            <commandString>HitServer.hitshell_execute</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="Shell" type="string" optional="False">name of the Shell</parameter>
+                <parameter name="Command" type="string" optional="False">Command</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitshell_execute</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>hitshell_write</name>
+            <commandString>HitServer.hitshell_write</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="Shell" type="string" optional="False">name of the Shell</parameter>
+                <parameter name="Command" type="string" optional="False">Command</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#hitshell_write</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Send</name>
+            <commandString>HitServer.Send</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Message" type="string" optional="False">Text string to send to HitServer</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_HitServer#Send</helplink>
+                <description>
+                    <default>Sends a string to the HitServer via UDP message.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

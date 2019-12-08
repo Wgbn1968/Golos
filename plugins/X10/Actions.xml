@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>X10</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_X10</helplink>
+            <description>
+                <default>Sends commands to [[X10]] Home Automation devices.
+Can also generate events based on X10 events.
+Tested with CM15A USB transceiver.  Other transceivers may also work.
+
+Requires installation of the ActiveHome Pro SDK:
+http://voxcommando.com/files/ahsdk_install.exe</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>SendAny</name>
+            <commandString>X10.SendAny</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="Type" type="string" optional="False">Type of command to send, example: SendPlc</parameter>
+                <parameter name="Command" type="string" optional="False">Command string. See description for examples</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_X10#SendAny</helplink>
+                <description>
+                    <default>The X10.SendAny action allows you to specify any &lt;Type&gt; of &lt;Command&gt; to send in case you wish to use a command other than SendPlc, SendRf, or QueryPlc.  Some other command types that *might* work (with the correct command) are: SendSecureRf, SendSecureHomeControlRf, SendIr
+
+Example:
+&lt;Type&gt;                SendSecureRf
+&lt;Command&gt;     homearmdelayed standard 100</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SendPlc</name>
+            <commandString>X10.SendPlc</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Command" type="string" optional="False">Command string. See description for examples</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_X10#SendPlc</helplink>
+                <description>
+                    <default>Sends the PLC (Power line command)  &lt;Command&gt; to the X10 interface.
+
+Example command strings:
+
+A1 ON
+B3 DIM 20
+A5 BRIGHT 40
+C1 ALLUNITSOFF</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SendRf</name>
+            <commandString>X10.SendRf</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Command" type="string" optional="False">Command string. See description for examples</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_X10#SendRf</helplink>
+                <description>
+                    <default>Sends the RF (Radio Frequency) &lt;Command&gt; to the X10 interface.
+
+Example command strings:
+
+A1 ON
+B3 DIM 20
+A5 BRIGHT 40
+C1 ALLUNITSOFF</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>QueryPlc</name>
+            <commandString>X10.QueryPlc</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Command" type="string" optional="False">Query command string</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_X10#QueryPlc</helplink>
+                <description>
+                    <default>Ask the X10 service the status of any address. There are two kinds of status to check:
+- On status: &lt;X10 address&gt; on
+- Dim level: &lt;X10 address&gt; dim
+Specifying the "on" parameter returns 0 if off, 1 if on. Dim returns the dim level as a percentage of full brightness.. Both functions return -1 if the current status is not known.
+
+Example to check if A1 is on [0] or off [1]:
+A1 ON</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--Options for VoxCommando / DxInput plugin.-->
+<Options>
+    <Option name="keyPressDelay" value="50" />
+    <Option name="keyComboDelay" value="5" />
+</Options>

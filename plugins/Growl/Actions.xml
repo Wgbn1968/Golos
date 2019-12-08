@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Growl</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Growl</helplink>
+            <description>
+                <default>Send notification messages to Growl for Windows.
+http://www.growlforwindows.com/gfw/</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Send</name>
+            <commandString>Growl.Send</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="Heading" type="string" optional="False">The heading or title of the Growl message</parameter>
+                <parameter name="Message" type="string" optional="False">The body of the Growl message</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Growl#Send</helplink>
+                <description>
+                    <default>Send a notification message to Growl</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

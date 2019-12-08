@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>1</value>
+        <phrase>Срочное подавление</phrase>
+    </payload>
+    <payload>
+        <value>2</value>
+        <phrase>Пристрелка</phrase>
+    </payload>
+    <payload>
+        <value>3</value>
+        <phrase>На поражение</phrase>
+    </payload>
+</PayloadsRoot>

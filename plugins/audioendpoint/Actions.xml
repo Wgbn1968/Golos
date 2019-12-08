@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>AudioEndpoint</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_AudioEndpoint</helplink>
+            <description>
+                <default>Действия для вывода списка и выбора устройства вывода звука по умолчанию, используемого ОС Windows.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>SetByName</name>
+            <commandString>AudioEndpoint.SetByName</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="DeviceName" type="string" optional="False">Name of the audio device</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_AudioEndpoint#SetByName</helplink>
+                <description>
+                    <default>Устанавливает устройство вывода звука по умолчанию на первое найденное, имя которого содержит параметр &lt;DeviceName&gt;</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetByNum</name>
+            <commandString>AudioEndpoint.SetByNum</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Device #" type="integer" optional="False">Номер аудиоустройства : начинается с 0</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_AudioEndpoint#SetByNum</helplink>
+                <description>
+                    <default>Установливает аудиоустройство по его ID#.  Первое устройство будет иметь идентификатор 0</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Cycle</name>
+            <commandString>AudioEndpoint.Cycle</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_AudioEndpoint#Cycle</helplink>
+                <description>
+                    <default>Изменяет устройства вывода звука по умолчанию путем циклического перебора всех доступных устройств.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetList</name>
+            <commandString>AudioEndpoint.GetList</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="Delimiter" type="string" optional="True">Имена устройств будут "соединены" с помощью этого разделителя</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_AudioEndpoint#GetList</helplink>
+                <description>
+                    <default>Возвращает строку со списком всех доступных устройств вывода звука в системе. Имена будут разделены &lt;Delimiter&gt;.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetMatches</name>
+            <commandString>AudioEndpoint.GetMatches</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_AudioEndpoint#GetMatches</helplink>
+                <description>
+                    <default>То же, что и GetList, но каждое устройство возвращается как отдельный [[Match]]</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--options for VoxCommando / <plugin name goes here>.-->
+<Options>
+    <Option name="currentFile" value="E:\GolosNew\PY\SBPPE.CheckPosition.py" />
+    <MruFiles>
+        <File>E:\GolosNew\PY\SBPPE.CheckPosition.py</File>
+    </MruFiles>
+</Options>

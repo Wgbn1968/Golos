@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>WUnder</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_WUnder</helplink>
+            <description>
+                <default>Gets weather from the Weather Underground.  Powerful formatting options are available.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Change</name>
+            <commandString>WUnder.Change</commandString>
+            <info>
+                <params>3</params>
+                <parameter name="Location" type="string" optional="False">Location to retrieve weather for.</parameter>
+                <parameter name="Language" type="string" optional="False">See plugin settings for codes.</parameter>
+                <parameter name="Scale" type="string" optional="False">C or F to indicate Celsius or Fahrenheit.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_WUnder#Change</helplink>
+                <description>
+                    <default>Call this action when you need to change the location, language, or system (C or F) to something other than the default values.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetCurrent</name>
+            <commandString>WUnder.GetCurrent</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_WUnder#GetCurrent</helplink>
+                <description>
+                    <default>Gets current weather. </default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetForecast</name>
+            <commandString>WUnder.GetForecast</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Format" type="integer" optional="False">0-3 What format string to use</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_WUnder#GetForecast</helplink>
+                <description>
+                    <default>&lt;Format&gt; determines which format string to use as set in the plugin settings.
+
+If you want more control you can use Wunder.GetCustom and specify the format directly.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetCustom</name>
+            <commandString>WUnder.GetCustom</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Format" type="" optional="False">The format of the text response</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_WUnder#GetCustom</helplink>
+                <description>
+                    <default>e.g.  Current conditions: {D0.conditions} and {c.temp} degrees.
+See plugin settings for more examples.
+</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

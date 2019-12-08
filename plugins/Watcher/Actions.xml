@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Watcher</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Watcher</helplink>
+            <description>
+                <default>Отслеживает папку для создания новых файлов, которые могут либо генерировать события, либо считываться и обрабатываться как действия в соответствии с VOXCOMMANDO API. См. страницу настроек плагина для деталей.
+
+Для плагина Watcher нет никаких действий (пока).</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Delete</name>
+            <commandString>Watcher.Delete</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="&lt;Name&gt;" type="string" optional="False">Имя наблюдателя для удаления.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Watcher#Delete</helplink>
+                <description>
+                    <default>Останавливает и удаляет наблюдателя с &lt;Name&gt;.
+
+Не будет удалять наблюдателя из параметров, если вы не сохраните параметры в настройках плагина наблюдателя, поэтому, если наблюдатель изначально был в настройках, он вернется при следующей инициализации VoxCommando.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

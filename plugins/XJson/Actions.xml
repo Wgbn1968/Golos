@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>XJson</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson</helplink>
+            <description>
+                <default>Actions for interacting with XBMC version 12 - Frodo (or later?).
+
+Most actions communicate with XBMC through the JSON protocol. Some simple actions use the event client (UDP). Some actions require the installation of the XBMC addon called [[VoxTools]].</default>
+            </description>
+        </info>
+        <command>
+            <name>Btn.KB</name>
+            <commandString>XJson.Btn.KB</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Button" type="string" optional="False">Keycode of button to send</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#Btn.KB</helplink>
+                <description>
+                    <default>Sends the keycode &lt;Button&gt; to XBMC's event client.
+
+For a reference of keycodes and their mappings see:
+https://github.com/xbmc/xbmc/blob/master/system/keymaps/keyboard.xml</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Connect</name>
+            <commandString>XJson.Connect</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#Connect</helplink>
+                <description>
+                    <default>Connects to XBMC to listen for JSON notifications on TCP socket. Uses parameters defined in the plugin options (IP, port).</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Disconnect</name>
+            <commandString>XJson.Disconnect</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#Disconnect</helplink>
+                <description>
+                    <default>Disconnects from XBMC and stops listening for JSON notifications.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ExecBuiltin</name>
+            <commandString>XJson.ExecBuiltin</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="CmdString" type="string" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#ExecBuiltin</helplink>
+                <description>
+                    <default>*** Requires that Kodi have the [[VoxTools]] addon correctly installed and enabled.
+
+Perfoms XBMC's built in functions.
+
+For valid parameters see: http://wiki.xbmc.org/index.php?title=List_of_built-in_functions</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXml</name>
+            <commandString>XJson.GenXml</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#GenXml</helplink>
+                <description>
+                    <default>Generates all the standard payload xml files by querying XBMC via JSON API. This action is limited (by the JSON API). 
+
+If possible, use the xSQL plugin instead.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXmlCustom</name>
+            <commandString>XJson.GenXmlCustom</commandString>
+            <info>
+                <params>7</params>
+                <parameter name="Json Action" type="string" optional="False">eg:AudioLibrary.GetArtists</parameter>
+                <parameter name="Json Params" type="string" optional="False">eg:</parameter>
+                <parameter name="XmlFileOut" type="string" optional="False">eg: xbmcArtists.xml</parameter>
+                <parameter name="ResultsArray" type="string" optional="False">eg: artists</parameter>
+                <parameter name="ValueTag" type="string" optional="False">eg: artistid</parameter>
+                <parameter name="PhraseTag" type="string" optional="False">eg: label</parameter>
+                <parameter name="UseSubset" type="boolean" optional="False">Use subset matching? eg: True</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#GenXmlCustom</helplink>
+                <description>
+                    <default>Generate a custom payload XML file by querying XBMC via JSON.
+All parameters are required, but "Json Params" may be left blank. This action is difficult to use and quite limited (by the JSON API). 
+
+If possible, use the xSQL plugin instead.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetVol</name>
+            <commandString>XJson.GetVol</commandString>
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#GetVol</helplink>
+                <description>
+                    <default>Returns the current XBMC volume value (ranging from 0 to 100).</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ParseTokens</name>
+            <commandString>XJson.ParseTokens</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="Format" type="string" optional="False" />
+                <parameter name="Data" type="string" optional="True">Override the Json data to parse</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#ParseTokens</helplink>
+                <description>
+                    <default>String format where items in { } get replaced by tokens from the last Raw result returned by XBMC JSON API (retrieved using the Raw action).  
+
+For advanced users. Requires an understanding of JSON and the results generated by XBMC. For more information see: [[XJson.ParseTokens]] on the wiki.
+
+Examples:
+Album name is: {item.album}, and the first listed artist is {item.artists[0]}.
+
+There are {item.genres[[#]]} genres associated with this song.
+
+Use double square brackets to concatenate an array of values, using whatever is between them as the delimiter, e.g. "All artists for this song: {item.artists[[ and ]]}"</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Raw</name>
+            <commandString>XJson.Raw</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="Method" type="string" optional="False">JSON method</parameter>
+                <parameter name="Params" type="string" optional="True">Optional parameters</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#Raw</helplink>
+                <description>
+                    <default>Sends a JSON command to XBMC.  See the default XBMC JSON configuration for examples. For more information see: http://wiki.xbmc.org/?title=JSON-RPC_API</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Raw/</name>
+            <commandString>XJson.Raw/</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="Method" type="string" optional="False">JSON method</parameter>
+                <parameter name="Params" type="string" optional="True">Optional parameters</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#Raw/</helplink>
+                <description>
+                    <default>Sends a JSON command to XBMC.  See the default XBMC JSON configuration for examples.
+
+Note: Raw/ is the same as the Raw action but converts backslashes '\' in &lt;Params&gt; to forward slashes '/' before sending to XBMC.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetConnection</name>
+            <commandString>XJson.SetConnection</commandString>
+            <info>
+                <params>2-4</params>
+                <parameter name="IP" type="string" optional="False" />
+                <parameter name="Port" type="string" optional="True" />
+                <parameter name="Username" type="string" optional="True" />
+                <parameter name="Password" type="string" optional="True" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#SetConnection</helplink>
+                <description>
+                    <default>Connect to a new XBMC host, overriding the default connection options defined in the XJson plugin settings.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVol</name>
+            <commandString>XJson.SetVol</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Volume" type="integer" optional="False">0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#SetVol</helplink>
+                <description>
+                    <default>*** Requires that Kodi have the [[VoxTools]] addon correctly installed and enabled.
+
+Sets XBMC volume to a value from 0 to 100.
+
+The volume will change gradually if "Use smooth volume changes" is checked in the XJson plugin settings.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SmartPL</name>
+            <commandString>XJson.SmartPL</commandString>
+            <info>
+                <params>1+</params>
+                <parameter name="FileIn" type="string" optional="False">Path to an xsp template file</parameter>
+                <parameter name="Var1" type="string" optional="True">value that will replace {1} in template</parameter>
+                <parameter name="Var2" type="string" optional="True">value that will replace {2} in template</parameter>
+                <parameter name="Var3" type="string" optional="True">value that will replace {3} in template</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#SmartPL</helplink>
+                <description>
+                    <default>*** Requires that Kodi have the [[VoxTools]] addon correctly installed and enabled.
+
+Loads a smartplaylist template from an XSP file, replaces variables, then sends the smart playlist to the VoxTools addon. Once received, the addon will save the updated file to the location: special://profile/playlists/mixed/voxsmart.xsp.
+
+</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SoftMute</name>
+            <commandString>XJson.SoftMute</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Vol %" type="integer" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#SoftMute</helplink>
+                <description>
+                    <default>*** Requires that Kodi have the [[VoxTools]] addon correctly installed and enabled.
+
+Reduces volume to a percentage of the current volume. The volume will change gradually if "Use smooth volume changes" is checked in the XJson plugin settings.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SoftUnMute</name>
+            <commandString>XJson.SoftUnMute</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#SoftUnMute</helplink>
+                <description>
+                    <default>*** Requires that Kodi have the [[VoxTools]] addon correctly installed and enabled.
+
+Restores volume to unmuted value. The volume will change gradually if "Use smooth volume changes" is checked in the XJson plugin settings.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>VoxTools</name>
+            <commandString>XJson.VoxTools</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="Command" type="string" optional="False" />
+                <parameter name="Param1" type="string" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XJson#VoxTools</helplink>
+                <description>
+                    <default>*** Requires that Kodi have the [[VoxTools]] addon correctly installed and enabled.
+
+Currently permits one particular command, which is a youtube search within XBMC.
+
+param 1   param 2
+
+youtube.search    [insert your search term here]</default>
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

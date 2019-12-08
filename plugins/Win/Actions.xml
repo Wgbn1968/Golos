@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Win</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win</helplink>
+            <description>
+                <default>Инструменты для выбора (поиска), запроса (получения) и управления (установки) разными окнами и процессами.
+
+Сначала используйте Win.Find.* действие для поиска и выбора окна.  Потом другая Win.* действия будут применяться к этому окну до тех пор, пока не будет выбран другой с помощью Win.Find.*</default>
+            </description>
+        </info>
+        <command>
+            <name>Get</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#Get</helplink>
+                <description>
+                    <default>Действия для получения информации о текущем окне.</default>
+                </description>
+            </info>
+            <command>
+                <name>Info</name>
+                <commandString>Win.Get.Info</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#Info</helplink>
+                    <description>
+                        <default>Возвращает различные данные о текущем окне.
+В настоящее время информация включает имя (заголовок), класс, положение и размер.
+Дополнительная информация может быть включена в будущих версиях.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Caption</name>
+                <commandString>Win.Get.Caption</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#Caption</helplink>
+                    <description>
+                        <default>Возвращает заголовок (имя)текущего окна.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Class</name>
+                <commandString>Win.Get.Class</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#Class</helplink>
+                    <description>
+                        <default>Возвращает класс текущего окна.
+Позже класс можно будет использовать для "Поиска " этого окна снова, используя Win.Find.ByName.</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Find</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#Find</helplink>
+                <description>
+                    <default>Действия, используемые для поиска и установки текущего окна. Другие последующие действия Win будут применены к этому окну.</default>
+                </description>
+            </info>
+            <command>
+                <name>Active</name>
+                <commandString>Win.Find.Active</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#Active</helplink>
+                    <description>
+                        <default>Выберите активное (сфокусированное) окно и процесс.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>ByHandle</name>
+                <commandString>Win.Find.ByHandle</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="HWnd" type="integer" optional="False">Дескриптор окна</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#ByHandle</helplink>
+                    <description>
+                        <default>Обратите внимание, что при каждом создании ОС windows будет присваиваться другой номер дескриптора.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>ByName</name>
+                <commandString>Win.Find.ByName</commandString>
+                <info>
+                    <params>0-2</params>
+                    <parameter name="Name" type="string" optional="True">Имя окна (заголовок). Оставьте пустым, чтобы использовать только класс</parameter>
+                    <parameter name="Class" type="string" optional="True">Класс окна. Оставьте пустым, чтобы использования только имя.</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#ByName</helplink>
+                    <description>
+                        <default>Найти окно, используя либо имя (заголовок), либо класс, либо оба.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>ByProcess</name>
+                <commandString>Win.Find.ByProcess</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="ProcessName" type="string" optional="False">Имя процесса, которому принадлежит окно</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#ByProcess</helplink>
+                    <description>
+                        <default>Имена активных процессов можно найти в Диспетчере задач Windows.
+Не включайте .exe в имени процесса.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>BySearch</name>
+                <commandString>Win.Find.BySearch</commandString>
+                <info>
+                    <params>0-2</params>
+                    <parameter name="Name" type="string" optional="True">RegEx шаблон</parameter>
+                    <parameter name="Class" type="string" optional="True">RegEx шаблон</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#BySearch</helplink>
+                    <description>
+                        <default>Похожее на Win.Find.ByName, но допускает частичное совпадение.
+
+Хотя оба &lt;Name&gt; и &lt;Class&gt; являются необязательными, необходимо указать хотя бы один параметр.
+
+Шаблоны регулярных выражений НЕ учитывают регистр и пробелы НЕ игнорируются.
+
+Можно найти только окна верхнего уровня, дочерние элементы (например, кнопки) в окне не могут быть найдены. Процесс может иметь несколько окон верхнего уровня.
+
+** Поиск окна может занять больше времени в зависимости от используемых параметров и количества открытых окон в системе. Другое Win.Find  действие следует практически мгновенно.</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Set</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#Set</helplink>
+                <description>
+                    <default>Действия для управления текущим окном.</default>
+                </description>
+            </info>
+            <command>
+                <name>Focus</name>
+                <commandString>Win.Set.Focus</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#Focus</helplink>
+                    <description>
+                        <default>Фокусирует текущее окно.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Position</name>
+                <commandString>Win.Set.Position</commandString>
+                <info>
+                    <params>2-5</params>
+                    <parameter name="Left" type="integer" optional="False">Расположить левый край окна (X)</parameter>
+                    <parameter name="Top" type="integer" optional="False">Расположить верхний край окна (Y)</parameter>
+                    <parameter name="Width" type="integer" optional="True">Изменить общию ширину (пикселей)</parameter>
+                    <parameter name="Height" type="integer" optional="True">Изменить общию высоту (пикселей)</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#Position</helplink>
+                    <description>
+                        <default>Переместить и, при необходимости, изменить размер текущего окна.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>State</name>
+                <commandString>Win.Set.State</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="State" type="string" optional="False">Close, Minimize, Maximize, Normalize</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#State</helplink>
+                    <description>
+                        <default>Изменение состояния текущего окна.
+
+&lt;State&gt; должно быть одно из следующих:
+Close, Minimize, Maximize, Normalize</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>KeyPress</name>
+            <commandString>Win.KeyPress</commandString>
+            <info>
+                <params>0-2</params>
+                <parameter name="ModKeys" type="string" optional="True" />
+                <parameter name="SequenceKeys" type="string" optional="True" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Win#KeyPress</helplink>
+                <description>
+                    <default>Отправить низкоуровневую эмуляцию клавиатуры, как будто пользователь нажимает клавиши на клавиатуре.
+Сначала &lt;ModKeys&gt; будет нажата и удерживается,
+затем &lt;SequenceKeys&gt; будет нажата и отжат,
+наконец &lt;ModKeys&gt; будут все отжаты.</default>
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

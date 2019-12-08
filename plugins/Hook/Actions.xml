@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Hook</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hook</helplink>
+            <description>
+                <default>Генерирует события для определенных комбинаций клавиш.
+Смотрите настройки плагина, чтобы выбрать, какие клавиши будут генерировать события.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Disable</name>
+            <commandString>Hook.Disable</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hook#Disable</helplink>
+                <description>
+                    <default>Отключить хуки клавиатуры и генерацию событий.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Enable</name>
+            <commandString>Hook.Enable</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hook#Enable</helplink>
+                <description>
+                    <default>Включить хуки клавиатуры и генерацию событий.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

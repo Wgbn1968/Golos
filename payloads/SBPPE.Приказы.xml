@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>197</value>
+        <phrase>Выдвигаться,выдвигайся</phrase>
+    </payload>
+    <payload>
+        <value>181</value>
+        <phrase>Атаковать,атакуй</phrase>
+    </payload>
+    <payload>
+        <value>165</value>
+        <phrase>Совершить марш,соверши марш</phrase>
+    </payload>
+    <payload>
+        <value>149</value>
+        <phrase>Отойти,отойди</phrase>
+    </payload>
+    <payload>
+        <value>133</value>
+        <phrase>Провести разведку,проведи разведку</phrase>
+    </payload>
+    <payload>
+        <value>117</value>
+        <phrase>Проделать проход,проделай проход</phrase>
+    </payload>
+    <payload>
+        <value>101</value>
+        <phrase>111Прекратить подавление11111</phrase>
+    </payload>
+    <payload>
+        <value>85</value>
+        <phrase>Подавить здесь,подивить,подави</phrase>
+    </payload>
+    <payload>
+        <value>69</value>
+        <phrase>Занять оборону здесь,займи оборону,Занять оборону</phrase>
+    </payload>
+    <payload>
+        <value>53</value>
+        <phrase>Наблюдать,наблюдай</phrase>
+    </payload>
+</PayloadsRoot>

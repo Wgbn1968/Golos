@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>1</value>
+        <phrase>одна тысячная,одна</phrase>
+    </payload>
+    <payload>
+        <value>1.5</value>
+        <phrase>полторы тысячные,полторы</phrase>
+    </payload>
+    <payload>
+        <value>2</value>
+        <phrase>две тысячные,две</phrase>
+    </payload>
+    <payload>
+        <value>2.5</value>
+        <phrase>две с половиной тысячные,две с половиной</phrase>
+    </payload>
+    <payload>
+        <value>3</value>
+        <phrase>три тысячные,три</phrase>
+    </payload>
+    <payload>
+        <value>3.5</value>
+        <phrase>три  с половиной тысячные,три с половиной</phrase>
+    </payload>
+    <payload>
+        <value>4</value>
+        <phrase>четыре тысячные,четыре</phrase>
+    </payload>
+    <payload>
+        <value>4.5</value>
+        <phrase>четыре с половиной тысячные,четыре с половиной</phrase>
+    </payload>
+    <payload>
+        <value>5</value>
+        <phrase>пять тысячных,пять</phrase>
+    </payload>
+    <payload>
+        <value>5.5</value>
+        <phrase>пять с половиной тысячных,пять с половиной</phrase>
+    </payload>
+    <payload>
+        <value>6</value>
+        <phrase>шесть тысячных,шесть</phrase>
+    </payload>
+    <payload>
+        <value>6.5</value>
+        <phrase>шесть с половиной тысячных,шесть с половиной</phrase>
+    </payload>
+    <payload>
+        <value>7</value>
+        <phrase>семь тысячных,семь</phrase>
+    </payload>
+    <payload>
+        <value>7.5</value>
+        <phrase>семь с половиной тысячных,семь с половиной</phrase>
+    </payload>
+    <payload>
+        <value>8</value>
+        <phrase>восемь тысячных,восемь</phrase>
+    </payload>
+    <payload>
+        <value>8.5</value>
+        <phrase>восемь с половиной тысячных,восемь с половиной</phrase>
+    </payload>
+    <payload>
+        <value>9</value>
+        <phrase>девять тысячных,девять</phrase>
+    </payload>
+    <payload>
+        <value>9.5</value>
+        <phrase>девять с половиной тысячных,девять с половиной</phrase>
+    </payload>
+    <payload>
+        <value>10</value>
+        <phrase>десять тысячных,десять</phrase>
+    </payload>
+    <payload>
+        <value>10.5</value>
+        <phrase>десять с половиной тысячных,десять с половиной</phrase>
+    </payload>
+    <payload>
+        <value>11</value>
+        <phrase>одиннадцать тысячных,одиннадцать</phrase>
+    </payload>
+    <payload>
+        <value>11.5</value>
+        <phrase>одиннадцать с половиной тысячных,одиннадцать с половиной</phrase>
+    </payload>
+    <payload>
+        <value>12</value>
+        <phrase>двенадцать тысячных,двенадцать</phrase>
+    </payload>
+    <payload>
+        <value>12.5</value>
+        <phrase>двенадцать с половиной тысячных,двенадцать с половиной</phrase>
+    </payload>
+    <payload>
+        <value>13</value>
+        <phrase>тринадцать тысячных,тринадцать</phrase>
+    </payload>
+    <payload>
+        <value>13.5</value>
+        <phrase>тринадцать с половиной тысячных,тринадцать с половиной</phrase>
+    </payload>
+    <payload>
+        <value>14</value>
+        <phrase>четырнадцать тысячных,четырнадцать</phrase>
+    </payload>
+    <payload>
+        <value>14.5</value>
+        <phrase>четырнадцать с половиной тысячных,четырнадцать с половиной</phrase>
+    </payload>
+    <payload>
+        <value>15</value>
+        <phrase>пятнадцать тысячных,пятнадцать</phrase>
+    </payload>
+    <payload>
+        <value>15.5</value>
+        <phrase>пятнадцать с половиной тысячных,пятнадцать с половиной</phrase>
+    </payload>
+    <payload>
+        <value>16</value>
+        <phrase>шестнадцать тысячных,шестнадцать</phrase>
+    </payload>
+    <payload>
+        <value>16.5</value>
+        <phrase>шестнадцать с половиной тысячных,шестнадцать с половиной</phrase>
+    </payload>
+    <payload>
+        <value>17</value>
+        <phrase>семнадцать тысячных,семнадцать</phrase>
+    </payload>
+    <payload>
+        <value>17.5</value>
+        <phrase>семнадцать с половиной тысячных,семнадцать с половиной</phrase>
+    </payload>
+    <payload>
+        <value>18</value>
+        <phrase>восемнадцать тысячных,восемнадцать</phrase>
+    </payload>
+    <payload>
+        <value>18.5</value>
+        <phrase>восемнадцать с половиной тысячных,восемнадцать с половиной</phrase>
+    </payload>
+    <payload>
+        <value>19</value>
+        <phrase>девятнадцать тысячных,девятнадцать</phrase>
+    </payload>
+    <payload>
+        <value>19.5</value>
+        <phrase>девятнадцать с половиной тысячных,девятнадцать с половиной</phrase>
+    </payload>
+    <payload>
+        <value>20</value>
+        <phrase>двадцать тысячных,двадцать</phrase>
+    </payload>
+    <payload>
+        <value>21</value>
+        <phrase>двадцать одна тысячная,двадцать одна</phrase>
+    </payload>
+    <payload>
+        <value>22</value>
+        <phrase>двадцать две тысячные,двадцать две</phrase>
+    </payload>
+    <payload>
+        <value>23</value>
+        <phrase>двадцать три тысячные,двадцать три</phrase>
+    </payload>
+    <payload>
+        <value>24</value>
+        <phrase>двадцать четыре тысячные,двадцать четыре</phrase>
+    </payload>
+    <payload>
+        <value>25</value>
+        <phrase>двадцать  пять тысячных,двадцать пять</phrase>
+    </payload>
+    <payload>
+        <value>26</value>
+        <phrase>двадцать шесть тысячных,двадцать шесть</phrase>
+    </payload>
+    <payload>
+        <value>27</value>
+        <phrase>двадцать семь тысячных,двадцать семь</phrase>
+    </payload>
+    <payload>
+        <value>28</value>
+        <phrase>двадцать восемь тысячных,двадцать восемь</phrase>
+    </payload>
+    <payload>
+        <value>29</value>
+        <phrase>двадцать девять тысячных,двадцать девять</phrase>
+    </payload>
+    <payload>
+        <value>30</value>
+        <phrase>тридцать тысячных,тридцать</phrase>
+    </payload>
+    <payload>
+        <value>31</value>
+        <phrase>тридцать одна тысячная,тридцать одна</phrase>
+    </payload>
+    <payload>
+        <value>32</value>
+        <phrase>тридцать две тысячные,тридцать две</phrase>
+    </payload>
+    <payload>
+        <value>33</value>
+        <phrase>тридцать три тысячные,тридцать три</phrase>
+    </payload>
+    <payload>
+        <value>34</value>
+        <phrase>тридцать четыре тысячные,тридцать четыре</phrase>
+    </payload>
+    <payload>
+        <value>35</value>
+        <phrase>тридцать пять тысячных,тридцать пять</phrase>
+    </payload>
+    <payload>
+        <value>36</value>
+        <phrase>тридцать шесть тысячных,тридцать шесть</phrase>
+    </payload>
+    <payload>
+        <value>37</value>
+        <phrase>тридцать семь тысячных,тридцать семь</phrase>
+    </payload>
+    <payload>
+        <value>38</value>
+        <phrase>тридцать восемь тысячных,тридцать восемь</phrase>
+    </payload>
+    <payload>
+        <value>39</value>
+        <phrase>тридцать девять тысячных,тридцать девять</phrase>
+    </payload>
+    <payload>
+        <value>40</value>
+        <phrase>сорок тысячных,сорок</phrase>
+    </payload>
+    <payload>
+        <value>41</value>
+        <phrase>сорок одна тысячная,сорок одна</phrase>
+    </payload>
+    <payload>
+        <value>42</value>
+        <phrase>сорок две тысячные,сорок две</phrase>
+    </payload>
+    <payload>
+        <value>43</value>
+        <phrase>сорок три тысячные,сорок три</phrase>
+    </payload>
+    <payload>
+        <value>44</value>
+        <phrase>сорок четыретысячные,сорок четыре</phrase>
+    </payload>
+    <payload>
+        <value>45</value>
+        <phrase>сорок пять тысячных,сорок пять</phrase>
+    </payload>
+    <payload>
+        <value>46</value>
+        <phrase>сорок шесть тысячных,сорок шесть</phrase>
+    </payload>
+    <payload>
+        <value>47</value>
+        <phrase>сорок семь тысячных,сорок семь</phrase>
+    </payload>
+    <payload>
+        <value>48</value>
+        <phrase>сорок восемь тысячных,сорок восемь</phrase>
+    </payload>
+    <payload>
+        <value>49</value>
+        <phrase>сорок девять тысячных,сорок девять</phrase>
+    </payload>
+    <payload>
+        <value>50</value>
+        <phrase>пятьдесят тысячных,пятьдесят</phrase>
+    </payload>
+    <payload>
+        <value>51</value>
+        <phrase>пятьдесят одна тысячная,пятьдесят одна</phrase>
+    </payload>
+    <payload>
+        <value>52</value>
+        <phrase>пятьдесят две тысячные,пятьдесят две</phrase>
+    </payload>
+    <payload>
+        <value>53</value>
+        <phrase>пятьдесят тир тысячные,пятьдесят три</phrase>
+    </payload>
+    <payload>
+        <value>54</value>
+        <phrase>пятьдесят четыре тысячные,пятьдесят четыре</phrase>
+    </payload>
+    <payload>
+        <value>55</value>
+        <phrase>пятьдесят пять тысячных,пятьдесят пять</phrase>
+    </payload>
+    <payload>
+        <value>56</value>
+        <phrase>пятьдесят шесть тысячных,пятьдесят шесть</phrase>
+    </payload>
+    <payload>
+        <value>57</value>
+        <phrase>пятьдесят семь тысячных,пятьдесят семь</phrase>
+    </payload>
+    <payload>
+        <value>58</value>
+        <phrase>пятьдесят восемь тысячных,пятьдесят восемь</phrase>
+    </payload>
+    <payload>
+        <value>59</value>
+        <phrase>пятьдесят девять тысячных,пятьдесят девять</phrase>
+    </payload>
+    <payload>
+        <value>60</value>
+        <phrase>шестьдесят тысячных,шестьдесят</phrase>
+    </payload>
+    <payload>
+        <value>61</value>
+        <phrase>шестьдесят одна тысячная,шестьдесят одна</phrase>
+    </payload>
+    <payload>
+        <value>62</value>
+        <phrase>шестьдесят две тысячные,шестьдесят две</phrase>
+    </payload>
+    <payload>
+        <value>63</value>
+        <phrase>шестьдесят три тысячные,шестьдесят три</phrase>
+    </payload>
+    <payload>
+        <value>64</value>
+        <phrase>шестьдесят четыре тысячные,шестьдесят четыре</phrase>
+    </payload>
+    <payload>
+        <value>65</value>
+        <phrase>шестьдесят пять тысячных,шестьдесят пять</phrase>
+    </payload>
+    <payload>
+        <value>66</value>
+        <phrase>шестьдесят шесть тысячных,шестьдесят шесть</phrase>
+    </payload>
+    <payload>
+        <value>67</value>
+        <phrase>шестьдесят семь тысячных,шестьдесят семь</phrase>
+    </payload>
+    <payload>
+        <value>68</value>
+        <phrase>шестьдесят восемь тысячных,шестьдесят восемь</phrase>
+    </payload>
+    <payload>
+        <value>69</value>
+        <phrase>шестьдесят девять тысячных,шестьдесят девять</phrase>
+    </payload>
+    <payload>
+        <value>70</value>
+        <phrase>семьдесят тысячных,семьдесят</phrase>
+    </payload>
+    <payload>
+        <value>71</value>
+        <phrase>семьдесят одна тысячная,семьдесят одна</phrase>
+    </payload>
+    <payload>
+        <value>72</value>
+        <phrase>семьдесят две тысячные,семьдесят две</phrase>
+    </payload>
+    <payload>
+        <value>73</value>
+        <phrase>семьдесят три тысячные,семьдесят три</phrase>
+    </payload>
+    <payload>
+        <value>74</value>
+        <phrase>семьдесят четыре тысячные,семьдесят четыре</phrase>
+    </payload>
+    <payload>
+        <value>75</value>
+        <phrase>семьдесят пять тысячных,семьдесят пять</phrase>
+    </payload>
+    <payload>
+        <value>76</value>
+        <phrase>семьдесят шесть тысячных,семьдесят шесть</phrase>
+    </payload>
+    <payload>
+        <value>77</value>
+        <phrase>семьдесят семь тысячных,семьдесят семь</phrase>
+    </payload>
+    <payload>
+        <value>78</value>
+        <phrase>семьдесят восемь тысячных,семьдесят восемь</phrase>
+    </payload>
+    <payload>
+        <value>79</value>
+        <phrase>семьдесят девять тысячных,семьдесят девять</phrase>
+    </payload>
+    <payload>
+        <value>80</value>
+        <phrase>восемьдесят тысячных,восемьдесят одна</phrase>
+    </payload>
+    <payload>
+        <value>81</value>
+        <phrase>восемьдесят одна тысячная,восемьдесят одна</phrase>
+    </payload>
+    <payload>
+        <value>82</value>
+        <phrase>восемьдесят две тысячные,восемьдесят две</phrase>
+    </payload>
+    <payload>
+        <value>83</value>
+        <phrase>восемьдесят три тысячные,восемьдесят три</phrase>
+    </payload>
+    <payload>
+        <value>84</value>
+        <phrase>восемьдесят четыре тысячные,восемьдесят четыре</phrase>
+    </payload>
+    <payload>
+        <value>85</value>
+        <phrase>восемьдесят пять тысячных,восемьдесят пять</phrase>
+    </payload>
+    <payload>
+        <value>86</value>
+        <phrase>восемьдесят шесть тысячных,восемьдесят шесть</phrase>
+    </payload>
+    <payload>
+        <value>87</value>
+        <phrase>восемьдесят семь тысячных,восемьдесят семь</phrase>
+    </payload>
+    <payload>
+        <value>88</value>
+        <phrase>восемьдесят восемьтысячных,восемьдесят восемь</phrase>
+    </payload>
+    <payload>
+        <value>89</value>
+        <phrase>восемьдесят девять тысячных,восемьдесят девять</phrase>
+    </payload>
+    <payload>
+        <value>90</value>
+        <phrase>девяносто тысячных,девяносто</phrase>
+    </payload>
+</PayloadsRoot>

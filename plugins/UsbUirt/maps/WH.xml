@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+  <payload>
+    <value>430A054405F4</value>
+    <phrase>left </phrase>
+  </payload>
+  <payload>
+    <value>430A004105F4</value>
+    <phrase>right </phrase>
+  </payload>
+  <payload>
+    <value>430A404101F0</value>
+    <phrase>right </phrase>
+  </payload>
+  <payload>
+    <value>430A115005F4</value>
+    <phrase>up </phrase>
+  </payload>
+  <payload>
+    <value>430A505145F4</value>
+    <phrase>down </phrase>
+  </payload>
+  <payload>
+    <value>4308511144F4</value>
+    <phrase>volume up </phrase>
+  </payload>
+  <payload>
+    <value>4308450544F4</value>
+    <phrase>volume down </phrase>
+  </payload>
+  <payload>
+    <value>4308151504F4</value>
+    <phrase>source up </phrase>
+  </payload>
+  <payload>
+    <value>4308010104F4</value>
+    <phrase>source down </phrase>
+  </payload>
+  <payload>
+    <value>4308150514F4</value>
+    <phrase>P. I. P. </phrase>
+  </payload>
+  <payload>
+    <value>430A004105F4</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>430A004105F4</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>4308040404F4</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>4308040404F4</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>190002A028E2</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>190002A028E2</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>190002A028E2</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>190002A028E2</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>412F51F040F1</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>412F50F050F1</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>4308100410F4</value>
+    <phrase>
+    </phrase>
+  </payload>
+  <payload>
+    <value>430A004105F4</value>
+    <phrase> </phrase>
+  </payload>
+</PayloadsRoot>

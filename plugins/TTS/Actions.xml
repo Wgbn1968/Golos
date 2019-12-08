@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>TTS</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS</helplink>
+            <description>
+                <default>Действия преобразования текста в речь.</default>
+                <de>Text-to-Speech-Befehle.</de>
+            </description>
+        </info>
+        <command>
+            <name>GetLastText</name>
+            <commandString>TTS.GetLastText</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#GetLastText</helplink>
+                <description>
+                    <default>Возвращает последний текст, произнесенный плагином TTS.
+Если TTS выбрал текст случайным образом из-за символа трубы | он вернет любую строку, которая была фактически произнесена.
+Если плагин TTS еще не говорил, он вернет ошибку.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetLang</name>
+            <commandString>TTS.SetLang</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Language Code" type="string" optional="False">en, es, fr, de, pt и т.д.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#SetLang</helplink>
+                <description>
+                    <default>Используется с VoxWav для Android.
+Инструктирует VoxWav пытаться установить TTS движок на языке, в указанном коде языка.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetOutput</name>
+            <commandString>TTS.SetOutput</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="DeviceName" type="string" optional="False">Имя устройства вывода, используемого для TTS</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#SetOutput</helplink>
+                <description>
+                    <default>Задает аудио устройство для TTS (текст в речь).
+Он выберет первое найденное устройство с описанием, которое содержит &lt;DeviceName&gt;.
+Если &lt;DeviceName&gt; - целое число, оно будет выбрано по номеру устройства.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetOpacity</name>
+            <commandString>TTS.SetOpacity</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Opacity" type="integer" optional="False">0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#SetOpacity</helplink>
+                <description>
+                    <default>Установите непрозрачность формы говорящей головы.  0 = невидимый, 100 = непрозрачный.
+Говорящая голова должна быть уже видна, чтобы использовать это действие.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetRate</name>
+            <commandString>TTS.SetRate</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Rate" type="integer" optional="False">-10 (медленно) до +10 (быстро)</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#SetRate</helplink>
+                <description>
+                    <default>Регулирует скорость ,с которой будет говорить голос.  Допустимый диапазон от -10 до +10</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetTransRGB</name>
+            <commandString>TTS.SetTransRGB</commandString>
+            <info>
+                <params>0-3</params>
+                <parameter name="Red" type="integer" optional="True">0-255</parameter>
+                <parameter name="Green" type="integer" optional="True">0-255</parameter>
+                <parameter name="Blue" type="integer" optional="True">0-255</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#SetTransRGB</helplink>
+                <description>
+                    <default>Говорящая голова должна быть уже видна, чтобы использовать это действие.
+При отсутствии параметров прозрачность будет отключена.
+Установка цвета RBG с помощью 3 параметров установит прозрачность этого цвета, так что любые части ваших изображений говорящей головы, которые соответствуют этому цвету, станут прозрачными и покажут все, что находится под формой говорящей головы.
+При использовании прозрачных изображений (gif, png) необходимо использовать 0,0,0 (черный)</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVoiceName</name>
+            <commandString>TTS.SetVoiceName</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="VoiceName" type="string" optional="False">&lt;voicename&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#SetVoiceName</helplink>
+                <description>
+                    <default>Устанавливает TTS движок для использования голоса с именем &lt;VoiceName&gt;.
+Вы можете просмотреть доступные имена в настройках плагина TTS.  &lt;VoiceName&gt; может быть подстрокой фактического имени голоса TTS.</default>
+                    <de>Gleich wie TTS.SetVoiceNum, nur das Sie hier den Namen der Stimme angeben &lt;voicename&gt; wie Sie in den VC-Optionen stehen, dieser Befehl bietet sich an wenn Sie Г¶fter Stimmen installieren, da hier keine Reihenfolge durch Nummer eingehalten werden muss.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVoiceNum</name>
+            <commandString>TTS.SetVoiceNum</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="VoiceNum" type="integer" optional="False">Первый голос 0</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#SetVoiceNum</helplink>
+                <description>
+                    <default>Установить TTS движок использовать голос с номером &lt;VoiceNum&gt;. Порядок голосов можно увидеть в опциях VoxCommando.
+Количество и имена голосов могут измениться при установке или удалении голосов.
+Первый голос в списке будет иметь номер: 0</default>
+                    <de>Stellt Sie die TTS-Ausgabe auf die Stimme mit der &lt;voicenumber&gt; um, die Nummer sind die Reihenfolge der Stimmen wie sie in VC angezeigt werden (angefangen wird mit 0). Die Anzahl und Namen der Stimmen kann sich Г¤ndern, wenn Sie Stimmen installieren oder deinstallieren.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVolume</name>
+            <commandString>TTS.SetVolume</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="TTS Volume" type="integer" optional="False">&lt;1-100&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#SetVolume</helplink>
+                <description>
+                    <default>Устанавливает выходную громкость голоса TTS.</default>
+                    <de>Legt die Ausgabe-LautstГ¤rke der TTS-Stimme fest</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ShowHead</name>
+            <commandString>TTS.ShowHead</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="ShowWindow" type="boolean" optional="False">True=Показать, False=Скрыть</parameter>
+                <parameter name="ShowBorder" type="boolean" optional="False">True=Показать, False=Скрыть</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#ShowHead</helplink>
+                <description>
+                    <default>Показать или скрыть говорящую голову TTS, в зависимости от того, имеет ли параметр &lt;ShowWindow&gt; значение True или False.
+Если &lt;ShowBorder&gt; имеет значение False, то окно, содержащее голову не будет иметь границ (рамки).</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>MoveHead</name>
+            <commandString>TTS.MoveHead</commandString>
+            <info>
+                <params>2-4</params>
+                <parameter name="Top" type="integer" optional="False" />
+                <parameter name="Left" type="integer" optional="False" />
+                <parameter name="Width" type="integer" optional="True" />
+                <parameter name="Height" type="integer" optional="True" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#MoveHead</helplink>
+                <description>
+                    <default>Позиционирует окно говорящей головы, указывая верхнюю и левую координаты окна относительно верхнего левого кордера экрана.
+Если указаны и ширина, и высота, то размер окна также будет изменен соответствующим образом.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Speak</name>
+            <commandString>TTS.Speak</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="TTS text" type="string" optional="False">&lt;stringoption1 | stringoption2 | и т. д.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#Speak</helplink>
+                <description>
+                    <default>Произносит строку вслух. VC будет выбирать случайным образом из нескольких фраз, разделенных символом: |</default>
+                    <de>Spricht die Zeichenfolge laut.  VC wГ¤hlt zufГ¤llig aus mehreren SГ¤tzen, die durch das Symbol getrennt werden: |</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SpeakSync</name>
+            <commandString>TTS.SpeakSync</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="TTS text" type="string" optional="False">&lt;stringoption1 | stringoption2 | и т. д.&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#SpeakSync</helplink>
+                <description>
+                    <default>То же, что и TTS.Speak, но VC будет ждать, пока разговор не будет завершен, прежде чем продолжить следующее действие.</default>
+                    <de>Gleich wie TTS.Speak, aber VC wartet bis das Sprechen abgeschlossen ist, bevor es mit der nГ¤chsten Aktion fortfГ¤hrt.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Speak2Wav</name>
+            <commandString>TTS.Speak2Wav</commandString>
+            <info>
+                <params>1-3</params>
+                <parameter name="TTS text" type="string" optional="False">Что должен сказать TTS движок?</parameter>
+                <parameter name="Path" type="string" optional="True">Где сохранить файл wav</parameter>
+                <parameter name="PlayWav" type="boolean" optional="True">True = воспроизведение wav-файла после его создания</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#Speak2Wav</helplink>
+                <description>
+                    <default>То же, что и TTS.Speak, но вместо того, чтобы говорить вслух, речь будет записана в файл WAV.
+
+Если PlayWav имеет значение true, wav файл будет воспроизводен немедленно, в противном случае файл будет создан, но не воспроизводится VoxCommando.</default>
+                    <de>Gleich wie TTS.Speak, nur die Sprache wird in eine Wav-Datei aufgezeichnet.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Stop</name>
+            <commandString>TTS.Stop</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TTS#Stop</helplink>
+                <description>
+                    <default>Прерывает TTS (если он все еще говорит). Другими словами, это останавливает TTS говорить речь. Текст, который еще не был произнесен, отбрасывается.</default>
+                    <de>Unterbricht die TTS-Stimme (wenn noch gesprochen wird). Text, der bisher noch nicht gesprochen wurde, wird verworfen.</de>
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--options for VoxCommando / <plugin name goes here>.-->
+<Options>
+    <Option name="useWav" value="False" />
+    <Option name="muteOnSpeakSync" value="False" />
+    <Option name="defaultVoice" value="IVONA 2 Maxim OEM" />
+    <Option name="defaultOutput" value="" />
+    <Option name="volume" value="100" />
+    <Option name="comPortArduino" value="" />
+    <Option name="showTalkingHead" value="False" />
+</Options>

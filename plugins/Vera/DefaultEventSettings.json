@@ -1,0 +1,435 @@
+{
+  "urn:micasaverde-com:serviceId:SceneController1": {
+    "sl_SceneActivated": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "Scenes": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-org:serviceId:SwitchPower1": {
+    "Status": {
+      "genEvent": true,
+      "eventString": "Switch",
+      "str0": "Off",
+      "str1": "On",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-org:serviceId:Dimming1": {
+    "LoadLevelStatus": {
+      "genEvent": true,
+      "eventString": "Dim",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:micasaverde-com:serviceId:SecuritySensor1": {
+    "Tripped": {
+      "genEvent": true,
+      "eventString": "Motion",
+      "str0": "Secure",
+      "str1": "Tripped",
+      "customFormat": "",
+      "restrictToCategory": "4",
+      "alwaysFire": false
+    },
+    "ArmedTripped": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Secure",
+      "str1": "Alert",
+      "customFormat": "",
+      "restrictToCategory": "4",
+      "alwaysFire": false
+    },
+    "Armed": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Disarmed",
+      "str1": "Armed",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-org:serviceId:TemperatureSensor1": {
+    "CurrentTemperature": {
+      "genEvent": true,
+      "eventString": "Temp",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "17",
+      "alwaysFire": false
+    }
+  },
+  "urn:dcineco-com:serviceId:MSwitch1": {
+    "Status1": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Off",
+      "str1": "On",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "Status2": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Off",
+      "str1": "On",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "Status3": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Off",
+      "str1": "On",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "Status4": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Off",
+      "str1": "On",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "Status5": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Off",
+      "str1": "On",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "Status6": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Off",
+      "str1": "On",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "Status7": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Off",
+      "str1": "On",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "Status8": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "Off",
+      "str1": "On",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:rts-services-com:serviceId:ProgramLogicC": {
+    "HouseMode": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:rts-services-com:serviceId:ProgramLogicEG": {
+    "Armed": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "ConditionSatisfied": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-org:serviceId:TemperatureSetpoint1_Cool": {
+    "CurrentSetpoint": {
+      "genEvent": true,
+      "eventString": "SetpointCool",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-org:serviceId:TemperatureSetpoint1_Heat": {
+    "CurrentSetpoint": {
+      "genEvent": true,
+      "eventString": "SetpointHeat",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-org:serviceId:HVAC_UserOperatingMode1": {
+    "ModeStatus": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "EnergyModeStatus": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:micasaverde-com:serviceId:HVAC_OperatingState1": {
+    "ModeState": {
+      "genEvent": true,
+      "eventString": "HvacModeState",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-org:serviceId:HVAC_FanOperatingMode1": {
+    "Mode": {
+      "genEvent": true,
+      "eventString": "HvacFanMode",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:micasaverde-com:serviceId:DoorLock1": {
+    "Status": {
+      "genEvent": true,
+      "eventString": "DoorLock",
+      "str0": "Open",
+      "str1": "Locked",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:micasaverde-com:serviceId:CameraMotionDetection1": {
+    "State": {
+      "genEvent": true,
+      "eventString": "CameraMotion",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-empuk-net:serviceId:SimpleAlarm1": {
+    "Status": {
+      "genEvent": true,
+      "eventString": "SimpleAlarm",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "LR_Light_State": {
+    "LR_Light_State": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-org:serviceId:VSwitch1": {
+    "Status": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:cd-jackson-com:serviceId:SystemMonitor": {
+    "memoryFree": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "memoryUsed": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "cpuLoad15": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "procTotal": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:micasaverde-com:serviceId:EnergyMetering1": {
+    "Watts": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:micasaverde-com:serviceId:LightSensor1": {
+    "CurrentLevel": {
+      "genEvent": true,
+      "eventString": "LightSensor",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "18",
+      "alwaysFire": false
+    }
+  },
+  "urn:upnp-org:serviceId:AVTransport": {
+    "TransportState": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "CurrentPlayMode": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "AVTransportURI": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "AVTransportURIMetaData": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "CurrentStatus": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    },
+    "CurrentArtist": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  },
+  "urn:micasaverde-com:serviceId:HumiditySensor1": {
+    "CurrentLevel": {
+      "genEvent": true,
+      "eventString": "",
+      "str0": "",
+      "str1": "",
+      "customFormat": "",
+      "restrictToCategory": "",
+      "alwaysFire": false
+    }
+  }
+}

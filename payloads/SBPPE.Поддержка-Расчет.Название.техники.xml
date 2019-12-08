@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>6.7</value>
+        <phrase>ТЭ семьдесят два длина</phrase>
+    </payload>
+    <payload>
+        <value>3.4</value>
+        <phrase>ТЭ семьдесят два ширина</phrase>
+    </payload>
+    <payload>
+        <value>2.2</value>
+        <phrase>ТЭ семьдесят два высота</phrase>
+    </payload>
+    <payload>
+        <value>7.7</value>
+        <phrase>Леопард один длина</phrase>
+    </payload>
+    <payload>
+        <value>3.7</value>
+        <phrase>Леопард один ширина</phrase>
+    </payload>
+    <payload>
+        <value>2.5</value>
+        <phrase>Леопард один высота</phrase>
+    </payload>
+    <payload>
+        <value>7.7</value>
+        <phrase>Леопард два длина</phrase>
+    </payload>
+    <payload>
+        <value>3.7</value>
+        <phrase>Леопард два ширина</phrase>
+    </payload>
+    <payload>
+        <value>2.8</value>
+        <phrase>Леопард два высота</phrase>
+    </payload>
+    <payload>
+        <value>9.8</value>
+        <phrase>Абрамс длина</phrase>
+    </payload>
+    <payload>
+        <value>3.7</value>
+        <phrase>Абрамс ширина</phrase>
+    </payload>
+    <payload>
+        <value>2.4</value>
+        <phrase>Абрамс высота</phrase>
+    </payload>
+    <payload>
+        <value>6.7</value>
+        <phrase>БЭЭМПЭ один длина</phrase>
+    </payload>
+    <payload>
+        <value>2.94</value>
+        <phrase>БЭЭМПЭ один ширина</phrase>
+    </payload>
+    <payload>
+        <value>2.6</value>
+        <phrase>БЭЭМПЭ один высота</phrase>
+    </payload>
+    <payload>
+        <value>6.7</value>
+        <phrase>БЭЭМПЭ два длина</phrase>
+    </payload>
+    <payload>
+        <value>3.1</value>
+        <phrase>БЭЭМПЭ два ширина</phrase>
+    </payload>
+    <payload>
+        <value>2.5</value>
+        <phrase>БЭЭМПЭ два высота</phrase>
+    </payload>
+    <payload>
+        <value>4.8</value>
+        <phrase>ЭМ сто триннадцать длина</phrase>
+    </payload>
+    <payload>
+        <value>2.7</value>
+        <phrase>ЭМ сто триннадцать ширина</phrase>
+    </payload>
+    <payload>
+        <value>2.5</value>
+        <phrase>ЭМ сто триннадцать высота</phrase>
+    </payload>
+    <payload>
+        <value>6.8</value>
+        <phrase>БЭЭМПЭ Марадер длина</phrase>
+    </payload>
+    <payload>
+        <value>3.2</value>
+        <phrase>БЭЭМПЭ Марадер ширина</phrase>
+    </payload>
+    <payload>
+        <value>3.0</value>
+        <phrase>БЭЭМПЭ Марадер высота</phrase>
+    </payload>
+    <payload>
+        <value>6.6</value>
+        <phrase>БЭЭМПЭ ЭМ два длина</phrase>
+    </payload>
+    <payload>
+        <value>3.3</value>
+        <phrase>БЭЭМПЭ ЭМ два ширина</phrase>
+    </payload>
+    <payload>
+        <value>3.0</value>
+        <phrase>БЭЭМПЭ ЭМ два высота</phrase>
+    </payload>
+    <payload>
+        <value>6.0</value>
+        <phrase>Дом один этаж</phrase>
+    </payload>
+    <payload>
+        <value>9.0</value>
+        <phrase>Дом два этажа</phrase>
+    </payload>
+    <payload>
+        <value>10.0</value>
+        <phrase>Столб телефонный</phrase>
+    </payload>
+</PayloadsRoot>

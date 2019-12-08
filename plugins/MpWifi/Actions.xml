@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>MpWifi</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi</helplink>
+            <description>
+                <default>Send buttons codes to MediaPortal via the plugin WifiRemote</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>ActivateWindow</name>
+            <commandString>MpWifi.ActivateWindow</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="WindowID" type="integer" optional="False">Id of window to open</parameter>
+                <parameter name="LoadParam" type="string" optional="True">Some plugins can be opened with a parameter</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#ActivateWindow</helplink>
+                <description>
+                    <default>for IDs see:
+http://wiki.team-mediaportal.com/1_MEDIAPORTAL_1/18_Contribute/7_Skins/Skin_Architecture/Window_IDs</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Connect</name>
+            <commandString>MpWifi.Connect</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="Host" type="string" optional="True">Host address (name or IP) of machine running MediaPortal</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#Connect</helplink>
+                <description>
+                    <default>Connects to the MediaPortal wifiremote plugin.
+If &lt;Host&gt; is specified the plugin settings will be changed temporarily and it will attempt to connect to the new host.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Command</name>
+            <commandString>MpWifi.Command</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Code" type="string" optional="False">Command to send</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#Command</helplink>
+                <description>
+                    <default>Sends a button code to the mediaportal WifiRemote plugin. 
+Code can be one of:
+stop, record, pause, play, rewind, forward, replay, skip, back,
+info, menu, up, down, left, right, ok, volup, voldown, volmute,
+chup, chdown, dvdmenu, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, clear, enter,
+teletext, red, blue, yellow, green, home, basichome, nowplaying,
+tvguide, tvrecs, dvd, playlists, first, last, fullscreen, subtitles, audiotrack,
+screenshot, aspectratio</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetNP</name>
+            <commandString>MpWifi.GetNP</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#GetNP</helplink>
+                <description>
+                    <default>Get Now Playing information for any media type (Music, Movie, or Series) using format strings defined in plugin settings.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetNPCustom</name>
+            <commandString>MpWifi.GetNPCustom</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="FormatString" type="string" optional="False">see description</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#GetNPCustom</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>isConnected</name>
+            <commandString>MpWifi.isConnected</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#isConnected</helplink>
+                <description>
+                    <default>Returns True if connected to MediaPortal via WifiRemote or False if not connected</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Key</name>
+            <commandString>MpWifi.Key</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Key" type="" optional="False">Key to send</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#Key</helplink>
+                <description>
+                    <default>Possible values for &lt;Key&gt;:
+All values accepted by SendKeys.SendWait() including the curly brackets {}
+see: http://msdn.microsoft.com/en-us/library/system.windows.forms.sendkeys.send.aspx</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>RequestMusicBySQL</name>
+            <commandString>MpWifi.RequestMusicBySQL</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Where" type="" optional="False">SQL where clause.  See description for examples.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#RequestMusicBySQL</helplink>
+                <description>
+                    <default>Performs an sql query againsts MediaPortals music database and then plays what it finds.
+
+example parameters:
+irating&gt;3
+strArtist like '%| {1} |%'
+strAlbum like '%{1}%'
+iyear&gt;1979 and iyear&lt;1990
+strGenre like '%| {1} |%'</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>RequestMusicPlaylist</name>
+            <commandString>MpWifi.RequestMusicPlaylist</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Playlist" type="" optional="False">Name of playlist to play</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#RequestMusicPlaylist</helplink>
+                <description>
+                    <default>You don't need to enter the whole path or the file extension.  Just the name of the playlist.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Moving Pictures</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#Moving Pictures</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+            <command>
+                <name>MvpcFindMovie</name>
+                <commandString>MpWifi.MvpcFindMovie</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="MovieTitle" type="string" optional="False">Name of movie to find</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#MvpcFindMovie</helplink>
+                    <description>
+                        <default>Go to the Moving Pictures details page for the movie &lt;MovieTitle&gt;</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>MvpcPlayMovie</name>
+                <commandString>MpWifi.MvpcPlayMovie</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="MovieTitle" type="string" optional="False">Name of movie to play</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#MvpcPlayMovie</helplink>
+                    <description>
+                        <default>Play the Moving Pictures movie &lt;MovieTitle&gt; immediately.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>PlayChannel</name>
+            <commandString>MpWifi.PlayChannel</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="Channel" type="integer" optional="False" />
+                <parameter name="FullScreen" type="boolean" optional="True">True means start in fullscreen</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#PlayChannel</helplink>
+                <description>
+                    <default>Tunes MP to channel number: &lt;Channel&gt;</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>PlayVideoFile</name>
+            <commandString>MpWifi.PlayVideoFile</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="FilePath" type="" optional="False">FullPath to the video file</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#PlayVideoFile</helplink>
+                <description>
+                    <default>Plays the file located at &lt;FilePath&gt;</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Powermode</name>
+            <commandString>MpWifi.Powermode</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Mode" type="" optional="False">Powermode to set</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#Powermode</helplink>
+                <description>
+                    <default>valid values for &lt;Mode&gt;:
+logoff, suspend, hibernate, reboot, shutdown, exit</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>RefreshNowPlaying</name>
+            <commandString>MpWifi.RefreshNowPlaying</commandString>
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#RefreshNowPlaying</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Seek</name>
+            <commandString>MpWifi.Seek</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="Position" type="integer" optional="False">position to seek to (% or seconds)</parameter>
+                <parameter name="SeekType" type="integer" optional="True">type of position (0-3)</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#Seek</helplink>
+                <description>
+                    <default>&lt;Position&gt; will have different meanings depending on &lt;SeekType&gt;
+&lt;SeekType&gt; default 0
+0=percentage, absolute,
+1=percentage, relative,
+2=seconds, absolute,
+3=seconds, relative</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Serial</name>
+            <commandString>MpWifi.Serial</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="JSON string" type="string" optional="False">Serialized String</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#Serial</helplink>
+                <description>
+                    <default>sends a json string, (automatically adds the autologon key)
+
+Example param: {"Type":"position","Position":15,"SeekType":0}</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ShowNowPlaying</name>
+            <commandString>MpWifi.ShowNowPlaying</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#ShowNowPlaying</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ShowPlaylist</name>
+            <commandString>MpWifi.ShowPlaylist</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#ShowPlaylist</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>TV Series</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#TV Series</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+            <command>
+                <name>TvsView</name>
+                <commandString>MpWifi.TvsView</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="ViewName" type="string" optional="False">The name of the TvSeries View to open</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#TvsView</helplink>
+                    <description>
+                        <default>Views/Filters are set in TvSeries plugin settings in MediaPortal Configuration.
+Typical Views are:
+All, Favourites, Online Favourites, Unwatched, Genres, Recently Added, etc.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>TvsPlayUnwatched</name>
+                <commandString>MpWifi.TvsPlayUnwatched</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="TvSeries" type="string" optional="False">Name of the Tv Series (show) to browse</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#TvsPlayUnwatched</helplink>
+                    <description>
+                        <default>Opens the Tv-Series Plugin and shows all the unwatched episodes for the series specified by &lt;TvSeries&gt;</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>TvsFindShow</name>
+                <commandString>MpWifi.TvsFindShow</commandString>
+                <info>
+                    <params>1-2</params>
+                    <parameter name="TvSeriesID" type="string" optional="False">ID of the TV Show to browse</parameter>
+                    <parameter name="Season" type="" optional="True">Season of the TV Show to browse</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#TvsFindShow</helplink>
+                    <description>
+                        <default>Opens the Tv-Series Plugin and finds the series specified by &lt;TvSeriesID&gt;</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>TvsPlayRandom</name>
+                <commandString>MpWifi.TvsPlayRandom</commandString>
+                <info>
+                    <params>1-2</params>
+                    <parameter name="SeriesName" type="string" optional="False" />
+                    <parameter name="AskToResume" type="boolean" optional="True" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#TvsPlayRandom</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>TvsEpisode</name>
+                <commandString>MpWifi.TvsEpisode</commandString>
+                <info>
+                    <params>3-4</params>
+                    <parameter name="SeriesName" type="string" optional="False" />
+                    <parameter name="Season#" type="integer" optional="False" />
+                    <parameter name="Episode#" type="integer" optional="False" />
+                    <parameter name="AskToResume" type="boolean" optional="True" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#TvsEpisode</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Volume</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#Volume</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+            <command>
+                <name>AdjustVolume</name>
+                <commandString>MpWifi.AdjustVolume</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Amount" type="integer" optional="False">+/- amount</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#AdjustVolume</helplink>
+                    <description>
+                        <default>Adjusts the volume by &lt;Amount&gt; relative to current volume.
+Use positive values to increase volume.
+Use negative values to reduce volume.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetVolume</name>
+                <commandString>MpWifi.SetVolume</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Volume" type="integer" optional="False">&lt;1-100&gt; absolute solume</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#SetVolume</helplink>
+                    <description>
+                        <default>Sets the absolute volume to &lt;Volume&gt;</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SoftMute</name>
+                <commandString>MpWifi.SoftMute</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Percent" type="integer" optional="False">Mute to this percent of original volume (0-100)</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#SoftMute</helplink>
+                    <description>
+                        <default>Reduces volume to &lt;Percent&gt;% of its current level.  Use SoftUnMute to restore it later.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SoftUnMute</name>
+                <commandString>MpWifi.SoftUnMute</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpWifi#SoftUnMute</helplink>
+                    <description>
+                        <default>Restores volume to original level</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+        </command>
+    </command>
+</AvailableCommands>

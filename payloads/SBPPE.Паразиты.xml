@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>Navodchik</value>
+        <phrase>наводчике,наводчик</phrase>
+    </payload>
+    <payload>
+        <value>Mehvod</value>
+        <phrase>механике,механик</phrase>
+    </payload>
+</PayloadsRoot>

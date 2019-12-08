@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>up</value>
+        <phrase>up</phrase>
+    </payload>
+    <payload>
+        <value>down</value>
+        <phrase>down</phrase>
+    </payload>
+    <payload>
+        <value>left</value>
+        <phrase>left</phrase>
+    </payload>
+    <payload>
+        <value>right</value>
+        <phrase>right</phrase>
+    </payload>
+</PayloadsRoot>

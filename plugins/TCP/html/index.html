@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>VoxCommando Web Api Examples</title>
+
+<style type="text/css">
+body {
+	margin-left: 20px;
+}
+</style>
+<head>
+<script type="text/javascript">
+
+	 function go(url)
+    {
+		
+        var req = new XMLHttpRequest ();
+        req.open ('GET', url);
+        req.send(null);
+    }
+		
+   </script>
+
+</head>
+<body>
+<h1><img src="logo.png" width="264" height="100" alt="vc logo">Mini Web Server</h1>
+<h3>Test sending multiple Api actions using Post</h3>
+<a href="testpost.html">open POST test form</a>
+
+<h3>Test Api actions using GET</h3>
+<p><a href="/api/TTS.Speak&&Isn't this fun?" target="_blank">/api/TTS.Speak&&Isn't this fun?</a></p>
+<p><a href="/api/TTS.SpeakSync&&You must wait for me to finish!" target="_blank">/api/TTS.SpeakSync&&You must wait for me to finish!</a></p>
+<p><a href="/api/OSD.ShowText&&You know you love it..." target="_blank">/api/OSD.ShowText&&You know you love it...</a></p>
+<p><a href="/api/Scrape&&http://www.thetimenow.com/" target="_blank">/api/Scrape&&http://www.thetimenow.com/</a></p>
+<h3>Using Google Speech Recognition</h3>
+<p><a href="ggspeech/index.html" target="_blank"><img src="ggspeech/mic-on.png" width="90" height="90" alt=""/> Google Speech Recognizer</a></p>
+<p>&nbsp;</p>
+<h3>Advanced web remote with javascript</h3>
+<p><a href="voxremote.html" target="_blank">VoxRemote example</a></p>
+<h3>Another get test...</h3>
+<p>
+    <input type="image" src="http://voxcommando.com/images/softicons/MediaMonkey.png" 
+    onclick="go('/api/TTS.Speak&&Dont click that monkey');"/>
+    which monkey will you click?
+    <input type="image" src="http://voxcommando.com/images/softicons/MediaMonkey.png" 
+    onclick="go('/api/TTS.Speak&&That monkey likes it.');"/>
+</p>
+</body></html>

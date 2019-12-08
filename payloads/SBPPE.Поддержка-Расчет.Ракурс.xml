@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>0.5</value>
+        <phrase>одна вторая</phrase>
+    </payload>
+    <payload>
+        <value>0.75</value>
+        <phrase>три четвёртых,три четверти</phrase>
+    </payload>
+    <payload>
+        <value>1</value>
+        <phrase>еденица</phrase>
+    </payload>
+</PayloadsRoot>

@@ -1,0 +1,66 @@
+<html>
+<head>
+<style type="text/css">
+body, td, th {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+tr td input {
+	width: 100%;
+	padding: 3px;
+	font-size: 12px;
+}
+</style>
+<script type='text/javascript'>
+        function addRow(){
+            // Find a <table> element with id="myTable":
+var myTable = document.getElementById("myTable");
+
+// Create an empty <tr> element and add it to the 1st position of the table:
+var row = myTable.insertRow(0);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+var cell1 = myTable.insertCell(0);
+var cell2 = myTable.insertCell(1);
+
+// Add some text to the new cells:
+cell1.innerHTML = "NEW CELL1";
+cell2.innerHTML = "NEW CELL2";
+        }
+		
+		function addNewRow()
+ {
+    var table = document.getElementById("table1");
+    var tr = table.insertRow();
+    var td = tr.insertCell();
+    td.innerHTML= "Action";
+
+    td = tr.insertCell();
+    td.innerHTML= '<input name="action">';
+td.style.backgroundColor ="#D0D5DA";
+    
+ }
+    </script>
+</head
+
+<body>
+<img src="logo.png" width="264" height="100" alt="vc logo" style="float: right; margin: 10px 20px 10px 10px;">
+<br>
+<h2>Test web server POST form</h2>
+<form action="/form" method="post" id="myTable" accept-charset="UTF-8">
+  <br>
+  <table id="table1" border="0" cellpadding="3" cellspacing="2" width="800px" >
+        <tr id="row1">
+            <td width="47" >Action</td>
+          <td width="733" bgcolor="#D0D5DA" ><input name="action2" value="OSD.ShowText&amp;&amp;This action is executed:"></td>
+        </tr>
+        <tr id="row1">
+            <td width="47">Action</td>
+          <td width="733" bgcolor="#D0D5DA" ><input name="action2" value="OSD.AddText&amp;&amp;... and then this one."></td>
+        </tr>
+    </table>
+<input type="button" name="button" id="button" value="+ Add Action" onClick="addNewRow()">
+<input type=submit name=send value=Send all actions>
+</form>
+</body>
+</html>

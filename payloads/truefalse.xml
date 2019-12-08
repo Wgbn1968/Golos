@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>true</value>
+        <phrase>true, on</phrase>
+    </payload>
+    <payload>
+        <value>false</value>
+        <phrase>false, off</phrase>
+    </payload>
+</PayloadsRoot>

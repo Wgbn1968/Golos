@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>1</value>
+        <phrase>стопервый</phrase>
+    </payload>
+    <payload>
+        <value>2</value>
+        <phrase>стовторой</phrase>
+    </payload>
+    <payload>
+        <value>3</value>
+        <phrase>стотретий</phrase>
+    </payload>
+    <payload>
+        <value>4</value>
+        <phrase>сточетвёртый</phrase>
+    </payload>
+</PayloadsRoot>

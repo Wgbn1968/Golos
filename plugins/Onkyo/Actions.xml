@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Onkyo</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Onkyo</helplink>
+            <description>
+                <default>Управление сетевыми приемниками Onkyo с помощью команд ISCP.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>SendRaw</name>
+            <commandString>Onkyo.SendRaw</commandString>
+            <info>
+                <params>1+</params>
+                <parameter name="Command" type="string" optional="False">ISCP командная строка, например: PWR00</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Onkyo#SendRaw</helplink>
+                <description>
+                    <default>Отправляет команду &lt;string&gt; в приемник Onkyo.  Несколько команд могут быть выданы одновременно, разделяя их запятыми.
+
+Пример команд:
+
+PWR00 (Режиме ожидания)
+PWR01 (Включение)
+MVLUP (Прибавить громкость)
+MVLDOWN (Убавить громкость)</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVolDecimal</name>
+            <commandString>Onkyo.SetVolDecimal</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Volume" type="integer" optional="False">&lt;0-100&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Onkyo#SetVolDecimal</helplink>
+                <description>
+                    <default>задает уровень громкости на значение от 0 до 100. (%)
+
+Предупреждение: высокие значения могут быть очень громкими и могут привести к повреждению или травме.  Начните тестирование со значений &lt; 30</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

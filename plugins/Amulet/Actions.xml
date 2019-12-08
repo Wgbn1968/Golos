@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Amulet</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Amulet</helplink>
+            <description>
+                <default>Generate events from the Amulet Devices microphone turning on/off</default>
+            </description>
+        </info>
+        <command>
+            <name>Connect</name>
+            <commandString>Amulet.Connect</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Amulet#Connect</helplink>
+                <description>
+                    <default>Reconnect to the Amulet USB device.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Reset</name>
+            <commandString>Amulet.Reset</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Amulet#Reset</helplink>
+                <description>
+                    <default>Attempts to destroy Amulet "object", reinitialize and then connect to the Amulet USB device.</default>
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

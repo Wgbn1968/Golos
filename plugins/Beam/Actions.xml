@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>BEAM</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP</helplink>
+            <description>
+                <default>Отправка и получение сообщений на TCP сокетах.</default>
+            </description>
+        </info>        
+        </command>
+        
+</AvailableCommands>

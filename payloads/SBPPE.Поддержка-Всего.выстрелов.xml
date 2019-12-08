@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>1</value>
+        <phrase>одна,одно,один</phrase>
+    </payload>
+    <payload>
+        <value>2</value>
+        <phrase>два,две</phrase>
+    </payload>
+    <payload>
+        <value>3</value>
+        <phrase>три</phrase>
+    </payload>
+    <payload>
+        <value>4</value>
+        <phrase>четыре</phrase>
+    </payload>
+    <payload>
+        <value>5</value>
+        <phrase>пять</phrase>
+    </payload>
+    <payload>
+        <value>6</value>
+        <phrase>шесть</phrase>
+    </payload>
+    <payload>
+        <value>7</value>
+        <phrase>семь</phrase>
+    </payload>
+    <payload>
+        <value>8</value>
+        <phrase>восемь</phrase>
+    </payload>
+    <payload>
+        <value>9</value>
+        <phrase>девять</phrase>
+    </payload>
+    <payload>
+        <value>10</value>
+        <phrase>десять</phrase>
+    </payload>
+    <payload>
+        <value>11</value>
+        <phrase>одиннадцать</phrase>
+    </payload>
+    <payload>
+        <value>12</value>
+        <phrase>двенадцать</phrase>
+    </payload>
+    <payload>
+        <value>13</value>
+        <phrase>тринадцать</phrase>
+    </payload>
+    <payload>
+        <value>14</value>
+        <phrase>четырнадцать</phrase>
+    </payload>
+    <payload>
+        <value>15</value>
+        <phrase>пятнадцать</phrase>
+    </payload>
+    <payload>
+        <value>16</value>
+        <phrase>шестнадцать</phrase>
+    </payload>
+    <payload>
+        <value>17</value>
+        <phrase>семнадцать</phrase>
+    </payload>
+    <payload>
+        <value>18</value>
+        <phrase>восемнадцать</phrase>
+    </payload>
+    <payload>
+        <value>19</value>
+        <phrase>девятнадцать</phrase>
+    </payload>
+    <payload>
+        <value>20</value>
+        <phrase>двадцать</phrase>
+    </payload>
+    <payload>
+        <value>21</value>
+        <phrase>двадцать одна,двадцать одно,двадцать один</phrase>
+    </payload>
+    <payload>
+        <value>22</value>
+        <phrase>двадцать две,двадцать два</phrase>
+    </payload>
+    <payload>
+        <value>23</value>
+        <phrase>двадцать три</phrase>
+    </payload>
+    <payload>
+        <value>24</value>
+        <phrase>двадцать четыре</phrase>
+    </payload>
+    <payload>
+        <value>25</value>
+        <phrase>двадцать пять</phrase>
+    </payload>
+    <payload>
+        <value>26</value>
+        <phrase>двадцать шесть</phrase>
+    </payload>
+    <payload>
+        <value>27</value>
+        <phrase>двадцать семь</phrase>
+    </payload>
+    <payload>
+        <value>28</value>
+        <phrase>двадцать восемь</phrase>
+    </payload>
+    <payload>
+        <value>29</value>
+        <phrase>двадцать девять</phrase>
+    </payload>
+    <payload>
+        <value>30</value>
+        <phrase>тридцать</phrase>
+    </payload>
+</PayloadsRoot>

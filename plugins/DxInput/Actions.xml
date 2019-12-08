@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>DxInput</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput</helplink>
+            <description>
+                <default>Эмуляция клавиатуры совместимая с DirectX. Некоторые приложения (например, игры) не отвечают на действия InputKeys или Sendkeys. В этих случаях вы можете попробовать использовать эмуляцию клавиатуры DirectX, используя действия, предоставляемые этим плагином.</default>
+            </description>
+        </info>
+        <command>
+            <name>KeyPress</name>
+            <commandString>DxInput.KeyPress</commandString>
+            <info>
+                <params>1+</params>
+                <parameter name="KeyCode" type="string" optional="False">клавиша для нажатия</parameter>
+                <parameter name="KeyCode" type="string" optional="True">2я клавиша для нажатия</parameter>
+                <parameter name="KeyCode" type="string" optional="True">3я клавиша для нажатия</parameter>
+                <parameter name="KeyCode" type="string" optional="True">4я клавиша для нажатия</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#KeyPress</helplink>
+                <description>
+                    <default>Нажимает одну клавишу (для каждого параметра) и удерживает ее в течение времени по умолчанию, заданного в настройках плагина DxInput.
+Несколько параметров будут отправлены последовательно.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>KeyCombo</name>
+            <commandString>DxInput.KeyCombo</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="ModKeys" type="string" optional="False">Клавиши для удержания нажатой клавиши &lt;PressKeys&gt;</parameter>
+                <parameter name="PressKeys" type="string" optional="True">Клавиши для нажатия и отпускания</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#KeyCombo</helplink>
+                <description>
+                    <default>Формат клавиш:  {keyname1}{keyname2}...
+Коды клавиш должны быть окружены {  }
+Последовательность событий будет:
+- нажмите и удерживайте &lt;ModKeys&gt;
+- нажмите и отпустите &lt;PressKeys&gt;
+- нажмите &lt;ModKeys&gt;
+
+Примеры:
+{leftcontrol}       {c}</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>KeyHold</name>
+            <commandString>DxInput.KeyHold</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="KeyCode" type="string" optional="False">Клавиша для нажатия</parameter>
+                <parameter name="Duration" type="integer" optional="False">Время удержания клавиши (миллисекунды)</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#KeyHold</helplink>
+                <description>
+                    <default>Нажмите одну клавишу с кодом &lt;KeyCode&gt;. Удерживает клавишу нажатой в течение &lt;Duration&gt; миллисекунд, а затем отпускает. Выполнение программы будет приостановлено до завершения действия.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>KeyDown</name>
+            <commandString>DxInput.KeyDown</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="KeyCode" type="string" optional="False">Клавиша для нажатия</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#KeyDown</helplink>
+                <description>
+                    <default>Нажимает клавишу, определенную в &lt;KeyCode&gt; и удерживает ее нажатой (не отпускает). Вы должны отпустить её позже, используя "KeyUp". Вы также можете отпустить её, физически нажав клавишу на клавиатуре.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>KeyUp</name>
+            <commandString>DxInput.KeyUp</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="KeyCode" type="string" optional="False">Клавиша для отпускания (отжатия)</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#KeyUp</helplink>
+                <description>
+                    <default>Отпускает клавишу, определенную в &lt;KeyCode&gt;, которая была ранее активирована с помощью "KeyDown".  Если клавиша уже была отжата, это действие не будет иметь никакого эффекта.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Type</name>
+            <commandString>DxInput.Type</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Text" type="string" optional="False">Текст для ввода</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#Type</helplink>
+                <description>
+                    <default>Вводит &lt;Text&gt;.  Можно ввести последовательность клавиш или строку. Можно использовать любой номер буквы или следующую пунктуацию:    [ ] , . / ? ! @ # $ % ^ &amp; * ( ) _ + ' "
+Другие клавиши могут быть заданы с помощью {}, например {tab}, но вы не можете использовать комбинации клавиш.
+Некоторые специальные символы могут не работать в зависимости от языка клавиатуры.
+
+Пример параметра:   Привет.{return}{tab}Хорошо? Да!{return}</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetDelay</name>
+            <commandString>DxInput.SetDelay</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Delay" type="integer" optional="False">установка задержки нажатия клавиш по умолчанию (мс)</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#SetDelay</helplink>
+                <description>
+                    <default>Установите задержку нажатия клавиш по умолчанию в &lt;Delay &gt; миллисекундах, но не сохраняет ее в опциях.  Остается в силе до тех пор, пока снова не изменится или VoxCommando не будет перезапущен, в этом случае он возвращается к значению по умолчанию, заданному в опциях.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Mouse</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#Mouse</helplink>
+                <description>
+                    <default>Действия для эмуляции кнопок мыши.</default>
+                </description>
+            </info>
+            <command>
+                <name>Click</name>
+                <commandString>DxInput.Mouse.Click</commandString>
+                <info>
+                    <params>1-2</params>
+                    <parameter name="Button" type="string" optional="False">Left, Right, Middle, X1, X2</parameter>
+                    <parameter name="Duration" type="integer" optional="True">Время удержания кнопки в миллисекундах</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#Click</helplink>
+                    <description>
+                        <default>Нажмите (нажмите и отпустите) кнопку мыши.
+При необходимости укажите &lt;Duration&gt; в миллисекундах, чтобы удерживать кнопку нажатой.
+&lt;Button&gt; должна быть одной из следующих: Left, Right, Middle, X1, X2</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Down</name>
+                <commandString>DxInput.Mouse.Down</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Button" type="string" optional="False">Left, Right, Middle, X1, X2</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#Down</helplink>
+                    <description>
+                        <default>Нажмите, но не отпускайте кнопку мыши.
+За этим должно последовать действие DxInput.Mouse.Up.
+&lt;Button&gt; должна быть одной из следующих: Left, Right, Middle, X1, X2</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Up</name>
+                <commandString>DxInput.Mouse.Up</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Button" type="string" optional="False">Left, Right, Middle, X1, X2</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_DxInput#Up</helplink>
+                    <description>
+                        <default>Отпускает кнопку мыши, которая ранее была нажата с помощью DxInput.Mouse.Down
+Должно предшествовать действие DxInput.Mouse.Down.
+&lt;Button&gt; должна быть одной из следующих: Left, Right, Middle, X1, X2</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+    </command>
+</AvailableCommands>

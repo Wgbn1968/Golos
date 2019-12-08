@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>ОФС+ДС,осколочные и дымовые</value>
+        <phrase>ОФС+ДС,осколочные и дымовые</phrase>
+    </payload>
+    <payload>
+        <value>ОФС,осколочные</value>
+        <phrase>ОФС,осколочные</phrase>
+    </payload>
+    <payload>
+        <value>Миномет-фугасный,мины осколочные</value>
+        <phrase>Миномет-фугасный,мины осколочные</phrase>
+    </payload>
+    <payload>
+        <value>Дымовые</value>
+        <phrase>Дымовые</phrase>
+    </payload>
+    <payload>
+        <value>Миномет-дымовой,мины дымовые</value>
+        <phrase>Миномет-дымовой,мины дымовые</phrase>
+    </payload>
+    <payload>
+        <value>Кассетные</value>
+        <phrase>Кассетные</phrase>
+    </payload>
+    <payload>
+        <value>БШУ-2х250кг,авиация</value>
+        <phrase>БШУ-2х250кг,авиация</phrase>
+    </payload>
+    <payload>
+        <value>ОФ-РС,реактивные осколочные</value>
+        <phrase>ОФ-РС,реактивные осколочные</phrase>
+    </payload>
+    <payload>
+        <value>Кассетные-РС,реактивные кассетные</value>
+        <phrase>Кассетные-РС,реактивные кассетные</phrase>
+    </payload>
+</PayloadsRoot>

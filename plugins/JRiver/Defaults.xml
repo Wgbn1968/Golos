@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--options for VoxCommando / <plugin name goes here>.-->
+<Options>
+    <Option name="hostname" value="localhost" />
+    <Option name="port" value="52199" />
+    <Option name="username" value="test" />
+    <Option name="password" value="test" />
+    <Option name="pathToSaveXml" value=".\JRPayloads\" />
+    <Option name="submatchPlaylist" value="False" />
+    <genXml>
+        <genXmlParam xmlFilename="AlbumArtists.xml" filter="Field=Album Artist&amp;Files=[Media Type]=[Audio] " useSubStrings="True" />
+        <genXmlParam xmlFilename="Albums.xml" filter="Field=Album&amp;Files=[Media Type]=[Audio] " useSubStrings="True" />
+        <genXmlParam xmlFilename="Artists.xml" filter="Field=Artist&amp;Files=[Media Type]=[Audio] " useSubStrings="True" />
+        <genXmlParam xmlFilename="Genres.xml" filter="Field=Genre&amp;Files[Media Type]=[Audio]" useSubStrings="False" />
+        <genXmlParam xmlFilename="ImageKeywords.xml" filter="Field=Keywords&amp;Files=[Media Type]=[Image]" useSubStrings="False" />
+        <genXmlParam xmlFilename="ImagePeople.xml" filter="Field=People&amp;Files=[Media Type]=[Image]" useSubStrings="True" />
+        <genXmlParam xmlFilename="ImagePlaces.xml" filter="Field=Places&amp;Files=[Media Type]=[Image]" useSubStrings="False" />
+        <genXmlParam xmlFilename="Movies.xml" filter="Field=Name&amp;Files=[Media Sub Type]=[Movie]" useSubStrings="True" />
+        <genXmlParam xmlFilename="Songs.xml" filter="Field=Name&amp;Files=[Media Type]=[Audio] [rating]=&gt;3" useSubStrings="True" />
+        <genXmlParam xmlFilename="TvSeries.xml" filter="Field=Series&amp;Files=[Media Sub Type]=[TV Show]" useSubStrings="True" />
+    </genXml>
+</Options>

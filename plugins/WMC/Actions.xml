@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>WMC</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_WMC</helplink>
+            <description>
+                <default>Отправляет командные сообщения в Windows Media Center через плагин VMC, который должен быть установлен на компьютере под управлением Windows Media Center.
+
+См.: [[Installation_WMC]] на вики</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Send</name>
+            <commandString>WMC.Send</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Command" type="string" optional="False">Command to send</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_WMC#Send</helplink>
+                <description>
+                    <default>Отправляет &lt;command&gt; в Windows Media Center через плагин VMC, который должен быть установлен на компьютере под управлением Windows Media Center
+
+См.: http://vmccontroller.codeplex.com/wikipage?title=Commands</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXML</name>
+            <commandString>WMC.GenXML</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_WMC#GenXML</helplink>
+                <description>
+                    <default>Создает различные файлы payloadXML на основе WMC медиа.  Файлы хранятся в папке wmcPayloads.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

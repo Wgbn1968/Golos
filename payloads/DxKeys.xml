@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>A</value>
+        <phrase>A</phrase>
+    </payload>
+    <payload>
+        <value>AbntC1</value>
+        <phrase>AbntC1</phrase>
+    </payload>
+    <payload>
+        <value>AbntC2</value>
+        <phrase>AbntC2</phrase>
+    </payload>
+    <payload>
+        <value>Add</value>
+        <phrase>Add</phrase>
+    </payload>
+    <payload>
+        <value>Apostrophe</value>
+        <phrase>Apostrophe</phrase>
+    </payload>
+    <payload>
+        <value>Apps</value>
+        <phrase>Apps</phrase>
+    </payload>
+    <payload>
+        <value>At</value>
+        <phrase>At</phrase>
+    </payload>
+    <payload>
+        <value>AX</value>
+        <phrase>AX</phrase>
+    </payload>
+    <payload>
+        <value>B</value>
+        <phrase>B</phrase>
+    </payload>
+    <payload>
+        <value>Back</value>
+        <phrase>Back</phrase>
+    </payload>
+    <payload>
+        <value>BackSlash</value>
+        <phrase>BackSlash</phrase>
+    </payload>
+    <payload>
+        <value>BackSpace</value>
+        <phrase>BackSpace</phrase>
+    </payload>
+    <payload>
+        <value>C</value>
+        <phrase>C</phrase>
+    </payload>
+    <payload>
+        <value>Calculator</value>
+        <phrase>Calculator</phrase>
+    </payload>
+    <payload>
+        <value>Capital</value>
+        <phrase>Capital</phrase>
+    </payload>
+    <payload>
+        <value>CapsLock</value>
+        <phrase>CapsLock</phrase>
+    </payload>
+    <payload>
+        <value>Circumflex</value>
+        <phrase>Circumflex</phrase>
+    </payload>
+    <payload>
+        <value>Colon</value>
+        <phrase>Colon</phrase>
+    </payload>
+    <payload>
+        <value>Comma</value>
+        <phrase>Comma</phrase>
+    </payload>
+    <payload>
+        <value>Convert</value>
+        <phrase>Convert</phrase>
+    </payload>
+    <payload>
+        <value>D</value>
+        <phrase>D</phrase>
+    </payload>
+    <payload>
+        <value>D0</value>
+        <phrase>0</phrase>
+    </payload>
+    <payload>
+        <value>D1</value>
+        <phrase>1</phrase>
+    </payload>
+    <payload>
+        <value>D2</value>
+        <phrase>2</phrase>
+    </payload>
+    <payload>
+        <value>D3</value>
+        <phrase>3</phrase>
+    </payload>
+    <payload>
+        <value>D4</value>
+        <phrase>4</phrase>
+    </payload>
+    <payload>
+        <value>D5</value>
+        <phrase>5</phrase>
+    </payload>
+    <payload>
+        <value>D6</value>
+        <phrase>6</phrase>
+    </payload>
+    <payload>
+        <value>D7</value>
+        <phrase>7</phrase>
+    </payload>
+    <payload>
+        <value>D8</value>
+        <phrase>8</phrase>
+    </payload>
+    <payload>
+        <value>D9</value>
+        <phrase>9</phrase>
+    </payload>
+    <payload>
+        <value>Decimal</value>
+        <phrase>Decimal</phrase>
+    </payload>
+    <payload>
+        <value>Delete</value>
+        <phrase>Delete</phrase>
+    </payload>
+    <payload>
+        <value>Divide</value>
+        <phrase>Divide</phrase>
+    </payload>
+    <payload>
+        <value>Down</value>
+        <phrase>Down</phrase>
+    </payload>
+    <payload>
+        <value>DownArrow</value>
+        <phrase>DownArrow</phrase>
+    </payload>
+    <payload>
+        <value>E</value>
+        <phrase>E</phrase>
+    </payload>
+    <payload>
+        <value>End</value>
+        <phrase>End</phrase>
+    </payload>
+    <payload>
+        <value>Equals</value>
+        <phrase>Equals</phrase>
+    </payload>
+    <payload>
+        <value>Escape</value>
+        <phrase>Escape</phrase>
+    </payload>
+    <payload>
+        <value>F</value>
+        <phrase>F</phrase>
+    </payload>
+    <payload>
+        <value>F1</value>
+        <phrase>F1</phrase>
+    </payload>
+    <payload>
+        <value>F10</value>
+        <phrase>F10</phrase>
+    </payload>
+    <payload>
+        <value>F11</value>
+        <phrase>F11</phrase>
+    </payload>
+    <payload>
+        <value>F12</value>
+        <phrase>F12</phrase>
+    </payload>
+    <payload>
+        <value>F13</value>
+        <phrase>F13</phrase>
+    </payload>
+    <payload>
+        <value>F14</value>
+        <phrase>F14</phrase>
+    </payload>
+    <payload>
+        <value>F15</value>
+        <phrase>F15</phrase>
+    </payload>
+    <payload>
+        <value>F2</value>
+        <phrase>F2</phrase>
+    </payload>
+    <payload>
+        <value>F3</value>
+        <phrase>F3</phrase>
+    </payload>
+    <payload>
+        <value>F4</value>
+        <phrase>F4</phrase>
+    </payload>
+    <payload>
+        <value>F5</value>
+        <phrase>F5</phrase>
+    </payload>
+    <payload>
+        <value>F6</value>
+        <phrase>F6</phrase>
+    </payload>
+    <payload>
+        <value>F7</value>
+        <phrase>F7</phrase>
+    </payload>
+    <payload>
+        <value>F8</value>
+        <phrase>F8</phrase>
+    </payload>
+    <payload>
+        <value>F9</value>
+        <phrase>F9</phrase>
+    </payload>
+    <payload>
+        <value>G</value>
+        <phrase>G</phrase>
+    </payload>
+    <payload>
+        <value>Grave</value>
+        <phrase>Grave</phrase>
+    </payload>
+    <payload>
+        <value>H</value>
+        <phrase>H</phrase>
+    </payload>
+    <payload>
+        <value>Home</value>
+        <phrase>Home</phrase>
+    </payload>
+    <payload>
+        <value>I</value>
+        <phrase>I</phrase>
+    </payload>
+    <payload>
+        <value>Insert</value>
+        <phrase>Insert</phrase>
+    </payload>
+    <payload>
+        <value>J</value>
+        <phrase>J</phrase>
+    </payload>
+    <payload>
+        <value>K</value>
+        <phrase>K</phrase>
+    </payload>
+    <payload>
+        <value>Kana</value>
+        <phrase>Kana</phrase>
+    </payload>
+    <payload>
+        <value>Kanji</value>
+        <phrase>Kanji</phrase>
+    </payload>
+    <payload>
+        <value>L</value>
+        <phrase>L</phrase>
+    </payload>
+    <payload>
+        <value>Left</value>
+        <phrase>Left</phrase>
+    </payload>
+    <payload>
+        <value>LeftAlt</value>
+        <phrase>LeftAlt</phrase>
+    </payload>
+    <payload>
+        <value>LeftArrow</value>
+        <phrase>LeftArrow</phrase>
+    </payload>
+    <payload>
+        <value>LeftBracket</value>
+        <phrase>LeftBracket</phrase>
+    </payload>
+    <payload>
+        <value>LeftControl</value>
+        <phrase>LeftControl</phrase>
+    </payload>
+    <payload>
+        <value>LeftMenu</value>
+        <phrase>LeftMenu</phrase>
+    </payload>
+    <payload>
+        <value>LeftShift</value>
+        <phrase>LeftShift</phrase>
+    </payload>
+    <payload>
+        <value>LeftWindows</value>
+        <phrase>LeftWindows</phrase>
+    </payload>
+    <payload>
+        <value>M</value>
+        <phrase>M</phrase>
+    </payload>
+    <payload>
+        <value>Mail</value>
+        <phrase>Mail</phrase>
+    </payload>
+    <payload>
+        <value>MediaSelect</value>
+        <phrase>MediaSelect</phrase>
+    </payload>
+    <payload>
+        <value>MediaStop</value>
+        <phrase>MediaStop</phrase>
+    </payload>
+    <payload>
+        <value>Minus</value>
+        <phrase>Minus</phrase>
+    </payload>
+    <payload>
+        <value>Multiply</value>
+        <phrase>Multiply</phrase>
+    </payload>
+    <payload>
+        <value>Mute</value>
+        <phrase>Mute</phrase>
+    </payload>
+    <payload>
+        <value>MyComputer</value>
+        <phrase>MyComputer</phrase>
+    </payload>
+    <payload>
+        <value>N</value>
+        <phrase>N</phrase>
+    </payload>
+    <payload>
+        <value>Next</value>
+        <phrase>Next</phrase>
+    </payload>
+    <payload>
+        <value>NextTrack</value>
+        <phrase>NextTrack</phrase>
+    </payload>
+    <payload>
+        <value>NoConvert</value>
+        <phrase>NoConvert</phrase>
+    </payload>
+    <payload>
+        <value>Numlock</value>
+        <phrase>Numlock</phrase>
+    </payload>
+    <payload>
+        <value>NumPad0</value>
+        <phrase>NumPad0</phrase>
+    </payload>
+    <payload>
+        <value>NumPad1</value>
+        <phrase>NumPad1</phrase>
+    </payload>
+    <payload>
+        <value>NumPad2</value>
+        <phrase>NumPad2</phrase>
+    </payload>
+    <payload>
+        <value>NumPad3</value>
+        <phrase>NumPad3</phrase>
+    </payload>
+    <payload>
+        <value>NumPad4</value>
+        <phrase>NumPad4</phrase>
+    </payload>
+    <payload>
+        <value>NumPad5</value>
+        <phrase>NumPad5</phrase>
+    </payload>
+    <payload>
+        <value>NumPad6</value>
+        <phrase>NumPad6</phrase>
+    </payload>
+    <payload>
+        <value>NumPad7</value>
+        <phrase>NumPad7</phrase>
+    </payload>
+    <payload>
+        <value>NumPad8</value>
+        <phrase>NumPad8</phrase>
+    </payload>
+    <payload>
+        <value>NumPad9</value>
+        <phrase>NumPad9</phrase>
+    </payload>
+    <payload>
+        <value>NumPadComma</value>
+        <phrase>NumPadComma</phrase>
+    </payload>
+    <payload>
+        <value>NumPadEnter</value>
+        <phrase>NumPadEnter</phrase>
+    </payload>
+    <payload>
+        <value>NumPadEquals</value>
+        <phrase>NumPadEquals</phrase>
+    </payload>
+    <payload>
+        <value>NumPadMinus</value>
+        <phrase>NumPadMinus</phrase>
+    </payload>
+    <payload>
+        <value>NumPadPeriod</value>
+        <phrase>NumPadPeriod</phrase>
+    </payload>
+    <payload>
+        <value>NumPadPlus</value>
+        <phrase>NumPadPlus</phrase>
+    </payload>
+    <payload>
+        <value>NumPadSlash</value>
+        <phrase>NumPadSlash</phrase>
+    </payload>
+    <payload>
+        <value>NumPadStar</value>
+        <phrase>NumPadStar</phrase>
+    </payload>
+    <payload>
+        <value>O</value>
+        <phrase>O</phrase>
+    </payload>
+    <payload>
+        <value>OEM102</value>
+        <phrase>OEM102</phrase>
+    </payload>
+    <payload>
+        <value>P</value>
+        <phrase>P</phrase>
+    </payload>
+    <payload>
+        <value>PageDown</value>
+        <phrase>PageDown</phrase>
+    </payload>
+    <payload>
+        <value>PageUp</value>
+        <phrase>PageUp</phrase>
+    </payload>
+    <payload>
+        <value>Pause</value>
+        <phrase>Pause</phrase>
+    </payload>
+    <payload>
+        <value>Period</value>
+        <phrase>Period</phrase>
+    </payload>
+    <payload>
+        <value>PlayPause</value>
+        <phrase>PlayPause</phrase>
+    </payload>
+    <payload>
+        <value>Power</value>
+        <phrase>Power</phrase>
+    </payload>
+    <payload>
+        <value>PrevTrack</value>
+        <phrase>PrevTrack</phrase>
+    </payload>
+    <payload>
+        <value>Prior</value>
+        <phrase>Prior</phrase>
+    </payload>
+    <payload>
+        <value>Q</value>
+        <phrase>Q</phrase>
+    </payload>
+    <payload>
+        <value>R</value>
+        <phrase>R</phrase>
+    </payload>
+    <payload>
+        <value>Return</value>
+        <phrase>Return</phrase>
+    </payload>
+    <payload>
+        <value>Right</value>
+        <phrase>Right</phrase>
+    </payload>
+    <payload>
+        <value>RightAlt</value>
+        <phrase>RightAlt</phrase>
+    </payload>
+    <payload>
+        <value>RightArrow</value>
+        <phrase>RightArrow</phrase>
+    </payload>
+    <payload>
+        <value>RightBracket</value>
+        <phrase>RightBracket</phrase>
+    </payload>
+    <payload>
+        <value>RightControl</value>
+        <phrase>RightControl</phrase>
+    </payload>
+    <payload>
+        <value>RightMenu</value>
+        <phrase>RightMenu</phrase>
+    </payload>
+    <payload>
+        <value>RightShift</value>
+        <phrase>RightShift</phrase>
+    </payload>
+    <payload>
+        <value>RightWindows</value>
+        <phrase>RightWindows</phrase>
+    </payload>
+    <payload>
+        <value>S</value>
+        <phrase>S</phrase>
+    </payload>
+    <payload>
+        <value>Scroll</value>
+        <phrase>Scroll</phrase>
+    </payload>
+    <payload>
+        <value>SemiColon</value>
+        <phrase>SemiColon</phrase>
+    </payload>
+    <payload>
+        <value>Slash</value>
+        <phrase>Slash</phrase>
+    </payload>
+    <payload>
+        <value>Sleep</value>
+        <phrase>Sleep</phrase>
+    </payload>
+    <payload>
+        <value>Space</value>
+        <phrase>Space</phrase>
+    </payload>
+    <payload>
+        <value>Stop</value>
+        <phrase>Stop</phrase>
+    </payload>
+    <payload>
+        <value>Subtract</value>
+        <phrase>Subtract</phrase>
+    </payload>
+    <payload>
+        <value>SysRq</value>
+        <phrase>SysRq</phrase>
+    </payload>
+    <payload>
+        <value>T</value>
+        <phrase>T</phrase>
+    </payload>
+    <payload>
+        <value>Tab</value>
+        <phrase>Tab</phrase>
+    </payload>
+    <payload>
+        <value>U</value>
+        <phrase>U</phrase>
+    </payload>
+    <payload>
+        <value>Underline</value>
+        <phrase>Underline</phrase>
+    </payload>
+    <payload>
+        <value>Unlabeled</value>
+        <phrase>Unlabeled</phrase>
+    </payload>
+    <payload>
+        <value>Up</value>
+        <phrase>Up</phrase>
+    </payload>
+    <payload>
+        <value>UpArrow</value>
+        <phrase>UpArrow</phrase>
+    </payload>
+    <payload>
+        <value>V</value>
+        <phrase>V</phrase>
+    </payload>
+    <payload>
+        <value>VolumeDown</value>
+        <phrase>VolumeDown</phrase>
+    </payload>
+    <payload>
+        <value>VolumeUp</value>
+        <phrase>VolumeUp</phrase>
+    </payload>
+    <payload>
+        <value>W</value>
+        <phrase>W</phrase>
+    </payload>
+    <payload>
+        <value>Wake</value>
+        <phrase>Wake</phrase>
+    </payload>
+    <payload>
+        <value>WebBack</value>
+        <phrase>WebBack</phrase>
+    </payload>
+    <payload>
+        <value>WebFavorites</value>
+        <phrase>WebFavorites</phrase>
+    </payload>
+    <payload>
+        <value>WebForward</value>
+        <phrase>WebForward</phrase>
+    </payload>
+    <payload>
+        <value>WebHome</value>
+        <phrase>WebHome</phrase>
+    </payload>
+    <payload>
+        <value>WebRefresh</value>
+        <phrase>WebRefresh</phrase>
+    </payload>
+    <payload>
+        <value>WebSearch</value>
+        <phrase>WebSearch</phrase>
+    </payload>
+    <payload>
+        <value>WebStop</value>
+        <phrase>WebStop</phrase>
+    </payload>
+    <payload>
+        <value>X</value>
+        <phrase>X</phrase>
+    </payload>
+    <payload>
+        <value>Y</value>
+        <phrase>Y</phrase>
+    </payload>
+    <payload>
+        <value>Yen</value>
+        <phrase>Yen</phrase>
+    </payload>
+    <payload>
+        <value>Z</value>
+        <phrase>Z</phrase>
+    </payload>
+</PayloadsRoot>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>MpScan</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpScan</helplink>
+            <description>
+                <default>Сканирование базы данных MediaPortal и создание файлов payloadXML.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>GenerateAll</name>
+            <commandString>MpScan.GenerateAll</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpScan#GenerateAll</helplink>
+                <description>
+                    <default>Сканирует все доступные базы данных для создания файлов payloadXml.  Настройки должны быть установлены на вкладке плагина MpScan.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

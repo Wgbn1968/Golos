@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Halx</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Halx</helplink>
+            <description>
+                <default>Send commands to HALi Home Automation controller.
+Utilities to learn and store codes are available.
+The base url for halx is defined in plugin settings.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Send</name>
+            <commandString>Halx.Send</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="Command" type="string" optional="False">Command string. See description for examples</parameter>
+                <parameter name="Description" type="string" optional="True">What does this code do?  Not used by VC</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Halx#Send</helplink>
+                <description>
+                    <default>&lt;Command&gt; should be everything that appears after the halx address
+
+example:    rf433.cgi?crce=2355090A18551503
+
+&lt;Description&gt; is optional.  User can set a friendly name to identify what the command does</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>LearnIR</name>
+            <commandString>Halx.LearnIR</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Halx#LearnIR</helplink>
+                <description>
+                    <default>Puts Halx into learn mode.  VC will be blocked until Halx detects an IR signal.
+The signal will be returned and can then be used in Halx.Send</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

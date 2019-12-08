@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>xMySql</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_xMySql</helplink>
+            <description>
+                <default>Используется для создания файлов payloadXML путем запроса базы данных XBMC mySQL.
+Пользовательские запросы можно определить в настройках плагина.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>GenerateAll</name>
+            <commandString>xMySql.GenerateAll</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_xMySql#GenerateAll</helplink>
+                <description>
+                    <default>Сканирует базы данных XBMC и создает новые файлы payloadXML в соответствии с настройками плагина.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

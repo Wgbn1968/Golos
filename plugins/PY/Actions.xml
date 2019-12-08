@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>PY</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_PY</helplink>
+            <description>
+                <default>Используя мощь Iron [[Python]], плагин "PY" позволяет запускать скрипты python в VoxCommando. Скрипты могут взаимодействовать с VoxCommando, считывать и настраивать переменные, вызывать события и выполнять другие действия.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>ExecString</name>
+            <commandString>PY.ExecString</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Code" type="string" optional="False">Код Python'а для выполнения</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_PY#ExecString</helplink>
+                <description>
+                    <default>оценивает и выполняет код python</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ExecFile</name>
+            <commandString>PY.ExecFile</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Path" type="string" optional="False">путь к файлу Python'а для выполнения</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_PY#ExecFile</helplink>
+                <description>
+                    <default>Загружает файл python из &lt;Path&gt; и выполняет его</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetVar</name>
+            <commandString>PY.GetVar</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="VarName" type="string" optional="False">Имя переменной для получения значения</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_PY#GetVar</helplink>
+                <description>
+                    <default>Пытается вернуть значение &lt;VarName&gt; в виде строки
+Не работает для сложных переменных, таких как коллекции (списки, кортежи, словари и т. д.)</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetList</name>
+            <commandString>PY.GetList</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="VarName" type="" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_PY#GetList</helplink>
+                <description>
+                    <default>Пытается вернуть значения &lt;VarName&gt; в виде набора совпадений.
+Работает только если &lt;VarName&gt; указывает на список строк.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ReInit</name>
+            <commandString>PY.ReInit</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_PY#ReInit</helplink>
+                <description>
+                    <default>Полностью повторно инициализирует движок python, стирая все объекты из памяти.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>1</value>
+        <phrase>один</phrase>
+    </payload>
+    <payload>
+        <value>2</value>
+        <phrase>два</phrase>
+    </payload>
+    <payload>
+        <value>3</value>
+        <phrase>три</phrase>
+    </payload>
+    <payload>
+        <value>4</value>
+        <phrase>четыре</phrase>
+    </payload>
+    <payload>
+        <value>5</value>
+        <phrase>пять</phrase>
+    </payload>
+    <payload>
+        <value>6</value>
+        <phrase>шесть</phrase>
+    </payload>
+    <payload>
+        <value>7</value>
+        <phrase>семь</phrase>
+    </payload>
+    <payload>
+        <value>8</value>
+        <phrase>восемь</phrase>
+    </payload>
+    <payload>
+        <value>9</value>
+        <phrase>девять</phrase>
+    </payload>
+    <payload>
+        <value>10</value>
+        <phrase>десять</phrase>
+    </payload>
+</PayloadsRoot>

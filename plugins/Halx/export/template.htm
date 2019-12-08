@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="Jitterjames" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="apple-touch-icon" href="icons/vclogo.png">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>Halx JitterTest</title>
+<link href="voxbtn.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	function go(url)
+    {
+        var req = new XMLHttpRequest ();
+        req.open ('GET', 'http://192.168.0.110/'+url);
+        req.send(null);
+    }
+	
+	function goLater(url,msDelay)
+	{
+		setTimeout(function() {go(url);},msDelay);
+	}
+</script>
+
+</head>
+<body>
+<div>
+	<table width="250" border="0" align="center" cellpadding="2" cellspacing="1">
+		<tr>
+			<td><input type="image" class="brdr" src="icons/on.png" onclick= "go('sendrf.cgi?crce=2355090A18551503');"></td>
+			<td>&nbsp;</td>
+			<td><input type="submit" value="Wake HTPC" onclick="go('wol.cgi?mac=002215F316D5');" /></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

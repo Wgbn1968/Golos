@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Wemo</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Wemo</helplink>
+            <description>
+                <default>Описание плагина</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>SetState</name>
+            <commandString>Wemo.SetState</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="SerialNumber" type="string" optional="False">Серийный номер устройства (или имя) переключателя для управления</parameter>
+                <parameter name="State" type="string" optional="False">on или off</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Wemo#SetState</helplink>
+                <description>
+                    <default>Переключить между on или off</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetState</name>
+            <commandString>Wemo.GetState</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="SerialNumber" type="string" optional="False">Серийный номер устройства (или имя) коммутатора для запроса</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Wemo#GetState</helplink>
+                <description>
+                    <default>Запросить указанный переключатель Wemo, чтобы увидеть, является ли текущее состояние " On " или " Off"</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXML</name>
+            <commandString>Wemo.GenXML</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Wemo#GenXML</helplink>
+                <description>
+                    <default>Создает файл payloadXML для всех найденных коммутаторов Wemo.  Файл сохраняется в папке payloads.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

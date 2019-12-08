@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>shell:DpAPIKeys</value>
+        <phrase>Roaming apps data</phrase>
+    </payload>
+    <payload>
+        <value>shell:Profile</value>
+        <phrase>profile folder</phrase>
+    </payload>
+    <payload>
+        <value>shell:Cryptokeys</value>
+        <phrase>encryption keys</phrase>
+    </payload>
+    <payload>
+        <value>shell:Downloads</value>
+        <phrase>downloads</phrase>
+    </payload>
+    <payload>
+        <value>shell:Desktop</value>
+        <phrase>Desktop</phrase>
+    </payload>
+    <payload>
+        <value>shell:SystemCertificates</value>
+        <phrase>Certificates</phrase>
+    </payload>
+    <payload>
+        <value>shell:Playlists</value>
+        <phrase>Music playlists</phrase>
+    </payload>
+    <payload>
+        <value>shell:Contacts</value>
+        <phrase>Windows Contacts</phrase>
+    </payload>
+    <payload>
+        <value>shell:My Video</value>
+        <phrase>My videos</phrase>
+    </payload>
+    <payload>
+        <value>shell:Startup</value>
+        <phrase>Startup</phrase>
+    </payload>
+    <payload>
+        <value>shell:Start Menu</value>
+        <phrase>Start Menu</phrase>
+    </payload>
+    <payload>
+        <value>shell:Programs</value>
+        <phrase>Start Menu Programs</phrase>
+    </payload>
+    <payload>
+        <value>shell:SendTo</value>
+        <phrase>Send To</phrase>
+    </payload>
+    <payload>
+        <value>shell:Recent</value>
+        <phrase>Recent Documents</phrase>
+    </payload>
+    <payload>
+        <value>shell:PhotoAlbums</value>
+        <phrase>Slide Shows</phrase>
+    </payload>
+    <payload>
+        <value>shell:My Pictures</value>
+        <phrase>My pictures</phrase>
+    </payload>
+    <payload>
+        <value>shell:NetHood</value>
+        <phrase>My network places</phrase>
+    </payload>
+    <payload>
+        <value>shell:My Music</value>
+        <phrase>My music</phrase>
+    </payload>
+    <payload>
+        <value>shell:Links</value>
+        <phrase>Links</phrase>
+    </payload>
+    <payload>
+        <value>shell:History</value>
+        <phrase>History</phrase>
+    </payload>
+    <payload>
+        <value>shell:GameTasks</value>
+        <phrase>Game Explorer</phrase>
+    </payload>
+    <payload>
+        <value>shell:Personal</value>
+        <phrase>Documents</phrase>
+    </payload>
+    <payload>
+        <value>shell:Local AppData</value>
+        <phrase>Application Data</phrase>
+    </payload>
+    <payload>
+        <value>shell:Searches</value>
+        <phrase>Saved searches</phrase>
+    </payload>
+    <payload>
+        <value>shell:ConnectionsFolder</value>
+        <phrase>Network Connections</phrase>
+    </payload>
+    <payload>
+        <value>shell:UserProfiles</value>
+        <phrase>User profiles</phrase>
+    </payload>
+    <payload>
+        <value>shell:Windows</value>
+        <phrase>installation</phrase>
+    </payload>
+    <payload>
+        <value>shell:Systemx86</value>
+        <phrase>32-bit Windows system</phrase>
+    </payload>
+    <payload>
+        <value>shell:System</value>
+        <phrase>Windows System</phrase>
+    </payload>
+    <payload>
+        <value>shell:SearchHomeFolder</value>
+        <phrase>Windows Search</phrase>
+    </payload>
+    <payload>
+        <value>shell:ResourceDir</value>
+        <phrase>Windows Resources</phrase>
+    </payload>
+    <payload>
+        <value>shell:Original Images</value>
+        <phrase>Windows Photo Gallery</phrase>
+    </payload>
+    <payload>
+        <value>shell:Public</value>
+        <phrase>Public users</phrase>
+    </payload>
+    <payload>
+        <value>shell:Cache</value>
+        <phrase>Open Internet cache</phrase>
+    </payload>
+    <payload>
+        <value>shell:RecycleBinFolder</value>
+        <phrase>Recycle Bin</phrase>
+    </payload>
+    <payload>
+        <value>shell:Quick Launch</value>
+        <phrase>Quick launch</phrase>
+    </payload>
+    <payload>
+        <value>shell:ProgramFilesCommon</value>
+        <phrase>Common program files</phrase>
+    </payload>
+    <payload>
+        <value>shell:ProgramFiles</value>
+        <phrase>Program Files</phrase>
+    </payload>
+    <payload>
+        <value>shell:PrintersFolder</value>
+        <phrase>Printers</phrase>
+    </payload>
+    <payload>
+        <value>shell:NetworkPlacesFolder</value>
+        <phrase>Network Places</phrase>
+    </payload>
+    <payload>
+        <value>shell:ChangeRemoveProgramsFolder</value>
+        <phrase>Control Panel uninstaller</phrase>
+    </payload>
+    <payload>
+        <value>shell:AddNewProgramsFolder</value>
+        <phrase>Control Panel installer</phrase>
+    </payload>
+    <payload>
+        <value>shell:MyComputerFolder</value>
+        <phrase>My Computer</phrase>
+    </payload>
+</PayloadsRoot>

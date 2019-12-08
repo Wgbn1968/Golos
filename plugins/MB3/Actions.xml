@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>MB3</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3</helplink>
+            <description>
+                <default>Control and query MB3 server and clients.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Browse</name>
+            <commandString>MB3.Browse</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="ItemID" type="string" optional="False">MB3 item ID string</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#Browse</helplink>
+                <description>
+                    <default>Instructs the current client to browse to the item with the ID &lt;ItemID&gt;.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXML</name>
+            <commandString>MB3.GenXML</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#GenXML</helplink>
+                <description>
+                    <default>Generates a payloadXML file for all MB3 media. The file is saved in the MB3Payloads folder.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXmlMusic</name>
+            <commandString>MB3.GenXmlMusic</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#GenXmlMusic</helplink>
+                <description>
+                    <default>Generates a payloadXML file for all MB3 music. The file is saved in the MB3Payloads folder.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXmlOther</name>
+            <commandString>MB3.GenXmlOther</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#GenXmlOther</helplink>
+                <description>
+                    <default>Generates a payloadXML file for all MB3 media except for music. The file is saved in the MB3Payloads folder.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GeneralCommand</name>
+            <commandString>MB3.GeneralCommand</commandString>
+            <info>
+                <params>1-3</params>
+                <parameter name="Command" type="string" optional="False" />
+                <parameter name="ArgumentName" type="string" optional="True" />
+                <parameter name="ArgumentValue" type="string" optional="True" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#GeneralCommand</helplink>
+                <description>
+                    <default>Generally used for simple messages to the client, such as MoveUp, PageDown, NextLetter, Back, TakeScreenshot, VolumeUp, GoHome, Mute, GoToSearch, etc. See "General Commands" at: https://github.com/MediaBrowser/MediaBrowser/wiki/Web-Socket
+
+In the case of some general commands that take parameters,we've already created VoxCommando actions to make it easier.
+</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetnowPlaying</name>
+            <commandString>MB3.GetnowPlaying</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="Format" type="string" optional="True">See description</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#GetnowPlaying</helplink>
+                <description>
+                    <default>If &lt;Format&gt; is omitted then it will return all now playing information in a json string.  This can be used to find the data structure and the variables available.
+
+Otherwise a string will be returned based on parsing the &lt;Format&gt; string to replace variables enclosed in { } .
+
+Example:
+This is: {Name}, from the album {Album}, by {Artists[[, ]]}, which was recorded in {ProductionYear}.
+Audio codec is {MediaStreams[0].Codec}. Bitrate is {MediaStreams[0].BitRate} recorded in {MediaStreams[0].ChannelLayout}</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>PlayItem</name>
+            <commandString>MB3.PlayItem</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="ItemID" type="string" optional="False">MB3 item ID string</parameter>
+                <parameter name="PlayType" type="string" optional="True">InstantMix, Last, Next, Now, Shuffle</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#PlayItem</helplink>
+                <description>
+                    <default>Instructs the current client to play item with the ID &lt;ItemID&gt;.
+&lt;PlayType&gt; is optional (default = Now) and can be one of the following:
+InstantMix, Last, Next, Now, Shuffle</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>ResumeItem</name>
+            <commandString>MB3.ResumeItem</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="ItemID" type="string" optional="False">MB3 item ID string</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#ResumeItem</helplink>
+                <description>
+                    <default>Instructs the current client to resume playback of item with the ID &lt;ItemID&gt;. Playback will resume wherever it was last stopped. This is usually used with Movies and TV Shows.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>PlayMusicGenre</name>
+            <commandString>MB3.PlayMusicGenre</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="GenreName" type="string" optional="False">Name of the genre to play (NOT THE GENRE ID)</parameter>
+                <parameter name="Limit" type="integer" optional="True">Maximum number of items to queue</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#PlayMusicGenre</helplink>
+                <description>
+                    <default>Queues up and plays music of genre &lt;GenreName&gt;. If &lt;Limit&gt; is omitted, it will play all music of that genre. Note: In the future it may be possible to play a genre using the PlayItem action, but currently MediaBrowser doesn't support this.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>PlayMusicArtist</name>
+            <commandString>MB3.PlayMusicArtist</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="ArtistID" type="string" optional="False">Library ID of the artist to play</parameter>
+                <parameter name="Limist" type="integer" optional="True">Maximum number of items to Queue</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#PlayMusicArtist</helplink>
+                <description>
+                    <default>DEPRECATED.
+
+This action is no longer needed if you're using the latest version of the MB3 server. Use the PlayItem action instead.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Playstate</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#Playstate</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+            <command>
+                <name>NextTrack</name>
+                <commandString>MB3.Playstate.NextTrack</commandString>
+                <info>
+                    <params>0-1</params>
+                    <parameter name="Wait" type="boolean" optional="True">Default = False (asynchronous)</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#NextTrack</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>PreviousTrack</name>
+                <commandString>MB3.Playstate.PreviousTrack</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#PreviousTrack</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Stop</name>
+                <commandString>MB3.Playstate.Stop</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#Stop</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Pause</name>
+                <commandString>MB3.Playstate.Pause</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#Pause</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Unpause</name>
+                <commandString>MB3.Playstate.Unpause</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#Unpause</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>FastForward</name>
+                <commandString>MB3.Playstate.FastForward</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#FastForward</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Rewind</name>
+                <commandString>MB3.Playstate.Rewind</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#Rewind</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Seek</name>
+            <commandString>MB3.Seek</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="SeekTo" type="integer" optional="False">0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#Seek</helplink>
+                <description>
+                    <default>Seeks in the current file to the specified &lt;SeekTo&gt; percentage. SeekTo should be an integer from 0 to 100.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetClient</name>
+            <commandString>MB3.SetClient</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="Device" type="string" optional="True">Name of device to control</parameter>
+                <parameter name="Client" type="string" optional="True">Name of client to control</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MB3#SetClient</helplink>
+                <description>
+                    <default>Sets (connects to) whichever client you want to control with VoxCommando. Client must already be connected to MB server. Either device, or client, or both can be specified. See wiki for more information.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

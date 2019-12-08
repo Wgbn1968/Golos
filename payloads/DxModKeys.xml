@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>LeftShift</value>
+        <phrase>Shift</phrase>
+    </payload>
+    <payload>
+        <value>LeftControl</value>
+        <phrase>Control</phrase>
+    </payload>
+    <payload>
+        <value>LeftAlt</value>
+        <phrase>Alt,Alternate</phrase>
+    </payload>
+    <payload>
+        <value>LeftWindows</value>
+        <phrase>Windows,Win</phrase>
+    </payload>
+</PayloadsRoot>

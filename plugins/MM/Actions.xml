@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>MM</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM</helplink>
+            <description>
+                <default>Действия для управления MediaMonkey и получения информации о текущем проигрываемом медиа.</default>
+                <de>Befehle zur Steuerung von MediaMonkey undabrufen von 
+Informationen Гјber aktuell abgespielten Medien.</de>
+            </description>
+        </info>
+        <command>
+            <name>AddCurrentToPlaylist</name>
+            <commandString>MM.AddCurrentToPlaylist</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Playlist" type="string" optional="False">Список воспроизведения для добавления текущей дорожки</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#AddCurrentToPlaylist</helplink>
+                <description>
+                    <default>Добавляет текущую песню в список воспроизведения MediaMonkey с именем &lt;Playlist&gt;. Вы не можете добавить песню в плейлист.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>AdjustVolume</name>
+            <commandString>MM.AdjustVolume</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Amount" type="integer" optional="False">+/- регулировка в %</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#AdjustVolume</helplink>
+                <description>
+                    <default>Изменяет громкость воспроизведения на &lt;Amount&gt; %
+Используйте положительное число для увеличения громкости.
+Используйте отрицательное число для уменьшения громкости.</default>
+                    <de>Г„ndert die LautstГ¤rke der Wiedergabe von &lt;ganze Zahl&gt; % Verwenden Sie eine positive Zahl, um die LautstГ¤rke zu erhГ¶hen. Verwenden Sie eine negative Zahl, um die LautstГ¤rke zu reduzieren.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>CurrentSongData</name>
+            <commandString>MM.CurrentSongData</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Data type" type="string" optional="False">&lt;data type&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#CurrentSongData</helplink>
+                <description>
+                    <default>Получите информацию о текущей песне. Параметр должен быть одним из следующих:
+album / artist / conductor / genre / id / mood / path / playcounter / rating / title / year / occasion / custom1 / ... / custom5</default>
+                    <de>Hier erhalten Sie Informationen Гјber den Song. Parameter sollten eine der folgenden sein:
+album / artist / conductor / genre / id / mood / path / playcounter / rating / title / year</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>DoubleUp</name>
+            <commandString>MM.DoubleUp</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#DoubleUp</helplink>
+                <description>
+                    <default>Изменяет текущий список воспроизведения, добавляя случайную вторую песню для каждого исполнителя.
+Это означает, что вы услышите две песни подряд для каждого исполнителя.
+Обработка может быть немного медленной и будет повторяться максимум только через 50 песен, в результате чего до 100 песен после удвоения.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXML</name>
+            <commandString>MM.GenXML</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#GenXML</helplink>
+                <description>
+                    <default>Создает все файлы payloadXML на основе настроек плагина MediaMonkey.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetVolume</name>
+            <commandString>MM.GetVolume</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#GetVolume</helplink>
+                <description>
+                    <default>Возвращает текущую громкость MediaMonkey от 0 до 100.</default>
+                    <de>Gibt die aktuelle LГ¤utstГ¤rkeeinstellung von MediaMonkey aus.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>LoadBySQL</name>
+            <commandString>MM.LoadBySQL</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="Where" type="string" optional="False">sql query where clause used to specify songs to load</parameter>
+                <parameter name="Special" type="string" optional="True">Replace, Mix, or PlayNext</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#LoadBySQL</helplink>
+                <description>
+                    <default>Loads songs according to an SQL query using the specified &lt;Where&gt; clause.
+Example where parameter: 
+rating&gt;75 order by random() limit 25
+
+Special can be set to Replace, Mix, or PlayNext.  Default is Replace
+Playnext will add new tracks after the current playing song.
+Mix will do the following:
+1 - Remove all tracks in now playing that precede the current track
+2 - Add the newly requested tracks to existing playlist
+3 - Shuffle them all together.
+
+For both Mix and Playnext, the current song will continue to play.</default>
+                    <de>lГ¤dt Songs nach einer SQL-Abfrage &lt;Zeichenfolge&gt;</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>LoadEqPreset</name>
+            <commandString>MM.LoadEqPreset</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Filename" type="string" optional="False">&lt;filename&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#LoadEqPreset</helplink>
+                <description>
+                    <default>Enables the MM equalizer and loads (if possible) the preset defined by &lt;filename&gt;.  The parameter does not need to include the path to the file.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>LoadPlaylist</name>
+            <commandString>MM.LoadPlaylist</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Playlist" type="string" optional="False">Name of Playlist to load</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#LoadPlaylist</helplink>
+                <description>
+                    <default>Loads the playlist with the name &lt;Playlist&gt;.</default>
+                    <de>LГ¤dt die Playlist mit dem Namen der &lt;Zeichenfolge&gt;</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>mode settings</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#mode settings</helplink>
+                <description>
+                    <default>Enable/disable various MediaMonkey playback modes.</default>
+                    <de />
+                </description>
+            </info>
+            <command>
+                <name>SetAutoDJ</name>
+                <commandString>MM.SetAutoDJ</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="AutoDJ" type="boolean" optional="False">True or False</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SetAutoDJ</helplink>
+                    <description>
+                        <default>Turn MM autoDJ on or off. 
+Parameter should be one of: true, false, on, off</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetCrossfade</name>
+                <commandString>MM.SetCrossfade</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="CrossFade" type="boolean" optional="False">True or False</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SetCrossfade</helplink>
+                    <description>
+                        <default>Turn MM crossfade between songs on or off. 
+Parameter should be one of: true, false, on, off</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetEQ</name>
+                <commandString>MM.SetEQ</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="EQ" type="boolean" optional="False">True or False</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SetEQ</helplink>
+                    <description>
+                        <default>Turn MM equalizer on or off. 
+Parameter should be one of: true, false, on, off</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetRepeat</name>
+                <commandString>MM.SetRepeat</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Repeat" type="boolean" optional="False">True or False</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SetRepeat</helplink>
+                    <description>
+                        <default>Turn MM song repeat on or off. 
+Parameter should be one of: true, false, on, off</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetShuffle</name>
+                <commandString>MM.SetShuffle</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Shuffle" type="boolean" optional="False">True or False</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SetShuffle</helplink>
+                    <description>
+                        <default>Turn MM song shuffle on or off. 
+Parameter should be one of: true, false, on, off</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Next</name>
+            <commandString>MM.Next</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#Next</helplink>
+                <description>
+                    <default>Advance playback to the next song.</default>
+                    <de>NГ¤chster Titel</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>NPList</name>
+            <commandString>MM.NPList</commandString>
+            <info>
+                <params>0-2</params>
+                <parameter name="Count" type="integer" optional="True">Number of songs to return (default: 10)</parameter>
+                <parameter name="Index" type="string" optional="True">Index of first song to return (default: 1) - accepts the word: current</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#NPList</helplink>
+                <description>
+                    <default>Returns the current MM "Now playing" playlist.
+
+Returns first &lt;Count&gt; songs starting at song &lt;Index&gt;.
+To start at the current song, Use the word current for the &lt;Index&gt; parameter.
+
+This is based on *all* of the songs in the now playing list, regardless of what the currently playing song is (i.e. results returned are not relative to the currently playing song, but to the first song in the playlist).</default>
+                    <de>Kopiert die aktuelle MM nowplaying Playlist zu {lastresult}
+
+Keine Parameter:  zeigt die ersten 10 Songs
+1 Parameter &lt;n&gt;:  zeigt die ersten &lt;n&gt; Songs
+2 parameter &lt;n,m&gt;:  zeigt &lt;m&gt; Songs, angefangen bei Song &lt;n&gt;.
+
+Beispiel:  4,6  zeigt Song 4 bis 10.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>NPShuffle</name>
+            <commandString>MM.NPShuffle</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#NPShuffle</helplink>
+                <description>
+                    <default>Shuffles MM's "now playing" playlist. Shuffles list and puts currently playing song at the beginning of the re-ordered list.</default>
+                    <de>Zufallswiedergabe von MMs now playing Liste.
+Derzeit scheint sich die Liste nicht zu aktualisieren, bis Sie mit der Maus Гјber die Songs gehen... ?</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Pause</name>
+            <commandString>MM.Pause</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#Pause</helplink>
+                <description>
+                    <default>Pause playback.</default>
+                    <de>HГ¤lt die Wiedergabe an</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Play</name>
+            <commandString>MM.Play</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#Play</helplink>
+                <description>
+                    <default>Begin/resume playback.</default>
+                    <de>Startet Wiedergabe</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Previous</name>
+            <commandString>MM.Previous</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#Previous</helplink>
+                <description>
+                    <default>Previous track. If a track is already playing, this action will "rewind" to beginning of currently playing track. 
+
+Use the set of actions "MM.Stop" &gt; "MM.Previous" &gt; "MM.Play" if you want it to play the previous track rather than rewinding to beginning of current track.</default>
+                    <de>vorherigen Titel</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetCurrentTrack</name>
+            <commandString>MM.SetCurrentTrack</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Index" type="integer" optional="False">Track #</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SetCurrentTrack</helplink>
+                <description>
+                    <default>Sets the playhead to track number &lt;index&gt; in the MM "now playing" playlist.</default>
+                    <de>setzt die Abspielposition an die Nummer &lt;ganze Zahl&gt; in der MM "Now Playing" Wiedergabeliste</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetRating</name>
+            <commandString>MM.SetRating</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Rating" type="integer" optional="False">0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SetRating</helplink>
+                <description>
+                    <default>Sets the rating for the currently playing song.
+50 = 2.5 stars, 60 = 3 stars, ... 100 = 5 stars</default>
+                    <de>Setzt die Bewertung des aktuell abgespielten Songs.
+50 = 2.5 Sterne, 60 = 3 Sterne, ... 100 = 5 Sterne</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVolume</name>
+            <commandString>MM.SetVolume</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Volume" type="integer" optional="False">0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SetVolume</helplink>
+                <description>
+                    <default>Sets the playback volume of mediamonkey to &lt;0-100&gt; %</default>
+                    <de>setzt die LautstГ¤rke der Wiedergabe in MediaMonkey auf &lt;0-100&gt; %</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SoftMute</name>
+            <commandString>MM.SoftMute</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Percent" type="integer" optional="False">0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SoftMute</helplink>
+                <description>
+                    <default>Reduces the MM playback volume to a &lt;Percent&gt;age of its current level.  Volume can be restored later using MM.SoftUnmute</default>
+                    <de>Reduziert in MediaMonkey die LautstГ¤rke durch "faden" auf den eingegebenen Wert &lt;0-100&gt;</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SoftUnmute</name>
+            <commandString>MM.SoftUnmute</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#SoftUnmute</helplink>
+                <description>
+                    <default>Restores MM volume to the level it was at before using MM.SoftMute</default>
+                    <de>ErhГ¶ht die LaustГ¤rke in MediaMonkey durch "faden" wieder auf den Wert, der vorher mit MM.Softmute reduziert wurde.
+Beispiel: Mit MM.Softmute wurde die LautstГ¤rke von 60 auf 10 reduziert, mit dem Befehl MM.Softunmute wird diese wieder automatisch von 10 auf 60 angehoben.
+Die Kombination dieser beiden Befehle (MM.Softmut und MM.Softunmute) eignen sich besonders gut um bei Sprachausgaben die LГ¤utstГ¤rke der Musik zu reduzieren, so das diese fГјr die Zeit der Sprachausgabe im Hintergrund leise zu hГ¶ren ist.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Stop</name>
+            <commandString>MM.Stop</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MM#Stop</helplink>
+                <description>
+                    <default>Stop playback</default>
+                    <de>Stoppt die Wiedergabe</de>
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

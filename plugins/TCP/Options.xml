@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--options for VoxCommando / TCP plugin.-->
+<PluginOptions>
+    <Option name="IpAddress" value="0.0.0.0" />
+    <Option name="tcpPort" value="12345" />
+    <Option name="useWebServer" value="True" />
+    <Option name="webServerPort" value="9090" />
+    <Option name="useUPnPforwarding" value="False" />
+    <Option name="webServerUsername" value="" />
+    <Option name="webServerPassword" value="" />
+    <Option name="useGS" value="True" />
+    <Option name="GSPort" value="33222" />
+    <Option name="GSLanguageID" value="ru-RU" />
+    <Option name="GSEmulateMultiple" value="True" />
+    <Option name="webServerRestrictIPs" value="False" />
+    <IPsAllowed />
+    <EventPatterns>
+        <EventPattern pattern="Напиши\s(.*)" event="GS.Type" />
+        <EventPattern pattern="Найди\sмне\s(.*)" event="Google.Search" />
+        <EventPattern pattern="Найди\sв\sЮтубе\s(.*)" event="Youtube.Search" />
+        <EventPattern pattern="Найди\sв\sYouTube\s(.*)" event="Youtube.Search" />
+        <EventPattern pattern="(?:Кто|Что)\s(?:такой|такая|такое)\s(.*)" event="Wiki.Search" />
+    </EventPatterns>
+</PluginOptions>

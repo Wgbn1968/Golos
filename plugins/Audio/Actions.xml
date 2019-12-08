@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Audio</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Audio</helplink>
+            <description>
+                <default>Действия для воспроизведения различных типов аудиофайлов на определенных устройствах вывода.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Play</name>
+            <commandString>Audio.Play</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="FilePath" type="string" optional="False">Путь к аудиофайлу</parameter>
+                <parameter name="DeviceName" type="string" optional="True">Имя используемого устройства вывода</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Audio#Play</helplink>
+                <description>
+                    <default>Воспроизведение аудиофайла по адресу &lt;FilePath&gt;
+Поддерживаемые форматы: wav, mp3, wma, avi
+Если &lt;DeviceName&gt; не указан, то звук будет воспроизводиться на выбранном устройстве, которое можно установить в настройках плагина, или с помощью Audio.SetOutputName.
+Если &lt;DeviceName&gt; указан, то звук будет воспроизводиться на этом устройстве, но текущий выход не будет изменен для последующих воспроизведений.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetOutputName</name>
+            <commandString>Audio.SetOutputName</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="OutputName" type="string" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Audio#SetOutputName</helplink>
+                <description>
+                    <default>Задает устройство через которое будет воспроизвордиться аудиофайл</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetOutputNum</name>
+            <commandString>Audio.SetOutputNum</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="OutputNum" type="integer" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Audio#SetOutputNum</helplink>
+                <description>
+                    <default>-1 устанавливает устройство вывода звука на выход Windows по умолчанию.
+0 - первое устройство
+1 - второй устройство и т. д.
+
+Установка устройства не изменяет вывод Windows по умолчанию.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Pause</name>
+            <commandString>Audio.Pause</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Audio#Pause</helplink>
+                <description>
+                    <default>Приостанавливает воспроизведение аудиофайла</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Resume</name>
+            <commandString>Audio.Resume</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Audio#Resume</helplink>
+                <description>
+                    <default>Возобновляет воспроизведение приостанавленного аудиофайла</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Stop</name>
+            <commandString>Audio.Stop</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Audio#Stop</helplink>
+                <description>
+                    <default>Останавливает воспроизведение аудиофайла</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXML</name>
+            <commandString>Audio.GenXML</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Filename" type="string" optional="False">Путь и имя файла для сохранения XML-файла</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Audio#GenXML</helplink>
+                <description>
+                    <default>Создает файл payloadXML, содержащий все известные аудиовыходы и их идентификаторы GUID, и сохраняет его в &lt;Filename&gt;</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>1</value>
+        <phrase>танки</phrase>
+    </payload>
+    <payload>
+        <value>2</value>
+        <phrase>БЭТЭЭР</phrase>
+    </payload>
+    <payload>
+        <value>3</value>
+        <phrase>автомобили</phrase>
+    </payload>
+    <payload>
+        <value>4</value>
+        <phrase>пехота</phrase>
+    </payload>
+</PayloadsRoot>

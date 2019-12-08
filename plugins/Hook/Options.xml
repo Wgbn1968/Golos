@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--options for VoxCommando / Hook plugin.-->
+<Options>
+    <Option name="genMouseDown" value="True" />
+    <Option name="genMouseUp" value="True" />
+    <Option name="genMouseClick" value="True" />
+    <Option name="genMouseDoubleClick" value="False" />
+    <Option name="genMouseWheel" value="False" />
+    <Option name="enabled" value="False" />
+    <Option name="genNamedEvents" value="True" />
+    <Option name="genPayloadEvents" value="False" />
+    <Option name="genWordEvents" value="False" />
+    <Option name="mode" value="2" />
+    <Option name="strRegEx" value="(^[A-Z]$)|^.ShiftKey\+[A-Z]$" />
+    <Option name="blockKeys" value="False" />
+    <Option name="keycombo" value="Q" />
+    <Option name="keycombo" value="B" />
+    <Option name="keycombo" value="Z" />
+    <Option name="keycombo" value="F5" />
+    <Option name="keycombo" value="F6" />
+    <Option name="keycombo" value="F7" />
+    <Option name="keycombo" value="F8" />
+    <Option name="keycombo" value="F9" />
+    <Option name="keycombo" value="Capital" />
+</Options>

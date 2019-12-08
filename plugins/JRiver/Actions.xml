@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>JRiver</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver</helplink>
+            <description>
+                <default>Control plugin for JRiver Media Center</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Generate</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#Generate</helplink>
+                <description>
+                    <default>Generates Payload XML files containing information about your JRiver media library content.</default>
+                    <de />
+                </description>
+            </info>
+            <command>
+                <name>All</name>
+                <commandString>JRiver.Generate.All</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#All</helplink>
+                    <description>
+                        <default>Creates Payload XML files for playlists and all categories defined in plugin settings.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Custom</name>
+                <commandString>JRiver.Generate.Custom</commandString>
+                <info>
+                    <params>2-3</params>
+                    <parameter name="Xml Filename" type="string" optional="False" />
+                    <parameter name="Search" type="string" optional="False" />
+                    <parameter name="UseSubMatch" type="boolean" optional="True" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#Custom</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Playlist</name>
+                <commandString>JRiver.Generate.Playlist</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#Playlist</helplink>
+                    <description>
+                        <default>Creates a Payload XML file containing all playlists</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Next</name>
+            <commandString>JRiver.Next</commandString>
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#Next</helplink>
+                <description>
+                    <default>Advance to the next track.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Pause</name>
+            <commandString>JRiver.Pause</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="State" type="integer" optional="True">0: unpaused, 1: paused, -1: toggle</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#Pause</helplink>
+                <description>
+                    <default>Set the Pause State.  Default state is -1
+0: unpaused, 1: paused, -1: toggle</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>PlayPause</name>
+            <commandString>JRiver.PlayPause</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#PlayPause</helplink>
+                <description>
+                    <default>Start playback or toggle the pause state.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Previous</name>
+            <commandString>JRiver.Previous</commandString>
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#Previous</helplink>
+                <description>
+                    <default>Move to the previous track.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Raw</name>
+            <commandString>JRiver.Raw</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="RawString" type="string" optional="False" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#Raw</helplink>
+                <description>
+                    <default>example RawString:
+Playback/Pause?State=-1&amp;Zone=-1&amp;ZoneType=ID</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SearchPlay</name>
+            <commandString>JRiver.SearchPlay</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Filter" type="string" optional="False">Play items that match this filter / query</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#SearchPlay</helplink>
+                <description>
+                    <default>Examples for query:
+artist= queen
+genre = [rock]
+
+Also you can use ~n=## to select a number of random items.  Example:
+[genre]=[blues] ~n=25
+
+or combine filters.  Here play songs by the beatles that contain the word "love"
+[artist]=[the beatles] [name]=love
+</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVolume</name>
+            <commandString>JRiver.SetVolume</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Volume" type="integer" optional="False">0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#SetVolume</helplink>
+                <description>
+                    <default>Set the volume to a value from 0 to 100</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Stop</name>
+            <commandString>JRiver.Stop</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#Stop</helplink>
+                <description>
+                    <default>Stop Playback</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SoftMute</name>
+            <commandString>JRiver.SoftMute</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Percent" type="integer" optional="False">0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#SoftMute</helplink>
+                <description>
+                    <default>Reduces the JRiver playback volume to a &lt;Percent&gt;age of its current level.  Volume can be restored later using JRiver.SoftUnmute</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SoftUnmute</name>
+            <commandString>JRiver.SoftUnmute</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#SoftUnmute</helplink>
+                <description>
+                    <default>Restores JRiver volume to the level it was at before using JRiver.SoftMute</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>TargetZone</name>
+            <commandString>JRiver.TargetZone</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="ZoneName" type="string" optional="True">Name of JRiver Zone to send commands to</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_JRiver#TargetZone</helplink>
+                <description>
+                    <default>After setting the target zone to &lt;ZoneName&gt; all subsequent commands sent to JRiver (except for Raw commands) will be sent to this zone.  This will not affect the current default zone in the JRiver UI.
+
+To set the target zone back to the default, omit the &lt;ZoneName&gt; parameter.
+
+If you set the target zone to an invalid zone name (one that does not exist or is spelled wrong), then commands will be sent to the default zone.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

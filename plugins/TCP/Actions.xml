@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>TCP</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP</helplink>
+            <description>
+                <default>Универсальный сетевой плагин, который позволяет и больше:
+
+* Отправка и получение сообщений на сокетах TCP.
+* Размещать простые веб-страницы и принимайте команды [[API]] 
+* Включить [[Google Speech]] в Chrome для распознавания речи</default>
+            </description>
+        </info>
+        <command>
+            <name>Client</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Client</helplink>
+                <description>
+                    <default>Создать именованный клиент и подключиться к серверу.
+Написать в сервер.
+Получить сообщения от сервера в виде событий.</default>
+                </description>
+            </info>
+            <command>
+                <name>Connect</name>
+                <commandString>TCP.Client.Connect</commandString>
+                <info>
+                    <params>3-6</params>
+                    <parameter name="Name" type="string" optional="False">Имя создаваемого клиента</parameter>
+                    <parameter name="Ip" type="string" optional="False">Адрес сервера для подключения</parameter>
+                    <parameter name="Port" type="integer" optional="False">Порт сервера для подключения</parameter>
+                    <parameter name="Terminator" type="string" optional="True">Сервер завершает сообщения с этим байтом</parameter>
+                    <parameter name="EventName" type="string" optional="True">Генерировать события с этим именем при получении сообщения от сервера</parameter>
+                    <parameter name="EventFilter" type="string" optional="True">Создавать события только в том случае, если они соответствуют регулярному выражению</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Connect</helplink>
+                    <description>
+                        <default>Подключается к серверу и сохраняет соединение открытым, после чего сообщения с сервера будут генерировать события. 
+
+События будут использовать имя клиента, если не указан параметр &lt;EventName&gt;. Сообщение с сервера будет присоединено к событию в качестве полезной нагрузки. Если сервер использует стандартный терминатор в конце каждого сообщения (например, \x0d), это можно указать в параметре &lt;Terminator&gt;, чтобы гарантировать, что каждое сообщение генерирует ровно одно событие.
+
+</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Disconnect</name>
+                <commandString>TCP.Client.Disconnect</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Name" type="string" optional="False">Имя клиента для отключения</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Disconnect</helplink>
+                    <description>
+                        <default>Клиент отключится и будет уничтожен.
+После этого вы можете повторно подключиться, используя имя.
+Если вы хотите отправить только одну команду,а затем отключить. рассмотрите возможность использования TCP.Single.Write.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Query</name>
+                <commandString>TCP.Client.Query</commandString>
+                <info>
+                    <params>3-4</params>
+                    <parameter name="ClientName" type="string" optional="False">Имя клиента</parameter>
+                    <parameter name="Message" type="string" optional="False">Сообщение для отправки</parameter>
+                    <parameter name="Delay" type="integer" optional="False">Миллисекунды ожидания ответа сервера</parameter>
+                    <parameter name="Notes" type="string" optional="True" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Query</helplink>
+                    <description>
+                        <default>Сервер запросов, похожий на TCP.Client.Write. Ответ будет сохранен в {LastResult}.
+
+&lt;ClientName&gt; должно быть именем клиента, который ранее был создан с помощью TCP.Client.Connect
+Чтобы включить байты в &lt;message&gt;, вы можете кодировать байты следующим образом
+0:       \x00
+1:       \x01
+255:   \xFF
+
+Примечание: Вы должны сперва использовать действие Client.Connect.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Write</name>
+                <commandString>TCP.Client.Write</commandString>
+                <info>
+                    <params>2-4</params>
+                    <parameter name="ClientName" type="string" optional="False">Имя клиента</parameter>
+                    <parameter name="Message" type="string" optional="False">Сообщение для отправки</parameter>
+                    <parameter name="Delay" type="integer" optional="True">Миллисекунд ожидания после отправки сообщения (по умолчанию 10)</parameter>
+                    <parameter name="Notes" type="string" optional="True" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Write</helplink>
+                    <description>
+                        <default>&lt;ClientName&gt; должно быть именем клиента, который ранее был создан с помощью TCP.Client.Connect.
+Чтобы включить байты в &lt;message&gt;, вы можете кодировать байты следующим образом
+0:       \x00
+1:       \x01
+255:   \xFF
+
+Примечание: Вы должны сперва использовать действие Client.Connect.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>WriteLn</name>
+                <commandString>TCP.Client.WriteLn</commandString>
+                <info>
+                    <params>2-4</params>
+                    <parameter name="ClientName" type="string" optional="False" />
+                    <parameter name="Message" type="string" optional="False" />
+                    <parameter name="Delay" type="integer" optional="True">Миллисекунд ожидания после отправки сообщения (по умолчанию 10)</parameter>
+                    <parameter name="Notes" type="string" optional="True">Здесь можно написать что угодно. VC не будет использовать его.</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#WriteLn</helplink>
+                    <description>
+                        <default>&lt;ClientName&gt; должно быть именем клиента, который ранее был создан с помощью TCP.Client.Connect.
+Чтобы включить байты в &lt;message&gt;, вы можете кодировать байты следующим образом
+0:       \x00
+1:       \x01
+255:   \xFF
+Сообщение автоматически будет иметь возврат каретки, добавленный к нему ( \x0D ).
+</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>GS</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#GS</helplink>
+                <description>
+                    <default>Действия по использованию распознавания речи Google в браузере Chrome с VoxCommando.
+
+Как "Web Server", так и "Google Speech" должны быть включены в настройки плагина TCP, чтобы использовать распознавание речи Google в Chrome с VoxCommando.</default>
+                </description>
+            </info>
+            <command>
+                <name>Close</name>
+                <commandString>TCP.GS.Close</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Close</helplink>
+                    <description>
+                        <default>( BETA )
+
+Попытаться найти и закрыть первую вкладку Chrome, на которой размещена веб-страница речи.  Может не работать, если открыто несколько окон Chrome.
+
+Вероятно, лучше оставить веб-страницу Google speech открытой и включать и выключать микрофон с помощью TCP.GS.On и TCP.GS.Off</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Launch</name>
+                <commandString>TCP.GS.Launch</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Launch</helplink>
+                    <description>
+                        <default>Попытаться запустить веб-страницу Google Speech в Chrome.
+
+Как "Web Server", так и "Google Speech" должны быть включены в настройки плагина TCP, чтобы использовать распознавание речи Google в Chrome с VoxCommando.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>On</name>
+                <commandString>TCP.GS.On</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#On</helplink>
+                    <description>
+                        <default>Отправляет сообщение на веб-страницу, чтобы попытаться включить микрофон и начать прислушиваться к речи.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Off</name>
+                <commandString>TCP.GS.Off</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Off</helplink>
+                    <description>
+                        <default>Отправляет сообщение на веб-страницу, чтобы попытаться выключить микрофон и прекратить прослушивание речи.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Send</name>
+                <commandString>TCP.GS.Send</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Message" type="string" optional="False">Текст для отправки на веб-страницу</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Send</helplink>
+                    <description>
+                        <default>Отправить любое сообщение на веб-страницу через websocket.
+(Может быть полезно в более поздних версиях плагина.)</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetLanguage</name>
+                <commandString>TCP.GS.SetLanguage</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="LanguageCode" type="string" optional="False">Например: en-US, fr-FR, de-DE, af-ZA</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#SetLanguage</helplink>
+                    <description>
+                        <default>Задает язык распознавания речи.
+
+Коды языков можно найти в настройках TCP на вкладке Google Speech или, возможно, есть больше кодов, перечисленных здесь: https://cloud.google.com/speech-to-text/docs/languages </default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetPrefix</name>
+                <commandString>TCP.GS.SetPrefix</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Prefix" type="string" optional="True">Префикс, используемый для указания, что речь должна быть отправлена в VoxCommando</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#SetPrefix</helplink>
+                    <description>
+                        <default>Если используется префикс, веб-страница будет отправлять распознанный текст в VoxCommando только при обнаружении префикса.  
+
+Любой текст, распознанный ПОСЛЕ префикса, будет отправлен в VoxCommando для обработки.
+
+Если &lt;Prefix&gt; пуст или опущен, префикс будет удален и весь текст будет принят.</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Server</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Server</helplink>
+                <description>
+                    <default>Создайте TCP-серверы, которые могут прослушивать соединения и получать сообщения.
+Сообщения могут инициировать действия VC или использоваться для создания событий.</default>
+                </description>
+            </info>
+            <command>
+                <name>Start</name>
+                <commandString>TCP.Server.Start</commandString>
+                <info>
+                    <params>1-2</params>
+                    <parameter name="Port" type="integer" optional="False">TCP-порт для прослушивания</parameter>
+                    <parameter name="GenEvent" type="string" optional="True">Создать событие вместо отправки команды в VC</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Start</helplink>
+                    <description>
+                        <default>Если параметр &lt;GenEvent&gt; опущен или пуст, все входящие сообщения клиента будут рассматриваться как команды, предназначенные для VC.  Пример: входящее сообщение "VC.On" превратит VC зеленый.
+Если &lt;GenEvent&gt; указан, то все входящие запросы будут генерировать событие и сообщение от клиента будет передано в качестве полезной нагрузки.
+Если &lt;GenEvent&gt; используется, и сообщение содержит "&amp;&amp;", будет создано несколько полезных нагрузок.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Stop</name>
+                <commandString>TCP.Server.Stop</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Port" type="integer" optional="False">Порт сервера для закрытия</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Stop</helplink>
+                    <description>
+                        <default>Останавливает сервер, работающий на &lt;Port&gt;.
+Сначала сервер должен быть создан с помощью TCP.StartServer.</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Single</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Single</helplink>
+                <description>
+                    <default>Эти команды будут:
+-открыть новое соединение
+-отправить строку
+-немедленно закрытье соединение </default>
+                </description>
+            </info>
+            <command>
+                <name>Write</name>
+                <commandString>TCP.Single.Write</commandString>
+                <info>
+                    <params>3-4</params>
+                    <parameter name="Message" type="string" optional="False">TCP сообщение для отправки. Кодировать байт как \x00\x01...\xFF</parameter>
+                    <parameter name="IP" type="string" optional="False" />
+                    <parameter name="Port" type="integer" optional="False" />
+                    <parameter name="Query" type="boolean" optional="True">По умолчанию = false.  Если true будет ждать ответа от сервера</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Write</helplink>
+                    <description>
+                        <default>Отправит строку &lt;Message&gt; без добавления возврата каретки на IP и порт, указанный в настройках плагина.
+Чтобы включить байты в &lt;message&gt;, вы можете кодировать байты следующим образом
+0:       \x00
+1:       \x01
+255:   \xFF
+
+Если для запроса задано значение true, он будет ждать ответа от сервера и хранить его в {LastResult}.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>WriteLn</name>
+                <commandString>TCP.Single.WriteLn</commandString>
+                <info>
+                    <params>3-4</params>
+                    <parameter name="Message" type="string" optional="False">TCP сообщение для отправки</parameter>
+                    <parameter name="IP" type="string" optional="False" />
+                    <parameter name="Port" type="integer" optional="False" />
+                    <parameter name="Query" type="boolean" optional="True">По умолчанию = false.  Если true будет ждать ответа от сервера</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#WriteLn</helplink>
+                    <description>
+                        <default>Отправит строку &lt;Message&gt; с последующим возвратом каретки (\x0D) на IP и Порт, указанные в настройках плагина.
+Чтобы включить байты в &lt;message&gt;, вы можете кодировать байты следующим образом
+0:       \x00
+1:       \x01
+255:   \xFF
+
+Если для запроса задано значение true, он будет ждать ответа от сервера и хранить его в {LastResult}.</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>UDP</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#UDP</helplink>
+                <description>
+                    <default />
+                </description>
+            </info>
+            <command>
+                <name>SendMixed</name>
+                <commandString>TCP.UDP.SendMixed</commandString>
+                <info>
+                    <params>2-3</params>
+                    <parameter name="Message" type="string" optional="False">строка с HEX закодированными элементами</parameter>
+                    <parameter name="Port" type="integer" optional="False">UDP порт для отправки</parameter>
+                    <parameter name="Target IP" type="string" optional="True">По умолчанию вещание IP: 255.255.255.255</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#SendMixed</helplink>
+                    <description>
+                        <default>Позволяет отправлять сообщения UDP на любой IP и Порт и вставлять любые символы ascii или не ascii, используя шестнадцатеричный формат \x00-\xFF.</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>WebServer</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#WebServer</helplink>
+                <description>
+                    <default />
+                </description>
+            </info>
+            <command>
+                <name>SetResponse</name>
+                <commandString>TCP.WebServer.SetResponse</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Response" type="string" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#SetResponse</helplink>
+                    <description>
+                        <default />
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Persistent Server</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Persistent Server</helplink>
+                <description>
+                    <default />
+                </description>
+            </info>
+            <command>
+                <name>Write</name>
+                <commandString>TCP.pSrv.Write</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Message" type="string" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#Write</helplink>
+                    <description>
+                        <default>Отправьте строку &lt;message&gt; последнему подключенному клиенту.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>WriteLn</name>
+                <commandString>TCP.pSrv.WriteLn</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Message" type="string" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_TCP#WriteLn</helplink>
+                    <description>
+                        <default>Отправьте строку &lt;message&gt; последнему подключенному клиенту.
+Добавить символ перевода строки в конце..</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+    </command>
+</AvailableCommands>

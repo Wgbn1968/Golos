@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>MpMessage</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpMessage</helplink>
+            <description>
+                <default>Отправить коды кнопок в MediaPortal</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>Button</name>
+            <commandString>MpMessage.Button</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Code" type="string" optional="False">Код кнопки для отправки</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_MpMessage#Button</helplink>
+                <description>
+                    <default>Отправляет код кнопки плагину mediaportal message</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>+</value>
+        <phrase>plus</phrase>
+    </payload>
+    <payload>
+        <value>-</value>
+        <phrase>minus</phrase>
+    </payload>
+    <payload>
+        <value>*</value>
+        <phrase>times,multiplied by</phrase>
+    </payload>
+    <payload>
+        <value>/</value>
+        <phrase>divided by</phrase>
+    </payload>
+    <payload>
+        <value>^</value>
+        <phrase>to the power of</phrase>
+    </payload>
+</PayloadsRoot>

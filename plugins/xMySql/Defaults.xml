@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--options for VoxCommando / xMySql plugin.-->
+<Options>
+    <Option name="strOutputFolder" value=".\XbmcPayloads" />
+    <genXml>
+        <genXmlParam database="MyMusic60" queryString="select idAlbum,strAlbum from album" xmlFilename="xbmcAlbums" useSubStrings="True" />
+        <genXmlParam database="MyMusic60" queryString="select idArtist,strArtist from artist" xmlFilename="xbmcArtists" useSubStrings="True" />
+        <genXmlParam database="MyMusic60" queryString="select idGenre,strGenre from genre" xmlFilename="xbmcGenres" useSubStrings="False" />
+        <genXmlParam database="MyMusic60" queryString="select distinct idSong,strTitle,strArtists from songview where strArtists!=&quot;&quot;" xmlFilename="XbmcSongsByArtist" useSubStrings="True" />
+        <genXmlParam database="MyMusic60" queryString="select idSong,strTitle from song" xmlFilename="xbmcSongs" useSubStrings="True" />
+        <genXmlParam database="MyVideos107" queryString="select genre_id, name from genre" xmlFilename="xbmcVideoGenres" useSubStrings="true" />
+        <genXmlParam database="MyVideos107" queryString="SELECT actor_id, name from (   SELECT actor_id, name, COUNT(actor_id) as Count FROM actor_link Natural JOIN actor WHERE media_type=&quot;movie&quot; GROUP BY actor_id ORDER BY Count DESC  limit 300) AS movieActors" xmlFilename="xbmcMovieActors" useSubStrings="true" />
+        <genXmlParam database="MyVideos107" queryString="select idMovie,c00 from movie" xmlFilename="xbmcMovieIDs" useSubStrings="True" />
+        <genXmlParam database="MyVideos107" queryString="select idMVideo,c00 from musicvideo" xmlFilename="xbmcMusicVideos" useSubStrings="true" />
+        <genXmlParam database="MyVideos107" queryString="select idShow,c00 from tvshow" xmlFilename="xbmcTvShowTitles" useSubStrings="True" />
+        <genXmlParam database="TV29" queryString="select idChannel, sChannelName from channels where bIsRadio=0" xmlFilename="xbmcTvChannels" useSubStrings="true" />
+        <genXmlParam database="TV29" queryString="select idChannel, sChannelName from channels where bIsRadio=1" xmlFilename="xbmcRadioChannels" useSubStrings="true" />
+    </genXml>
+</Options>

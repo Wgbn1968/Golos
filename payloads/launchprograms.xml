@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>C:\Windows\system32\calc.exe</value>
+        <phrase>Calculator</phrase>
+    </payload>
+    <payload>
+        <value>C:\Windows\system32\notepad.exe</value>
+        <phrase>Notepad</phrase>
+    </payload>
+    <payload>
+        <value>{path.pfx86}\mediamonkey\mediamonkey.exe</value>
+        <phrase>Media Monkey</phrase>
+    </payload>
+    <payload>
+        <value>{path.pfx86}\Kodi\Kodi.exe</value>
+        <phrase>Kodi, X B M C</phrase>
+    </payload>
+    <payload>
+        <value>C:\Windows\ehome\ehshell.exe</value>
+        <phrase>Windows Media Center</phrase>
+    </payload>
+    <payload>
+        <value>C:\Program Files\Internet Explorer\iexplore.exe</value>
+        <phrase>Internet Explorer</phrase>
+    </payload>
+    <payload>
+        <value>{path.pfx86}\Google\Chrome\Application\chrome.exe</value>
+        <phrase>Chrome</phrase>
+    </payload>
+</PayloadsRoot>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>190002A028EA</value>
+        <phrase>VolUp</phrase>
+    </payload>
+    <payload>
+        <value>190002A028E2</value>
+        <phrase>VolDown</phrase>
+    </payload>
+    <payload>
+        <value>190002A0A8E2</value>
+        <phrase>Mute</phrase>
+    </payload>
+
+    </PayloadsRoot>

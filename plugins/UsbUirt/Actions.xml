@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>UsbUIRT</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_UsbUIRT</helplink>
+            <description>
+                <default>Sends and receives IR signals using the USB-UIRT transceiver
+IR received will generate an [[event]].
+IR codes are sent using the Pronto code format.
+Learning mode allows Pronto codes to be learned and stored.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>LearnPronto</name>
+            <commandString>UsbUIRT.LearnPronto</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="MinLength" type="" optional="True">The minimum length of the learned code that is considered valid</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_UsbUIRT#LearnPronto</helplink>
+                <description>
+                    <default>Puts the USB-UIRT into learn mode.  
+Codes will be learned in Pronto mode.
+When a code is learned, an event will be generated with the code as payload {1}.
+If the code is shorter than &lt;MinLength&gt; the event name will be: UUIRT.LearnTooShort
+Otherwise the event name will be: UUIRT.LearnComplete</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>CancelLearn</name>
+            <commandString>UsbUIRT.CancelLearn</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_UsbUIRT#CancelLearn</helplink>
+                <description>
+                    <default>Cancels learning mode and returns the USB-UIRT to normal mode of operation.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetBlink</name>
+            <commandString>UsbUIRT.SetBlink</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="OnTransmit" type="boolean" optional="False">True means blink when sending IR</parameter>
+                <parameter name="OnReceive" type="boolean" optional="False">True means blink when receiving IR</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_UsbUIRT#SetBlink</helplink>
+                <description>
+                    <default>Enter True or False for each parameter to set how the device will blink when sending and receiving IR signals.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>LearnUU</name>
+            <commandString>UsbUIRT.LearnUU</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="MinLength" type="integer" optional="True">The minimum length of the learned code that is considered valid</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_UsbUIRT#LearnUU</helplink>
+                <description>
+                    <default>Puts the USB-UIRT into learn mode.  
+Codes will be learned in UUIRT mode (shorter codes).
+When a code is learned, an event will be generated with the code as payload {1}.
+If the code is shorter than &lt;MinLength&gt; the event name will be: UUIRT.LearnTooShort
+Otherwise the event name will be: UUIRT.LearnComplete</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Send</name>
+            <commandString>UsbUIRT.Send</commandString>
+            <info>
+                <params>1-2</params>
+                <parameter name="IR Code" type="string" optional="False">Can be UUIRT or Pronto format</parameter>
+                <parameter name="Repeat" type="integer" optional="True" />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_UsbUIRT#Send</helplink>
+                <description>
+                    <default>Sends (blasts) the infrared code specified by &lt;IR Code&gt;.
+Sends the code &lt;Repeat&gt; times.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>XSQL</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XSQL</helplink>
+            <description>
+                <default>Используется для создания файлов payloadXML путем сканирования XBMC sqlite ".db" файлы.
+Пользовательские запросы можно определить в настройках плагина.</default>
+                <de />
+            </description>
+        </info>
+        <command>
+            <name>GenerateAll</name>
+            <commandString>XSQL.GenerateAll</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_XSQL#GenerateAll</helplink>
+                <description>
+                    <default>Сканирует базы данных XBMC и создает новые файлы payloadXML в соответствии с настройками плагина.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

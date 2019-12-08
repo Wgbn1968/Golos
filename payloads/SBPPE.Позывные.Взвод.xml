@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A VoxCommando Payload file-->
+<PayloadsRoot>
+    <payload>
+        <value>1708,1015</value>
+        <phrase>двен'адцатый</phrase>
+    </payload>
+    <payload>
+        <value>1665,1045</value>
+        <phrase>стовторой</phrase>
+    </payload>
+    <payload>
+        <value>1694,1045</value>
+        <phrase>стотретий</phrase>
+    </payload>
+    <payload>
+        <value>1721,1045</value>
+        <phrase>сточетвертый</phrase>
+    </payload>
+</PayloadsRoot>

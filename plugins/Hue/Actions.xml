@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Hue</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue</helplink>
+            <description>
+                <default>Communicate with Philips Hue Bridge.
+
+Lights and groups can be sent strings to control them.
+Example: "on":true, "hue":5000, "bri":40%
+
+"on" can be true or false
+"sat" (saturation) can be a value from 0-254
+"bri" (brightness) can be a value from 0-254 or a value from 0-100 if you add a % symbol to the end of the number.
+
+For more info see: http://www.developers.meethue.com/documentation/core-concepts
+
+"hue" can be a value from 0 (red) to 65280 (red).</default>
+            </description>
+        </info>
+        <command>
+            <name>GenMaps</name>
+            <commandString>Hue.GenMaps</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#GenMaps</helplink>
+                <description>
+                    <default>Generates [[maps]] for Groups and Scenes stored on the bridge</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GenXML</name>
+            <commandString>Hue.GenXML</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#GenXML</helplink>
+                <description>
+                    <default>Generates payloadXML files for Groups and Scenes stored on the bridge</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Group</name>
+            <commandString>Hue.Group</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="ID" type="integer" optional="False">Group ID</parameter>
+                <parameter name="Action" type="string" optional="False">see example</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Group</helplink>
+                <description>
+                    <default>Sends a command string to a group of Hue lights.
+
+Use special group ID 0 for all lights.
+
+Example action string:
+"on":true, "hue":5000, "bri":40%
+
+See: http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Light</name>
+            <commandString>Hue.Light</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="ID" type="integer" optional="False">Light ID</parameter>
+                <parameter name="Command" type="string" optional="False">Command String</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Light</helplink>
+                <description>
+                    <default>Sends a command string to a single Hue light.
+
+Example action string:
+"on":true, "hue":5000, "bri":40%
+
+See: http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Raw</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Raw</helplink>
+                <description>
+                    <default>See: http://www.developers.meethue.com/philips-hue-api
+
+and find examples in the default VC Hue configuration</default>
+                </description>
+            </info>
+            <command>
+                <name>Delete</name>
+                <commandString>Hue.Raw.Delete</commandString>
+                <info>
+                    <params>2</params>
+                    <parameter name="URL" type="string" optional="False" />
+                    <parameter name="Data" type="string" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Delete</helplink>
+                    <description>
+                        <default>Example to delete the 3rd schedule:
+
+Hue.Raw.Delete     schedules/3
+
+See: http://www.developers.meethue.com/philips-hue-api
+and find examples in the default VC Hue configuration</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Get</name>
+                <commandString>Hue.Raw.Get</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="URL" type="string" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Get</helplink>
+                    <description>
+                        <default>Example to get data on all existing scenes stored on bridge:
+Hue.Raw.Get     scenes
+
+See: http://www.developers.meethue.com/philips-hue-api
+and find examples in the default VC Hue configuration</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Post</name>
+                <commandString>Hue.Raw.Post</commandString>
+                <info>
+                    <params>2</params>
+                    <parameter name="URL" type="string" optional="False" />
+                    <parameter name="Data" type="string" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Post</helplink>
+                    <description>
+                        <default>Example to schedule all lights on in 1 minute:
+Hue.Raw.Post      schedules      "name": "timer","description": "VcTimer","command": {"address": "/api/voxcommando/groups/0/action","method": "PUT","body": {"on": true}},"time": "PT00:01:00","autodelete": true
+
+See: http://www.developers.meethue.com/philips-hue-api
+and find examples in the default VC Hue configuration</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Put</name>
+                <commandString>Hue.Raw.Put</commandString>
+                <info>
+                    <params>2</params>
+                    <parameter name="URL" type="string" optional="False" />
+                    <parameter name="Data" type="string" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Put</helplink>
+                    <description>
+                        <default>See: http://www.developers.meethue.com/philips-hue-api
+and find examples in the default VC Hue configuration</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Restore</name>
+            <commandString>Hue.Restore</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Restore</helplink>
+                <description>
+                    <default>Restore the state of all lights as stored by the "Hue.Store" action</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>RotateLeft</name>
+            <commandString>Hue.RotateLeft</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="LightIDs" type="string" optional="False">example: 1,3,4</parameter>
+                <parameter name="TransitionTime" type="integer" optional="False">Duration of fade</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#RotateLeft</helplink>
+                <description>
+                    <default>Rotates light colours (hue and saturation only) among a list of lights.
+&lt;LightIDs&gt; should be a list of integers separated by commas, which specify the IDs of the lights you want to use.  Example: 2,1,4
+
+&lt;TransitionTime&gt; controls the duration of the fade from the old colour to the new.
+
+Rotate left means the first light will take on the color of the second and so on.
+Rotate right means the second light will take on the color of the first and so on.
+</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>RotateRight</name>
+            <commandString>Hue.RotateRight</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="LightIDs" type="string" optional="False">example: 1,3,4</parameter>
+                <parameter name="TransitionTime" type="integer" optional="False">Duration of fade</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#RotateRight</helplink>
+                <description>
+                    <default>Rotates light colours (hue and saturation only) among a list of lights.
+&lt;Light IDs&gt; should be a list of integers separated by commands, which specify the IDs of the lights you want to use.  Example:
+2,1,4
+&lt;TransitionTime&gt; controls the duration of the fade from the old colour to the new.
+Rotate left means the first light will take on the color of the second and so on.
+Rotate right means the second light will take on the color of the first and so on.</default>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Scene</name>
+            <commandString>Hue.Scene</commandString>
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Scene</helplink>
+                <description>
+                    <default />
+                </description>
+            </info>
+            <command>
+                <name>Create</name>
+                <commandString>Hue.Scene.Create</commandString>
+                <info>
+                    <params>2-3</params>
+                    <parameter name="SceneID" type="string" optional="False">Max 12 characters</parameter>
+                    <parameter name="SceneName" type="string" optional="False">Max 12 characters</parameter>
+                    <parameter name="Lights" type="string" optional="False">Comma separated list of light IDs</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Create</helplink>
+                    <description>
+                        <default>Create a new scene on the bridge using with ID &lt;SceneID&gt; and name &lt;SceneName&gt;.  Assign the lights listed in &lt;Lights&gt; to the scene.  If &lt;Lights&gt; is omitted then all lights will be assigned.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Load</name>
+                <commandString>Hue.Scene.Load</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="SceneID" type="string" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Load</helplink>
+                    <description>
+                        <default>Loads a stored scene using the alphanumeric &lt;SceneID&gt;.</default>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>Delete</name>
+                <commandString>Hue.Scene.Delete</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="SceneID" type="string" optional="False" />
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Delete</helplink>
+                    <description>
+                        <default>Deletes a stored scene from the Hue hub using the alphanumeric &lt;SceneID&gt;.</default>
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Store</name>
+            <commandString>Hue.Store</commandString>
+            <info>
+                <params>0-1</params>
+                <parameter name="Lights" type="string" optional="False">Comma separated list of light IDs</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Hue#Store</helplink>
+                <description>
+                    <default>Store the state of all lights, which can later be restored using the "Hue.Restore" action.
+Specific lights can be stored by using the &lt;Lights&gt; parameter to list light IDs as follows:
+1,3,4,6
+
+If no lights are specified then the state of all lights will be stored.</default>
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>

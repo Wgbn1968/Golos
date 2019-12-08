@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>iTunes</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes</helplink>
+            <description>
+                <default>Commands to control iTunes and to retrieve information about currently playing media.
+Various playback [[events]] are generated.</default>
+                <de>Befehle zur Steuerung von iTunes und abrufen von Informationen Гјber die aktuell abgespielten Medien</de>
+            </description>
+        </info>
+        <command>
+            <name>GenXML</name>
+            <commandString>iTunes.GenXML</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#GenXML</helplink>
+                <description>
+                    <default>Updates payloadXML files by scanning the iTunes database.
+
+See iTunes plugin settings for options.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Play</name>
+            <commandString>iTunes.Play</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#Play</helplink>
+                <description>
+                    <default>Same as clicking Play in iTunes.  Begins playback.</default>
+                    <de>entspricht dem Klick auf Play in iTunes</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Pause</name>
+            <commandString>iTunes.Pause</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#Pause</helplink>
+                <description>
+                    <default>Same as clicking Pause in iTunes.  Toggles playback.</default>
+                    <de>entspricht dem Klick auf Pause in iTunes</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Stop</name>
+            <commandString>iTunes.Stop</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#Stop</helplink>
+                <description>
+                    <default>Same as clicking Stop in iTunes. Stops playback.</default>
+                    <de>entspricht dem Klick auf Stop in iTunes</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Previous</name>
+            <commandString>iTunes.Previous</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#Previous</helplink>
+                <description>
+                    <default>Same as clicking Previous Track in iTunes</default>
+                    <de>entspricht dem Klick auf vorherigen Titel in iTunes</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Next</name>
+            <commandString>iTunes.Next</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#Next</helplink>
+                <description>
+                    <default>Same as clicking NextTrack in iTunes</default>
+                    <de>entspricht dem Klick auf nГ¤chsten Titel in iTunes</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetVolume</name>
+            <commandString>iTunes.SetVolume</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Volume" type="integer" optional="False">Desired volume: 0-100</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#SetVolume</helplink>
+                <description>
+                    <default>Sets iTunes to the desired volume level.  Expects an integer from 0 to 100</default>
+                    <de>Stellt in iTunes die gewГјnschte LautstГ¤rke ein.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetVolume</name>
+            <commandString>iTunes.GetVolume</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#GetVolume</helplink>
+                <description>
+                    <default>Returns the current iTunes volume level (0-100)</default>
+                    <de>Zeigt die aktuelle iTunes LautstГ¤rke (0-100)</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SoftMute</name>
+            <commandString>iTunes.SoftMute</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#SoftMute</helplink>
+                <description>
+                    <default>Partially mutes iTunes.  Generally used when performing TTS to make the voice easier to hear.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SoftUnmute</name>
+            <commandString>iTunes.SoftUnmute</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#SoftUnmute</helplink>
+                <description>
+                    <default>Returns volume to the level it was at before calling SoftMute.</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetRating</name>
+            <commandString>iTunes.SetRating</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Rating" type="integer" optional="False">Star rating: 0-5</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#SetRating</helplink>
+                <description>
+                    <default>Rates the current song.  Parameter indicates the number of stars.  Use 0 for unrated.</default>
+                    <de>Bewertet den aktuellen Song.
+Parameter gibt die Anzahl der Sterne an. Verwenden Sie 0 fГјr nicht bewertet.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>OpenURL</name>
+            <commandString>iTunes.OpenURL</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="URL" type="string" optional="False">URL of stream to open</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#OpenURL</helplink>
+                <description>
+                    <default>Start streaming audio from a web URL (internet radio)</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>RequestMusic</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#RequestMusic</helplink>
+                <description>
+                    <default>Either load an exisiting playlist (Request Playlist) or create a new temporary playlist and populate it based on search criteria.</default>
+                    <de />
+                </description>
+            </info>
+            <command>
+                <name>SetShuffleLoad</name>
+                <commandString>iTunes.SetShuffleLoad</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Shuffle" type="boolean" optional="False">If true, music is shuffled when requested</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#SetShuffleLoad</helplink>
+                    <description>
+                        <default>If parameter is True then all future RequestMusic commands will shuffle the new playlist on load.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>RequestPlaylist</name>
+                <commandString>iTunes.rqPlaylist</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Playlist" type="string" optional="False">Name of playlist to load and play</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#RequestPlaylist</helplink>
+                    <description>
+                        <default />
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>RequestArtist</name>
+                <commandString>iTunes.rqArtist</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Artist" type="string" optional="False">Play songs by this artist</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#RequestArtist</helplink>
+                    <description>
+                        <default>Loads and plays songs by &lt;Artist&gt;</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>RequestByID</name>
+                <commandString>iTunes.rqbyID</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="PID" type="string" optional="False">Persistent ID</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#RequestByID</helplink>
+                    <description>
+                        <default>Loads and plays a song with a specific persistent ID.
+
+Example for PID: 30E659D1E72B617E</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>RequestAlbum</name>
+                <commandString>iTunes.rqAlbum</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Album" type="string" optional="False">Play this album</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#RequestAlbum</helplink>
+                    <description>
+                        <default>Loads and plays songs in &lt;Album&gt;</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>RequestSong</name>
+                <commandString>iTunes.rqSong</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Title" type="string" optional="False">Song title to play</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#RequestSong</helplink>
+                    <description>
+                        <default>Searches for songs with the title: &lt;Title&gt; and plays it.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>RequestAll</name>
+                <commandString>iTunes.rqAll</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="Text" type="string" optional="False">plays all songs containing the search text</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#RequestAll</helplink>
+                    <description>
+                        <default>Searches for and plays song.  A fields are searched.
+
+For example, if &lt;Text&gt; is blues you will get songs from the genre blues, but also songs with blues in the title or albums with blues in the album name.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>RequestVisible</name>
+                <commandString>iTunes.rqVisible</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="SearchText" type="string" optional="False">plays all songs containing the search text</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#RequestVisible</helplink>
+                    <description>
+                        <default>Same as Request.All but only searches columns that are visible in the iTunes browser window.  Needs testing...</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>Get Info on current track</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#Get Info on current track</helplink>
+                <description>
+                    <default>Retreive information (stored in tags and/or the iTunes database) about the currently playing track.  As with other commands, the results are stored in {LastResult}.  These commands will only work if you music is properly tagged.</default>
+                    <de />
+                </description>
+            </info>
+            <command>
+                <name>GetArtist</name>
+                <commandString>iTunes.GetArtist</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#GetArtist</helplink>
+                    <description>
+                        <default>Retreive the artist name of the currently playing track.</default>
+                        <de>Abrufen des Namens vom Interpreten des aktuell wiedergegebenen Titels. Der Wert wird in {lastResult} gespeichert.</de>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetAlbum</name>
+                <commandString>iTunes.GetAlbum</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#GetAlbum</helplink>
+                    <description>
+                        <default>Retreive the album name of the currently playing track.</default>
+                        <de>Abrufen des Albumnamens vom aktuell wiedergegebenen Titel. Der Wert wird in {lastResult} gespeichert.</de>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetSongTitle</name>
+                <commandString>iTunes.GetSongTitle</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#GetSongTitle</helplink>
+                    <description>
+                        <default>Retreive the song title of the currently playing track.</default>
+                        <de>Abrufen des Songnamens vom aktuell wiedergegebenen Titel. Der Wert wird in {lastResult} gespeichert.</de>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetRating</name>
+                <commandString>iTunes.GetRating</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#GetRating</helplink>
+                    <description>
+                        <default>Retreive the user rating of the currently playing track.</default>
+                        <de>Abrufen der Bewertung des aktuell wiedergegebenen Titels. Der Wert wird in {lastResult} gespeichert.</de>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetGenre</name>
+                <commandString>iTunes.GetGenre</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#GetGenre</helplink>
+                    <description>
+                        <default>Retreive the genre of the currently playing track.</default>
+                        <de>Abrufen des Genres des aktuell wiedergegebenen Titels. Der Wert wird in {lastResult} gespeichert.</de>
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetYear</name>
+                <commandString>iTunes.GetYear</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_iTunes#GetYear</helplink>
+                    <description>
+                        <default>Retreive the year of the currently playing track.</default>
+                        <de>Abrufen des Jahres vom aktuell wiedergegebenen Titel. Der Wert wird in {lastResult} gespeichert.</de>
+                    </description>
+                </info>
+            </command>
+        </command>
+    </command>
+</AvailableCommands>

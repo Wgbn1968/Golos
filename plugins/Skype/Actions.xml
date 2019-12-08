@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--AvailableCommands.xml-->
+<!--This should be in the same folder as the plugin dll-->
+<AvailableCommands>
+    <command>
+        <name>Skype</name>
+        <commandString />
+        <info>
+            <params />
+            <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype</helplink>
+            <description>
+                <default>Commands to perform various actions with Skype, including placing voice calls, sending text messages, answering, hanging up, etc.</default>
+                <de>Befehle von verschiedene Aktionen mit Skype, u.a. Telefonanrufe, Kurzmitteilungen, Beantwortung, Auflegen, etc.</de>
+            </description>
+        </info>
+        <command>
+            <name>Answer</name>
+            <commandString>Skype.Answer</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#Answer</helplink>
+                <description>
+                    <default>Attempts to answer an incoming call immediately.</default>
+                    <de>Versucht, einen eingehenden Anruf unmittelbar zu beantworten.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Connect</name>
+            <commandString>Skype.Connect</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#Connect</helplink>
+                <description>
+                    <default>Establishes a link with Skype and enables Skype events to be generated.  Skype will be started if it is not already running.
+
+* Note this will create a connection between VoxCommando and Skype.  It is not used to connect to a conversation.</default>
+                    <de>Stellt eine Verbindung mit Skype her und ermГ¶glicht mit Skype generierte Ereignisse zu nutzen. Skype wird gestartet, wenn es nicht bereits ausgefГјhrt wird.
+
+* Hinweis: Dadurch wird eine Verbindung zwischen VoxCommando und Skype hergestellt. Es kann nicht verwendet werden um ein GesprГ¤ch zu fГјhren.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>EndCall</name>
+            <commandString>Skype.EndCall</commandString>
+            <info>
+                <params>0</params>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#EndCall</helplink>
+                <description>
+                    <default>Ends the current call. (Hang up).</default>
+                    <de>Bendet den aktuellen Anruf. (Auflegen).</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>CallContact</name>
+            <commandString>Skype.CallContact</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Target" type="string" optional="False">Skype ID or phone number</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#CallContact</helplink>
+                <description>
+                    <default>Place a Skype call to contact named &lt;Target&gt;
+
+The &lt;Target&gt; parameter can be a Skype contact name or a phone number.  To call a phone you must have Skype credit.</default>
+                    <de>WГ¤hlt einen Skype-Anruf zu einem Kontakt &lt;Zeichenfolge&gt; Kontakt.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SendText</name>
+            <commandString>Skype.SendText</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="To" type="string" optional="False">Skype contact name to send the message to</parameter>
+                <parameter name="Message" type="string" optional="False">The text of the message (body) to send.</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SendText</helplink>
+                <description>
+                    <default>Send a text &lt;Message&gt; string to a skype contact.</default>
+                    <de>Senden Sie eine SMS an Kontakt &lt;string1&gt;
+&lt;string 2&gt; wird als Text der Nachricht gesendet werden.</de>
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>SetStatus</name>
+            <commandString>Skype.SetStatus</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="String" type="string" optional="False">&lt;string&gt;</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SetStatus</helplink>
+                <description>
+                    <default>Sets your Skype status to &lt;string&gt;
+
+valid values are:
+
+Offline, Online, Away, NotAvailable, DoNotDisturb, Invisible, LoggedOut, SkypeMe</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>Settings</name>
+            <commandString />
+            <info>
+                <params />
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#Settings</helplink>
+                <description>
+                    <default />
+                    <de />
+                </description>
+            </info>
+            <command>
+                <name>GetAudioIn</name>
+                <commandString>Skype.Settings.GetAudioIn</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#GetAudioIn</helplink>
+                    <description>
+                        <default>Returns the name of the currently active audio recording device.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetAudioOut</name>
+                <commandString>Skype.Settings.GetAudioOut</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#GetAudioOut</helplink>
+                    <description>
+                        <default>Returns the name of the currently active audio playback (output) device.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetRinger</name>
+                <commandString>Skype.Settings.GetRinger</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#GetRinger</helplink>
+                    <description>
+                        <default>Returns the name of the currently active audio device used to play ringtones.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>GetVideoIn</name>
+                <commandString>Skype.Settings.GetVideoIn</commandString>
+                <info>
+                    <params>0</params>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#GetVideoIn</helplink>
+                    <description>
+                        <default>Returns the name of the currently active video recording device.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetAEC</name>
+                <commandString>Skype.Settings.SetAEC</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="AecState" type="boolean" optional="False">True to enable AEC</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SetAEC</helplink>
+                    <description>
+                        <default>Enable or disable AEC (Acoustic Echo Cancellation)</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetAGC</name>
+                <commandString>Skype.Settings.SetAGC</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="AgcState" type="boolean" optional="False">True to enable AGC</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SetAGC</helplink>
+                    <description>
+                        <default>Enable or disable AGC (Automatic Gain Control)</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetAutoAway</name>
+                <commandString>Skype.Settings.SetAutoAway</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="AutoAwayState" type="boolean" optional="False">True to enable AutoAway mode</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SetAutoAway</helplink>
+                    <description>
+                        <default>Enable or disable AutoAway mode.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetAvatar</name>
+                <commandString>Skype.Settings.SetAvatar</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="ImagePath" type="string" optional="False">Path to image file</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SetAvatar</helplink>
+                    <description>
+                        <default>Sets your Skype avatar image to the image file found at &lt;ImagePath&gt;.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetAudioIn</name>
+                <commandString>Skype.Settings.SetAudioIn</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceName" type="string" optional="False">The full name of the audio input device to select.</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SetAudioIn</helplink>
+                    <description>
+                        <default>Sets the active audio recording device to the device whose full name is &lt;DeviceName&gt;.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetAudioOut</name>
+                <commandString>Skype.Settings.SetAudioOut</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceName" type="string" optional="False">The full name of the audio input device to select.</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SetAudioOut</helplink>
+                    <description>
+                        <default>Sets the active audio playback (output) device to the device whose full name is &lt;DeviceName&gt;.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetRinger</name>
+                <commandString>Skype.Settings.SetRinger</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceName" type="string" optional="False">The full name of the audio input device to select.</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SetRinger</helplink>
+                    <description>
+                        <default>Sets the active audio device used to play ringtones to the device whose full name is &lt;DeviceName&gt;.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+            <command>
+                <name>SetVideoIn</name>
+                <commandString>Skype.Settings.SetVideoIn</commandString>
+                <info>
+                    <params>1</params>
+                    <parameter name="DeviceName" type="string" optional="False">The full name of the video input device to select.</parameter>
+                    <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#SetVideoIn</helplink>
+                    <description>
+                        <default>Sets the active video recording device to the device whose full name is &lt;DeviceName&gt;.</default>
+                        <de />
+                    </description>
+                </info>
+            </command>
+        </command>
+        <command>
+            <name>GetUserInfo</name>
+            <commandString>Skype.GetUserInfo</commandString>
+            <info>
+                <params>2</params>
+                <parameter name="SkypeID" type="string" optional="False">the handle of user to get information with</parameter>
+                <parameter name="InfoType" type="string" optional="False">What information to get</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#GetUserInfo</helplink>
+                <description>
+                    <default>infoType can be one of the following:
+aliases
+birthday
+buddystatus
+displayname
+fullname
+isblocked
+lastonline
+moodtext
+onlinestatus
+phonehome
+phonemobile
+phoneoffice
+sex
+speeddial
+timezone</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+        <command>
+            <name>GetUsers</name>
+            <commandString>Skype.GetUsers</commandString>
+            <info>
+                <params>1</params>
+                <parameter name="Status" type="string" optional="False">Get a list of contacts with matching status</parameter>
+                <helplink>http://voxcommando.com/mediawiki/index.php?title=Plugin_Skype#GetUsers</helplink>
+                <description>
+                    <default>Returns a list of contact with matching &lt;Status&gt;.
+Contact returned as MATCHES.
+&lt;Status&gt; can be on of the following:
+Any
+Online
+Offline
+SkypeOut
+NotAvailable
+Away
+DoNotDisturb</default>
+                    <de />
+                </description>
+            </info>
+        </command>
+    </command>
+</AvailableCommands>
