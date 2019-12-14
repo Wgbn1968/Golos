@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<VoiceCommands version="2.2.4.5" space="preserve" date="12/8/2019 12:00:00 AM">
+<VoiceCommands version="2.2.4.5" space="preserve" date="12/14/2019 12:00:00 AM">
     <commandGroup open="True" name="VoxCommando" enabled="True" prefix="" priority="1" requiredProcess="" description="">
         <command id="8" name="режим ожидания" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
             <action>
@@ -6779,55 +6779,7 @@
         </commandGroup>
     </groupCollection>
     <groupCollection open="False" name="Naval Action">
-        <commandGroup open="False" name="Пушки" enabled="True" prefix="" priority="0" requiredProcess="Client" description="">
-            <command id="1538" name="Правый борт картечь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>2</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>VC.Pause</cmdType>
-                    <params>
-                        <param>100</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>3</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <phrase>Правый борт картечь</phrase>
-            </command>
-            <command id="1514" name="Правый борт книпеля" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>2</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>VC.Pause</cmdType>
-                    <params>
-                        <param>100</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>2</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <phrase>Правый борт книпеля</phrase>
-            </command>
+        <commandGroup open="True" name="Пушки" enabled="True" prefix="" priority="0" requiredProcess="Client" description="">
             <command id="1533" name="Правый борт огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
@@ -6848,124 +6800,6 @@
                 </action>
                 <phrase>Левый борт огонь</phrase>
             </command>
-            <command id="1532" name="Правый борт ядра" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>2</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>VC.Pause</cmdType>
-                    <params>
-                        <param>100</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>1</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <phrase>Правый борт ядра</phrase>
-            </command>
-            <command id="1508" name="Левый борт Картечь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>1</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>VC.Pause</cmdType>
-                    <params>
-                        <param>100</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>3</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <phrase>Левый борт Картечь</phrase>
-            </command>
-            <command id="1553" name="Левый борт книпеля" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>1</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>VC.Pause</cmdType>
-                    <params>
-                        <param>100</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>2</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <phrase>Левый борт книпеля</phrase>
-            </command>
-            <command id="1505" name="Левый борт ядра" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>1</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>VC.Pause</cmdType>
-                    <params>
-                        <param>100</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>1</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <phrase>Левый борт ядра</phrase>
-            </command>
-            <command id="1586" name="Ретирадные ядра" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>3</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <action>
-                    <cmdType>DxInput.KeyPress</cmdType>
-                    <params>
-                        <param>1</param>
-                    </params>
-                    <cmdRepeat>1</cmdRepeat>
-                </action>
-                <phrase>Ретирадные ядра</phrase>
-            </command>
-            <command id="1564" name="Ретирадные Книпеля" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
-            <command id="1582" name="Ретирадные Картечь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
-            <command id="1600" name="Погонные ядра" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
-            <command id="1584" name="Погонные Книпеля" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
-            <command id="1591" name="Погонные Картечь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
             <command id="1575" name="Дистанция веер" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Фокуса нет. Параллельный веер Prizel = 0">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
@@ -7532,8 +7366,62 @@
                 </action>
                 <phrase>Прекратить огонь, не стрелять</phrase>
             </command>
+            <command id="1470" name="Заряжание" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+                <if ifBlockDisabled="False" ifNot="False">
+                    <ifType>(A)==(B)</ifType>
+                    <ifParams>{1}&amp;&amp;5</ifParams>
+                    <then>
+                        <action>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>1</param>
+                            </params>
+                            <cmdRepeat>1</cmdRepeat>
+                        </action>
+                        <action>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>{2}</param>
+                            </params>
+                            <cmdRepeat>1</cmdRepeat>
+                        </action>
+                        <action>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>2</param>
+                            </params>
+                            <cmdRepeat>1</cmdRepeat>
+                        </action>
+                        <action>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>{2}</param>
+                            </params>
+                            <cmdRepeat>1</cmdRepeat>
+                        </action>
+                    </then>
+                    <else>
+                        <action>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>{1}</param>
+                            </params>
+                            <cmdRepeat>1</cmdRepeat>
+                        </action>
+                        <action>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>{2}</param>
+                            </params>
+                            <cmdRepeat>1</cmdRepeat>
+                        </action>
+                    </else>
+                </if>
+                <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\NA_Пушки-Заряжание.xml</payloadFromXML>
+                <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\NA_Заряды.xml</payloadFromXML>
+            </command>
         </commandGroup>
-        <commandGroup open="True" name="Паруса" enabled="True" prefix="" priority="0" requiredProcess="Client" description="">
+        <commandGroup open="False" name="Паруса" enabled="True" prefix="" priority="0" requiredProcess="Client" description="">
             <command id="1528" name="Прямо руль" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyUp</cmdType>
@@ -7880,6 +7768,109 @@
                 </action>
                 <phrase>Убрать стаксели</phrase>
             </command>
+            <command id="1468" name="Реи налево" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+                <action>
+                    <cmdType>DxInput.KeyUp</cmdType>
+                    <params>
+                        <param>E</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <action>
+                    <cmdType>DxInput.KeyUp</cmdType>
+                    <params>
+                        <param>C</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <action>
+                    <cmdType>DxInput.KeyDown</cmdType>
+                    <params>
+                        <param>Q</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <action>
+                    <cmdType>DxInput.KeyDown</cmdType>
+                    <params>
+                        <param>Z</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <phrase>Реи налево</phrase>
+            </command>
+            <command id="1486" name="Реи направо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+                <action>
+                    <cmdType>DxInput.KeyUp</cmdType>
+                    <params>
+                        <param>Z</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <action>
+                    <cmdType>DxInput.KeyUp</cmdType>
+                    <params>
+                        <param>Q</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <action>
+                    <cmdType>DxInput.KeyDown</cmdType>
+                    <params>
+                        <param>E</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <action>
+                    <cmdType>DxInput.KeyDown</cmdType>
+                    <params>
+                        <param>C</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <phrase>Реи направо</phrase>
+            </command>
+            <command id="1495" name="Реи на ветер" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+                <action>
+                    <cmdType>DxInput.KeyPress</cmdType>
+                    <params>
+                        <param>F</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <phrase>Реи на ветер</phrase>
+            </command>
+            <command id="1487" name="Закрепить" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+                <action>
+                    <cmdType>DxInput.KeyUp</cmdType>
+                    <params>
+                        <param>Q</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <action>
+                    <cmdType>DxInput.KeyUp</cmdType>
+                    <params>
+                        <param>Z</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <action>
+                    <cmdType>DxInput.KeyUp</cmdType>
+                    <params>
+                        <param>E</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <action>
+                    <cmdType>DxInput.KeyUp</cmdType>
+                    <params>
+                        <param>C</param>
+                    </params>
+                    <cmdRepeat>1</cmdRepeat>
+                </action>
+                <phrase>Закрепить, закрепляй</phrase>
+            </command>
         </commandGroup>
         <commandGroup open="False" name="Маневры" enabled="True" prefix="" priority="0" requiredProcess="Client" description="">
             <command id="1590" name="К повороту оверштаг направо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
@@ -7900,7 +7891,7 @@
                     <cmdRepeat>1</cmdRepeat>
                 </action>
                 <phrase optional="true">К повороту</phrase>
-                <phrase>Правый оверштаг</phrase>
+                <phrase>Правый оверштаг, оверштаг направо</phrase>
             </command>
             <command id="1627" name="К повороту оверштаг налево" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
@@ -7920,7 +7911,7 @@
                     <cmdRepeat>1</cmdRepeat>
                 </action>
                 <phrase optional="true">К повороту</phrase>
-                <phrase>Левый оверштаг</phrase>
+                <phrase>Левый оверштаг, оверштаг налево</phrase>
             </command>
             <command id="1577" name="Отмена поворота" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
@@ -7951,9 +7942,18 @@
                     <ifParams>{var.Overstag}&amp;&amp;Levo</ifParams>
                     <then>
                         <action>
-                            <cmdType />
-                            <params />
-                            <cmdRepeat>1</cmdRepeat>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>Е</param>
+                            </params>
+                            <cmdRepeat>2</cmdRepeat>
+                        </action>
+                        <action>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>Z</param>
+                            </params>
+                            <cmdRepeat>2</cmdRepeat>
                         </action>
                         <action>
                             <cmdType>VC.StopMacro</cmdType>
@@ -7968,9 +7968,18 @@
                     <ifParams>{var.Overstag}&amp;&amp;Pravo</ifParams>
                     <then>
                         <action>
-                            <cmdType />
-                            <params />
-                            <cmdRepeat>1</cmdRepeat>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>Q</param>
+                            </params>
+                            <cmdRepeat>2</cmdRepeat>
+                        </action>
+                        <action>
+                            <cmdType>DxInput.KeyPress</cmdType>
+                            <params>
+                                <param>C</param>
+                            </params>
+                            <cmdRepeat>2</cmdRepeat>
                         </action>
                         <action>
                             <cmdType>VC.StopMacro</cmdType>
@@ -8124,7 +8133,9 @@
         </commandGroup>
         <commandGroup open="False" name="Ремонт" enabled="True" prefix="" priority="0" requiredProcess="Client" description="">
             <command id="1609" name="Ремонт парусов" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
-            <command id="1608" name="Лечение раненых" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
+            <command id="1608" name="Лечение раненых" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+                <phrase>Лечение раненых, раненых к доктору</phrase>
+            </command>
             <command id="1592" name="Ремонт корпуса" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
         </commandGroup>
         <commandGroup open="False" name="Абордаж" enabled="True" prefix="" priority="0" requiredProcess="Client" description="">
@@ -8158,9 +8169,6 @@
                 </action>
                 <phrase>На абордаж, абордаж</phrase>
             </command>
-            <command id="1638" name="Укрыться" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
-            <command id="1612" name="Оборона" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
-            <command id="1613" name="Атака" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
         </commandGroup>
         <commandGroup open="False" name="Общие" enabled="True" prefix="" priority="0" requiredProcess="Client" description="">
             <command id="1579" name="Капитан на борту" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Назначение переменной &#xD;&#xA;на порядок стрельбы Zalp = 0 (поочередно с носа), &#xD;&#xA;Прицел Prizel = 0 (параллельный веер) &#xD;&#xA;Паруса Sail = 0 (нет парусов,) &#xD;&#xA;Кливера и стакселя Stagsel = 1 (паруса поднимаются с кливерами и стакселями)">
@@ -8214,9 +8222,9 @@
             </command>
         </commandGroup>
     </groupCollection>
-    <groupCollection open="False" name="SBPPE">
+    <groupCollection open="True" name="SBPPE">
         <commandGroup open="False" name="SBPPE.Вид" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1057" name="Открыть карту" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1041" name="Открыть карту" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Hook.Disable</cmdType>
                     <params />
@@ -8283,7 +8291,7 @@
                 <phrase optional="true">открыть</phrase>
                 <phrase>карта, карту</phrase>
             </command>
-            <command id="1033" name="Закрыть карту" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1026" name="Закрыть карту" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Map</ifParams>
@@ -8382,7 +8390,7 @@
                 </if>
                 <phrase>убрать карту,закрыть карту</phrase>
             </command>
-            <command id="1122" name="Командир по походному" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1115" name="Командир по походному" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Hook.Disable</cmdType>
                     <params />
@@ -8506,7 +8514,7 @@
                 </if>
                 <phrase>Люк командира, командир по походному</phrase>
             </command>
-            <command id="1009" name="Наблюдатель" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="994" name="Наблюдатель" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Hook.Disable</cmdType>
                     <params />
@@ -8603,7 +8611,7 @@
                 <phrase optional="true">Позиция</phrase>
                 <phrase>наблюдателя,наблюдатель,внешняя камера</phrase>
             </command>
-            <command id="997" name="Высунуться" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="979" name="Высунуться" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -8658,7 +8666,7 @@
                 </if>
                 <phrase>Высунуться</phrase>
             </command>
-            <command id="1077" name="По боевому" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1062" name="По боевому" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -8725,7 +8733,7 @@
                 </if>
                 <phrase>по боевому, люки закрыть</phrase>
             </command>
-            <command id="1221" name="По походному" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1236" name="По походному" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -8790,7 +8798,7 @@
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Заряжающий" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="" />
         <commandGroup open="False" name="SBPPE.Командир машины" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1158" name="Занять место командира" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1143" name="Занять место командира" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Hook.Disable</cmdType>
                     <params />
@@ -8888,7 +8896,7 @@
                 <phrase>место командира</phrase>
                 <phrase optional="true">занять</phrase>
             </command>
-            <command id="964" name="Бинокль" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="929" name="Бинокль" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -8922,7 +8930,7 @@
                 </if>
                 <phrase>Бинокль, убрать бинокль</phrase>
             </command>
-            <command id="947" name="ЗПУ" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="995" name="ЗПУ" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -8946,7 +8954,7 @@
                 </action>
                 <phrase>ЗПУ, к утесу</phrase>
             </command>
-            <command id="886" name="Наблюдение влево" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="998" name="Наблюдение влево" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -8971,7 +8979,7 @@
                 <phrase optional="true">Наводчик, наводчику</phrase>
                 <phrase>Пушку влево</phrase>
             </command>
-            <command id="930" name="Наблюдение вправо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="863" name="Наблюдение вправо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -8996,7 +9004,7 @@
                 <phrase optional="true">Наводчик, наводчику</phrase>
                 <phrase>Пушку вправо</phrase>
             </command>
-            <command id="935" name="Наблюдение прямо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="950" name="Наблюдение прямо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -9021,7 +9029,7 @@
                 <phrase optional="true">Наводчик, наводчику</phrase>
                 <phrase>Наблюдать прямо</phrase>
             </command>
-            <command id="987" name="ТКН" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="972" name="ТКН" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9033,7 +9041,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Методическая" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1164" name="Вводная" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1146" name="Вводная" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -9066,7 +9074,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Механик" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1055" name="Занять место механика" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1040" name="Занять место механика" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Mehvod}&amp;&amp;parasite</ifParams>
@@ -9181,7 +9189,7 @@
                 </if>
                 <phrase>Занять место механика, занять отделение управления</phrase>
             </command>
-            <command id="218" name="Быстрее" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="203" name="Быстрее" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9192,7 +9200,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Обороты, больше ход, больше обороты</phrase>
             </command>
-            <command id="960" name="Вернуться на маршрут" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="945" name="Вернуться на маршрут" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9227,7 +9235,7 @@
                 <phrase optional="true">возвращаемся</phrase>
                 <phrase>на маршрут, к маршруту</phrase>
             </command>
-            <command id="200" name="Вперед" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="185" name="Вперед" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9245,7 +9253,7 @@
                 <phrase optional="true">механик</phrase>
                 <phrase>вперед, первая вперед</phrase>
             </command>
-            <command id="1002" name="Двигатель" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1017" name="Двигатель" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -9270,7 +9278,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Глуши, заводи</phrase>
             </command>
-            <command id="217" name="Короткая" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="199" name="Короткая" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9295,7 +9303,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>короткая</phrase>
             </command>
-            <command id="1063" name="Левее" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1048" name="Левее" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -9320,7 +9328,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Левее</phrase>
             </command>
-            <command id="229" name="Правее" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="214" name="Правее" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -9345,7 +9353,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Правее</phrase>
             </command>
-            <command id="978" name="Максимальная" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="944" name="Максимальная" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9356,7 +9364,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Максимальная</phrase>
             </command>
-            <command id="1011" name="Медленнее" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="991" name="Медленнее" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9367,7 +9375,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>меньше ход,меньше обороты,сбросить обороты</phrase>
             </command>
-            <command id="963" name="Назад" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="948" name="Назад" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9392,7 +9400,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Задняя, назад</phrase>
             </command>
-            <command id="993" name="Налево" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="959" name="Налево" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -9403,7 +9411,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Налево, влево</phrase>
             </command>
-            <command id="1021" name="Направо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1006" name="Направо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -9414,7 +9422,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Направо, вправо</phrase>
             </command>
-            <command id="1349" name="Поворот налево 90гр" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1334" name="Поворот налево 90гр" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyHold</cmdType>
                     <params>
@@ -9426,7 +9434,7 @@
                 <phrase optional="true">механик</phrase>
                 <phrase>налево девяносто,влево девяносто </phrase>
             </command>
-            <command id="1339" name="Поворот направо 90гр" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1324" name="Поворот направо 90гр" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyHold</cmdType>
                     <params>
@@ -9438,7 +9446,7 @@
                 <phrase optional="true">механик</phrase>
                 <phrase>направо девяносто,вправо девяносто </phrase>
             </command>
-            <command id="1353" name="Полный разворот" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1338" name="Полный разворот" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyHold</cmdType>
                     <params>
@@ -9450,7 +9458,7 @@
                 <phrase optional="true">механик</phrase>
                 <phrase>кругом марш</phrase>
             </command>
-            <command id="949" name="Прямо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="866" name="Прямо" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyUp</cmdType>
                     <params>
@@ -9468,7 +9476,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Прямо</phrase>
             </command>
-            <command id="952" name="Стой" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="967" name="Стой" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9479,7 +9487,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>Стой</phrase>
             </command>
-            <command id="1025" name="ТДА" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1010" name="ТДА" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -9504,7 +9512,7 @@
                 <phrase optional="true">Механик</phrase>
                 <phrase>ТДА, дым, включить ТДА, убрать дым, выключить ТДА</phrase>
             </command>
-            <command id="1081" name="Укрытие" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1096" name="Укрытие" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9538,7 +9546,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Наводчик" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1168" name="Занять место наводчика" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1153" name="Занять место наводчика" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Navodchik}&amp;&amp;parasite</ifParams>
@@ -9653,8 +9661,8 @@
                 </if>
                 <phrase>Занять место наводчика</phrase>
             </command>
-            <command id="1016" name="Выстрел" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
-            <command id="1030" name="Кумулятивным" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1001" name="Выстрел" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="" />
+            <command id="1015" name="Кумулятивным" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9674,7 +9682,7 @@
                 <phrase>Кумулятивным, кумулятивный</phrase>
                 <phrase optional="true">Заряжай, заряжать</phrase>
             </command>
-            <command id="1212" name="Осколочным" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1227" name="Осколочным" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9694,7 +9702,7 @@
                 <phrase>Осколочным, осколочный</phrase>
                 <phrase optional="true">Заряжай, заряжать</phrase>
             </command>
-            <command id="1086" name="Подкалиберным" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1071" name="Подкалиберным" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9714,7 +9722,7 @@
                 <phrase>Подкалиберным, подкалиберный</phrase>
                 <phrase optional="true">Заряжай, заряжать</phrase>
             </command>
-            <command id="1068" name="Подсветка вкл/выкл" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1050" name="Подсветка вкл/выкл" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9726,7 +9734,7 @@
                 <phrase>Подсветка, убрать подсветку, подсветку</phrase>
                 <phrase optional="true">прицела</phrase>
             </command>
-            <command id="1014" name="Управляемым" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="999" name="Управляемым" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -9748,8 +9756,8 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Общее" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="" />
-        <commandGroup open="False" name="SBPPE.Огневая поддержка" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="618" name="Огневая поддержка" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+        <commandGroup open="True" name="SBPPE.Огневая поддержка" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
+            <command id="651" name="Огневая поддержка" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;1</ifParams>
@@ -9920,7 +9928,7 @@
                 </action>
                 <phrase>Огневая поддержка, запрос огневой поддержки</phrase>
             </command>
-            <command id="696" name="Тип огневой задачи" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="678" name="Тип огневой задачи" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;0</ifParams>
@@ -10153,7 +10161,7 @@
                 <phrase>тип</phrase>
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Поддержка-Тип.огневой.задачи.xml</payloadFromXML>
             </command>
-            <command id="673" name="Тип снарядов" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="688" name="Тип снарядов" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;0</ifParams>
@@ -10386,7 +10394,7 @@
                 <phrase>снаряды</phrase>
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Поддержка-Тип.снарядов.xml</payloadFromXML>
             </command>
-            <command id="681" name="Орудий" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="711" name="Орудий" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;0</ifParams>
@@ -10619,7 +10627,7 @@
                 <phrase>орудий</phrase>
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Поддержка-Орудий.xml</payloadFromXML>
             </command>
-            <command id="729" name="Темп стрельбы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="714" name="Темп стрельбы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;0</ifParams>
@@ -10852,7 +10860,7 @@
                 <phrase>темп стрельбы</phrase>
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Поддержка-Темп.стрельбы.xml</payloadFromXML>
             </command>
-            <command id="748" name="Всего выстрелов на орудие" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="733" name="Всего выстрелов на орудие" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;0</ifParams>
@@ -11085,7 +11093,7 @@
                 <phrase>выстрелов на орудие</phrase>
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Поддержка-Всего.выстрелов.xml</payloadFromXML>
             </command>
-            <command id="760" name="Продолжительность стрельбы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="745" name="Продолжительность стрельбы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;0</ifParams>
@@ -11325,7 +11333,7 @@
                 <phrase>Продолжительность стрельбы</phrase>
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Поддержка-Продолжительность.xml</payloadFromXML>
             </command>
-            <command id="680" name="Тип огневой задачи" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="695" name="Тип огневой задачи" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -11427,7 +11435,7 @@
                     <cmdRepeat>1</cmdRepeat>
                 </action>
             </command>
-            <command id="701" name="Открытие огня" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="716" name="Открытие огня" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -11529,7 +11537,7 @@
                     <cmdRepeat>1</cmdRepeat>
                 </action>
             </command>
-            <command id="732" name="Время" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="747" name="Время" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -11631,7 +11639,7 @@
                     <cmdRepeat>1</cmdRepeat>
                 </action>
             </command>
-            <command id="689" name="Длина и Ширина" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="699" name="Длина и Ширина" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -11733,7 +11741,7 @@
                     <cmdRepeat>1</cmdRepeat>
                 </action>
             </command>
-            <command id="725" name="Угол" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="727" name="Угол" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -11835,7 +11843,7 @@
                     <cmdRepeat>1</cmdRepeat>
                 </action>
             </command>
-            <command id="746" name="Техника" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="757" name="Техника" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -11937,7 +11945,7 @@
                     <cmdRepeat>1</cmdRepeat>
                 </action>
             </command>
-            <command id="756" name="Размещение цели" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="758" name="Размещение цели" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -12039,7 +12047,7 @@
                     <cmdRepeat>1</cmdRepeat>
                 </action>
             </command>
-            <command id="685" name="Подтвердить поддержку" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="687" name="Подтвердить поддержку" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;0</ifParams>
@@ -12248,7 +12256,7 @@
                 </action>
                 <phrase>подтвердить, подтверждаю, вызвать</phrase>
             </command>
-            <command id="704" name="Отменить поддержку" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="691" name="Отменить поддержку" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;0</ifParams>
@@ -12463,7 +12471,7 @@
                 </action>
                 <phrase>отменить, отмена, отменяю</phrase>
             </command>
-            <command id="1529" name="Начало перемещения окна огневой поддержки" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1514" name="Начало перемещения окна огневой поддержки" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;1</ifParams>
@@ -12480,7 +12488,7 @@
                 </if>
                 <event>Hook.Mouse.Down.Left</event>
             </command>
-            <command id="1500" name="Конец перемещения окна огневой поддержки" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1485" name="Конец перемещения окна огневой поддержки" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.FireSupport}&amp;&amp;1</ifParams>
@@ -12497,7 +12505,7 @@
                 </if>
                 <event>Hook.Mouse.Up.Left</event>
             </command>
-            <command id="1491" name="Новый список типов снарядов" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1476" name="Новый список типов снарядов" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PayloadXML.Clear</cmdType>
                     <params>
@@ -12521,7 +12529,7 @@
                 </action>
                 <phrase>новый список снарядов</phrase>
             </command>
-            <command id="811" name="Создание списка типа снарядов" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="796" name="Создание списка типа снарядов" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PayloadXML.GetValue</cmdType>
                     <params>
@@ -12575,7 +12583,7 @@
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Отключенные команды" enabled="False" prefix="" priority="0" requiredProcess="" description="" />
         <commandGroup open="False" name="SBPPE.Пехота" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1142" name="Встать" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1127" name="Встать" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -12599,7 +12607,7 @@
                 </action>
                 <phrase>Встать</phrase>
             </command>
-            <command id="1019" name="Ложись" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1032" name="Ложись" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -12623,7 +12631,7 @@
                 </action>
                 <phrase>Ложись</phrase>
             </command>
-            <command id="1058" name="На колено" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1060" name="На колено" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -12647,7 +12655,7 @@
                 </action>
                 <phrase>на колено</phrase>
             </command>
-            <command id="1238" name="По местам" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1223" name="По местам" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -12672,7 +12680,7 @@
                 <phrase optional="true">взвод, рота, всем</phrase>
                 <phrase>к машинам по местам</phrase>
             </command>
-            <command id="1049" name="Спешиться" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1051" name="Спешиться" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -12685,7 +12693,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Подразделение" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="Симулятор танка">
-            <command id="1036" name="В колонну" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1023" name="В колонну" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -12725,7 +12733,7 @@
                 <phrase optional="true">Взвод, рота</phrase>
                 <phrase>за мной в колонну марш, в колонну марш</phrase>
             </command>
-            <command id="1166" name="В линию" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1177" name="В линию" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -12744,7 +12752,7 @@
                 <phrase optional="true">взвод, рота, всем</phrase>
                 <phrase>к бою, в линию марш</phrase>
             </command>
-            <command id="1230" name="Елочка" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1215" name="Елочка" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -12777,7 +12785,7 @@
                 <phrase optional="true">взвод, рота, всем</phrase>
                 <phrase>елочка</phrase>
             </command>
-            <command id="1190" name="Клин" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1175" name="Клин" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -12810,7 +12818,7 @@
                 <phrase optional="true">взвод, рота</phrase>
                 <phrase>углом вперед марш, клином марш</phrase>
             </command>
-            <command id="1162" name="Короткие интервалы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1173" name="Короткие интервалы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -12835,7 +12843,7 @@
                 <phrase optional="true">взвод, рота, всем</phrase>
                 <phrase>короткие интервалы, короткие дистанции, вплотную</phrase>
             </command>
-            <command id="1211" name="Не открывать огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
+            <command id="1196" name="Не открывать огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -12861,7 +12869,7 @@
                 <phrase optional="true">взвод, рота, всем</phrase>
                 <phrase>прекратить огонь,огонь только по моей команде,огонь не открывать,не открывать огонь</phrase>
             </command>
-            <command id="1075" name="Огонь по готовности" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
+            <command id="1073" name="Огонь по готовности" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -12887,7 +12895,7 @@
                 <phrase optional="true">Взвод, рота, всем</phrase>
                 <phrase>огонь по готовности,огонь огонь</phrase>
             </command>
-            <command id="1253" name="Стой" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1235" name="Стой" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -12897,7 +12905,7 @@
                 </action>
                 <phrase>Взвод стой, рота стой, взвод к обороне, рота к обороне</phrase>
             </command>
-            <command id="1257" name="Только ответный огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
+            <command id="1242" name="Только ответный огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
                 <action>
                     <cmdType>DxInput.KeyCombo</cmdType>
                     <params>
@@ -12924,7 +12932,7 @@
                 <phrase optional="true">Взвод, рота, всем</phrase>
                 <phrase>только ответный огонь</phrase>
             </command>
-            <command id="1231" name="Увеличить интервалы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1213" name="Увеличить интервалы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -12935,7 +12943,7 @@
                 <phrase optional="true">Взвод</phrase>
                 <phrase>увеличить интевалы, увеличить дистанции, увеличить интервалы дистанции</phrase>
             </command>
-            <command id="1126" name="Углом назад" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1111" name="Углом назад" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -12968,7 +12976,7 @@
                 <phrase optional="true">взвод, рота</phrase>
                 <phrase>углом назад марш</phrase>
             </command>
-            <command id="1199" name="Уменьшить интервалы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1181" name="Уменьшить интервалы" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -12979,7 +12987,7 @@
                 <phrase optional="true">Взвод, рота</phrase>
                 <phrase>сократить интервалы, сократить дистанции, сократить интервалы дистанции, уменьшить интервалы, уменьшить дистанции</phrase>
             </command>
-            <command id="1037" name="Уступом в лево" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1022" name="Уступом в лево" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -12998,7 +13006,7 @@
                 <phrase optional="true">взвод, рота</phrase>
                 <phrase>уступом влево марш</phrase>
             </command>
-            <command id="1083" name="Уступом в право" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1065" name="Уступом в право" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -13019,7 +13027,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Связь" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1160" name="Голос включен" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1145" name="Голос включен" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>VC.On</cmdType>
                     <params />
@@ -13027,7 +13035,7 @@
                 </action>
                 <event>Hook.Capital.Up</event>
             </command>
-            <command id="1174" name="Голос отключен" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1172" name="Голос отключен" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>VC.Standby</cmdType>
                     <params />
@@ -13037,7 +13045,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Тактическое управление" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1331" name="Противник слева" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1329" name="Противник слева" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>TTS.Speak</cmdType>
                     <params>
@@ -13093,7 +13101,7 @@
                 <phrase optional="true">взвод</phrase>
                 <phrase>противник слева к бою</phrase>
             </command>
-            <command id="1317" name="Противник справа" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1315" name="Противник справа" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>TTS.Speak</cmdType>
                     <params>
@@ -13149,7 +13157,7 @@
                 <phrase optional="true">механик</phrase>
                 <phrase>противник справа к бою</phrase>
             </command>
-            <command id="1248" name="Кругом" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1229" name="Кругом" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyHold</cmdType>
                     <params>
@@ -13162,7 +13170,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Тригеры" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1439" name="Hook" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1415" name="Hook" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>ProgramFocused</ifType>
                     <ifParams>SBProPE64cm&amp;&amp;</ifParams>
@@ -13185,7 +13193,7 @@
                 <event>Unfocused.SBProPE64cm</event>
                 <event>Hook</event>
             </command>
-            <command id="1453" name="Отключить Hook" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1434" name="Отключить Hook" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Hook.Disable</cmdType>
                     <params />
@@ -13200,7 +13208,7 @@
                 </action>
                 <phrase>отключить хук,отключи хук</phrase>
             </command>
-            <command id="1465" name="Включить Hook" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1441" name="Включить Hook" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Hook.Enable</cmdType>
                     <params />
@@ -13215,7 +13223,7 @@
                 </action>
                 <phrase>включить хук,включи хук</phrase>
             </command>
-            <command id="1039" name="Восстановления положения в танке" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1053" name="Восстановления положения в танке" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -13286,7 +13294,7 @@
                 </if>
                 <event>RestoreStateInCabin</event>
             </command>
-            <command id="965" name="Боевой порядок (Колонна)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="938" name="Боевой порядок (Колонна)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -13318,7 +13326,7 @@
                 </action>
                 <event>BattleFormation0</event>
             </command>
-            <command id="1163" name="Боевой порядок (Линия)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1161" name="Боевой порядок (Линия)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -13336,7 +13344,7 @@
                 </action>
                 <event>BattleFormation1</event>
             </command>
-            <command id="1246" name="Боевой порядок (Угол вперёд)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1259" name="Боевой порядок (Угол вперёд)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -13368,7 +13376,7 @@
                 </action>
                 <event>BattleFormation2</event>
             </command>
-            <command id="1159" name="Боевой порядок (Угол назад)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1170" name="Боевой порядок (Угол назад)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -13400,7 +13408,7 @@
                 </action>
                 <event>BattleFormation3</event>
             </command>
-            <command id="1070" name="Боевой порядок (Уступом влево)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1046" name="Боевой порядок (Уступом влево)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -13418,7 +13426,7 @@
                 </action>
                 <event>BattleFormation4</event>
             </command>
-            <command id="1082" name="Боевой порядок (Уступом вправо)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1080" name="Боевой порядок (Уступом вправо)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyPress</cmdType>
                     <params>
@@ -13436,7 +13444,7 @@
                 </action>
                 <event>BattleFormation5</event>
             </command>
-            <command id="1274" name="Боевой порядок (Ёлочка)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1255" name="Боевой порядок (Ёлочка)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>DxInput.KeyDown</cmdType>
                     <params>
@@ -13470,7 +13478,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Отслеживание кнопок" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1287" name="Отслеживание Q" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Sidya&#xD;&#xA;Vysunut&#xD;&#xA;Boevomy&#xD;&#xA;Pohodnomy">
+            <command id="1289" name="Отслеживание Q" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Sidya&#xD;&#xA;Vysunut&#xD;&#xA;Boevomy&#xD;&#xA;Pohodnomy">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>ProgramFocused</ifType>
                     <ifParams>SBProPE64cm&amp;&amp;</ifParams>
@@ -13557,7 +13565,7 @@
                 </if>
                 <event>Hook.Q</event>
             </command>
-            <command id="1262" name="Отслеживание Z" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Sidya&#xD;&#xA;Vysunut&#xD;&#xA;Boevomy&#xD;&#xA;Pohodnomy">
+            <command id="1264" name="Отслеживание Z" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Sidya&#xD;&#xA;Vysunut&#xD;&#xA;Boevomy&#xD;&#xA;Pohodnomy">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>ProgramFocused</ifType>
                     <ifParams>SBProPE64cm&amp;&amp;</ifParams>
@@ -13644,7 +13652,7 @@
                 </if>
                 <event>Hook.Z</event>
             </command>
-            <command id="1275" name="Отслеживание B" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Sidya&#xD;&#xA;Vysunut&#xD;&#xA;Boevomy&#xD;&#xA;Pohodnomy">
+            <command id="1277" name="Отслеживание B" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Sidya&#xD;&#xA;Vysunut&#xD;&#xA;Boevomy&#xD;&#xA;Pohodnomy">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>ProgramFocused</ifType>
                     <ifParams>SBProPE64cm&amp;&amp;</ifParams>
@@ -13700,7 +13708,7 @@
                 </if>
                 <event>Hook.B</event>
             </command>
-            <command id="1288" name="Отслеживание F5" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1290" name="Отслеживание F5" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>ProgramFocused</ifType>
                     <ifParams>SBProPE64cm&amp;&amp;</ifParams>
@@ -13752,7 +13760,7 @@
                 </if>
                 <event>Hook.F5</event>
             </command>
-            <command id="1261" name="Отслеживание F6" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1270" name="Отслеживание F6" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>ProgramFocused</ifType>
                     <ifParams>SBProPE64cm&amp;&amp;</ifParams>
@@ -13856,7 +13864,7 @@
                 </if>
                 <event>Hook.F6</event>
             </command>
-            <command id="1283" name="Отслеживание F7" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1285" name="Отслеживание F7" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>ProgramFocused</ifType>
                     <ifParams>SBProPE64cm&amp;&amp;</ifParams>
@@ -13941,7 +13949,7 @@
                 </if>
                 <event>Hook.F7</event>
             </command>
-            <command id="1297" name="Отслеживание F8" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1299" name="Отслеживание F8" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>ProgramFocused</ifType>
                     <ifParams>SBProPE64cm&amp;&amp;</ifParams>
@@ -14026,7 +14034,7 @@
                 </if>
                 <event>Hook.F8</event>
             </command>
-            <command id="1286" name="Отслеживание F9" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Mehvod">
+            <command id="1302" name="Отслеживание F9" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Mehvod">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>ProgramFocused</ifType>
                     <ifParams>SBProPE64cm&amp;&amp;</ifParams>
@@ -14130,7 +14138,7 @@
                 </if>
                 <event>Hook.F9</event>
             </command>
-            <command id="1446" name="Отслеживание ЛКМ" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1448" name="Отслеживание ЛКМ" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -14260,7 +14268,7 @@
                 </if>
                 <event>Hook.Mouse.Click.Left</event>
             </command>
-            <command id="1464" name="Отслеживание ПКМ" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1466" name="Отслеживание ПКМ" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.cursor}&amp;&amp;0</ifParams>
@@ -14354,7 +14362,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.All Keys" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1548" name="Отслеживание всех клавиш" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1524" name="Отслеживание всех клавиш" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Group.Disable</cmdType>
                     <params>
@@ -14457,7 +14465,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Паразиты" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1271" name="Паразит на Наводчике-Механике" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1273" name="Паразит на Наводчике-Механике" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Results.SetVar</cmdType>
                     <params>
@@ -14485,7 +14493,7 @@
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Паразиты.xml</payloadFromXML>
                 <phrase>паразит</phrase>
             </command>
-            <command id="1296" name="Освобождение Наводчика-Механика" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1298" name="Освобождение Наводчика-Механика" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Results.SetVar</cmdType>
                     <params>
@@ -14522,7 +14530,7 @@
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Паразиты.xml</payloadFromXML>
                 <phrase>свободен</phrase>
             </command>
-            <command id="1427" name="Потеря 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1425" name="Потеря 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Results.SetVar</cmdType>
                     <params>
@@ -14565,7 +14573,7 @@
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Позывные.xml</payloadFromXML>
                 <phrase>утерян,потерян,убит,передан,подбит, уничтожен, горит, минус</phrase>
             </command>
-            <command id="1432" name="Возврат 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1451" name="Возврат 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Results.SetVar</cmdType>
                     <params>
@@ -14611,7 +14619,7 @@
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Управление подразделением" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="" />
         <commandGroup open="False" name="SBPPE.Команды машинам" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1374" name="Контрольный осмотр" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="section: &#xD;&#xA;   G - взвод в полном составе,&#xD;&#xA;GG - взвод разделен на 2 секции по 2 машине&#xD;&#xA;BattleFormation: боевой порядок">
+            <command id="1372" name="Контрольный осмотр" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="section: &#xD;&#xA;   G - взвод в полном составе,&#xD;&#xA;GG - взвод разделен на 2 секции по 2 машине&#xD;&#xA;BattleFormation: боевой порядок">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -14997,7 +15005,7 @@
                 </action>
                 <phrase>Контрольный осмотр</phrase>
             </command>
-            <command id="1282" name="Игра по сети" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1280" name="Игра по сети" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="False">
                     <ifType>(A)Contains(B)</ifType>
                     <ifParams>{LastSpoken}&amp;&amp;по сети</ifParams>
@@ -15045,7 +15053,7 @@
                 <phrase>игра</phrase>
                 <phrase>по сети, по локалке</phrase>
             </command>
-            <command id="1419" name="Приказы для 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1400" name="Приказы для 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -15361,7 +15369,7 @@
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Позывные.xml</payloadFromXML>
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Приказы.xml</payloadFromXML>
             </command>
-            <command id="1498" name="Приказы для 12" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1509" name="Приказы для 12" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -15671,7 +15679,7 @@
                 <phrase>двеннадцатый</phrase>
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Приказы.xml</payloadFromXML>
             </command>
-            <command id="1545" name="Объеденить взвод для 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1543" name="Объеденить взвод для 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -15919,7 +15927,7 @@
                 <phrase optional="true">встать, вернись</phrase>
                 <phrase>в строй</phrase>
             </command>
-            <command id="1536" name="Объеденить взвод для 12" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1538" name="Объеденить взвод для 12" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -16148,7 +16156,7 @@
                 <phrase optional="true">встать, вернись</phrase>
                 <phrase>в строй</phrase>
             </command>
-            <command id="1563" name="Прекратить подавление 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1565" name="Прекратить подавление 101-104" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -16402,7 +16410,7 @@
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Позывные.xml</payloadFromXML>
                 <phrase>прекратить подавление</phrase>
             </command>
-            <command id="1541" name="Прекратить подавление для 12" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Podavlenie3">
+            <command id="1535" name="Прекратить подавление для 12" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Podavlenie3">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -16658,7 +16666,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Режим огня 101-104" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1364" name="Не открывать огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
+            <command id="1362" name="Не открывать огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -16939,7 +16947,7 @@
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Позывные.xml</payloadFromXML>
                 <phrase>не открывать огонь,огня не открывать,огонь не открывать,прекратить огонь</phrase>
             </command>
-            <command id="1397" name="Огонь по готовности" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
+            <command id="1399" name="Огонь по готовности" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -17212,7 +17220,7 @@
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Позывные.xml</payloadFromXML>
                 <phrase>огонь по готовности,огонь огонь</phrase>
             </command>
-            <command id="1444" name="Только ответный огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
+            <command id="1417" name="Только ответный огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -17487,7 +17495,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Режим огня 12-го" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1369" name="Не открывать огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
+            <command id="1371" name="Не открывать огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -17741,7 +17749,7 @@
                 <phrase>двеннадцатый</phrase>
                 <phrase>не открывать огонь,огня не открывать,огонь не открывать,прекратить огонь</phrase>
             </command>
-            <command id="1424" name="Огонь по готовности" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
+            <command id="1426" name="Огонь по готовности" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -17987,7 +17995,7 @@
                 <phrase>двеннадцатый</phrase>
                 <phrase>огонь по готовности,огонь огонь</phrase>
             </command>
-            <command id="1398" name="Только ответный огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
+            <command id="1409" name="Только ответный огонь" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="Не открывать огонь = 0&#xA;&#xD;&#xA;Огонь по готовности = 1&#xD;&#xA;&#xA;Только ответный огонь = 2">
                 <if ifBlockDisabled="False" ifNot="True">
                     <ifType>(A)==(B)</ifType>
                     <ifParams>{var.Position}&amp;&amp;Commander</ifParams>
@@ -18235,7 +18243,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="SBPPE.Команды в разработке" enabled="True" prefix="" priority="0" requiredProcess="SBProPE64cm" description="">
-            <command id="1458" name="где точка" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1469" name="где точка" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>Mouse.MoveAbsolute</cmdType>
                     <params>
@@ -18247,7 +18255,7 @@
             </command>
         </commandGroup>
         <commandGroup open="False" name="Тест" enabled="True" prefix="" priority="0" requiredProcess="" description="">
-            <command id="1445" name="Измерение дальности (вариант 1)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1447" name="Измерение дальности (вариант 1)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
@@ -18276,7 +18284,7 @@
                 <payloadFromXML phraseOnly="False" use2partPhrase="False" phraseConnector="by" Phrase2wildcard="anyone" optional="False">payloads\SBPPE.Поддержка-Расчет.Угловая.xml</payloadFromXML>
                 <phrase>дальность</phrase>
             </command>
-            <command id="1467" name="Измерение дальности (вариант 2)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+            <command id="1478" name="Измерение дальности (вариант 2)" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
                 <action>
                     <cmdType>PY.ExecFile</cmdType>
                     <params>
